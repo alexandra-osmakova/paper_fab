@@ -87,12 +87,15 @@ function isPartiallyVisible(el) {
 
 var overlay = document.getElementsByClassName('overlay')[0];
 var invisible_slider = document.getElementsByClassName('hidden_slider')[0];
-var open_slider = document.getElementsByClassName('animation_text')[0];
+var open_slider = document.getElementsByClassName('slider_trigger')[0];
 var close_btn = document.getElementById('close_btn_slider');
 var modal_btn = document.getElementById('modal_btn');
 var apply_modal = document.getElementsByClassName('modal_window_second')[0];
 var modal_trigger = document.getElementsByClassName('modal_trigger')[0];
 var modal_thanx_btn = document.getElementById('modal_thanx_btn');
+var close_btn_video = document.getElementById('close_btn_video');
+var hidden_video = document.getElementsByClassName('hidden_video')[0];
+var open_video = document.getElementsByClassName('circle_amimation_container')[0];
 
 open_slider.addEventListener('click', slider_start);
 
@@ -122,6 +125,18 @@ modal_btn.addEventListener('click', function() {
 
 modal_thanx_btn.addEventListener('click', function() {
     apply_modal.classList.toggle('invisible_item');
+    overlay.classList.toggle('invisible_item');
+    document.documentElement.classList.remove('no_scroll');
+})
+
+open_video.addEventListener('click', function() {
+    hidden_video.classList.toggle('invisible_item');
+    overlay.classList.toggle('invisible_item');
+    document.documentElement.classList.add('no_scroll');
+})
+
+close_btn_video.addEventListener('click', function() {
+    hidden_video.classList.toggle('invisible_item');
     overlay.classList.toggle('invisible_item');
     document.documentElement.classList.remove('no_scroll');
 })
