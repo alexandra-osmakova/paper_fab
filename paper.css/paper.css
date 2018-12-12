@@ -1,0 +1,1595 @@
+@font-face {
+    font-family: "P TSans";
+    src: url(../font/PT_Sans-Web-Bold.ttf);
+    font-style: bold;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "P TSans";
+    src: url(../font/PT_Sans-Web-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'P TSans', sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.625rem 7.9375rem;
+}
+
+.header_item {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+}
+
+.header_item:nth-of-type(2),
+.header_item:nth-of-type(3) {
+    width: auto;
+}
+
+.header_item:nth-of-type(3) {
+    padding-top: 1rem;
+    align-items: flex-start;
+}
+
+.header_logo {
+    background-image: url(../img/paper_logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 6.875rem;
+    height: 3.0625rem;
+    margin-right: 1.874rem;
+}
+
+.header_logo_text {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #000000;
+    font-family: "P TSans";
+}
+
+.header_info_link {
+    display: block;
+    width: 50%;
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    color: #000000;
+    font-family: "P TSans";
+    text-decoration: unset;
+    text-align: right;
+    padding: 0 1.2rem;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.header_info_link:hover {
+    color: #7eac01;
+}
+
+.header_info_link:nth-of-type(2) {
+    text-align: left;
+}
+
+.header_item__telephone_wrap,
+header_item__button {
+    width: 50%;
+}
+
+.header_item__telephone_wrap,
+header_item__button {
+    display: flex;
+    align-items: center;
+}
+
+.header_item__telephone_wrap div {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    border: 0.0625rem solid #7eac01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.8rem;
+}
+
+.header_item__telephone_wrap svg {
+    width: 45%;
+}
+
+.header_phone {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #000000;
+    font-family: "P TSans";
+    position: relative;
+    text-decoration: unset;
+}
+
+.header_phone span {
+    position: absolute;
+    bottom: -1.5rem;
+    right: 0;
+    font-size: 0.875rem;
+    color: #7eac01;
+    font-family: "P TSans";
+    border-bottom: 1px dashed #7eac01;
+}
+
+.header_item__button {
+    margin-left: 1.5rem;
+    font-size: 0.9375rem;
+    color: #000000;
+    font-family: "P TSans";
+    width: 11.25rem;
+    height: 3.5rem;
+    border-radius: 1.75rem;
+    border: 0.0625rem solid #000000;
+    outline: none;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.header_item__button:hover {
+    color: #7fad02;
+    border: 0.0625rem solid #7fad02;
+}
+
+.main_section {
+    width: 100%;
+    padding: 9.1875rem 7.9375rem;
+    background-image: url(../img/main_section_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main_section__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.6;
+}
+
+.main_section__content {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.main_section__content_item:nth-of-type(1) {
+    width: 60%;
+}
+
+.main_section__content_item:nth-of-type(2) {
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.title_style {
+    font-size: 3rem;
+    line-height: 3.125rem;
+    color: #000000;
+    font-family: "P TSans";
+    font-weight: bold;
+}
+
+.main_section .title_style {
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+}
+
+.styled_text {
+    color: #7eac01;
+}
+
+.common_text {
+    font-size: 1rem;
+    color: #000000;
+    font-family: "P TSans";
+}
+
+.main_section .common_text {
+    color: #ffffff;
+}
+
+.main_section__buttons {
+    width: 100%;
+    display: flex;
+    padding-top: 4.9375rem;
+}
+
+.main_section__styled_btn {
+    width: 11.25rem;
+    height: 3.5rem;
+    border-radius: 1.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+    color: #ffffff;
+    font-family: "P TSans";
+    font-weight: bold;
+    border: unset;
+    outline: none;
+    transition: .15s ease-in-out;
+    box-shadow: 0 0 40px 40px #7fad02 inset, 0 0 0 0 #7fad02;
+}
+
+.main_section__styled_btn:hover {
+    box-shadow: 0 0 2px 0 #7fad02 inset, 0 0 2px 2px #7fad02;
+    background-color: transparent;
+    color: #7fad02;
+}
+
+
+.main_section__normal_btn {
+    outline: none;
+    width: 13.75rem;
+    height: 3.5rem;
+    border-radius: 1.75rem;
+    border: 0.0625rem solid #ffffff;
+    font-size: 0.9375rem;
+    background-color: transparent;
+    line-height: 1.375rem;
+    color: #ffffff;
+    font-family: "P TSans";
+    font-weight: bold;
+    margin-left: 1.5625rem;
+    transition: all .15s ease-in-out;
+}
+
+.main_section__normal_btn:hover {
+    border: 0.0625rem solid #7fad02;
+    color: #7fad02;
+}
+
+.main_section__normal_btn:hover path {
+    fill: #7fad02;
+}
+
+.main_section__normal_btn path {
+    fill: #ffffff;
+}
+
+.main_section__normal_btn svg {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-right: 0.375rem;
+}
+
+.circle_amimation_container {
+    position: relative;
+}
+
+.progress__value {
+    transform: matrix(-0.42, -0.91, 0.91, -0.42, 0, 0);
+    -ms-transform: matrix(-0.42, -0.91, 0.91, -0.42, 0, 0);
+    -webkit-transform: matrix(-0.42, -0.91, 0.91, -0.42, 0, 0);
+    stroke-dasharray: 230;
+    animation: progress 2s infinite alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.progress__value_second {
+    opacity: 0.6;
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    transform: matrix(-0.42, -0.91, 0.91, -0.42, 0, 0);
+    -ms-transform: matrix(-0.42, -0.91, 0.91, -0.42, 0, 0);
+    -webkit-transform: matrix(-0.42, -0.91, 0.91, -0.42, 0, 0);
+    stroke-dasharray: 140;
+    animation: progress_second 2s infinite alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes progress_second {
+    from {
+        stroke-dashoffset: 140;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes progress {
+    from {
+        stroke-dashoffset: 230;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.main_section_icon {
+    position: absolute;
+    bottom: 3.3rem;
+    right: 2.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.animation_text {
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #ffffff;
+    font-family: "P TSans";
+    font-weight: bold;
+    position: absolute;
+    top: 1.5rem;
+    left: -3rem;
+
+}
+
+.advantages {
+    width: 100%;
+    padding: 7rem 8rem 1rem;
+}
+
+.advantages_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.diagram_title, .digram_text, .diagram_number {
+    font-size: 1.125rem;
+    color: #000000;
+    font-family: "P TSans";
+    font-weight: bold;
+    display: block;
+    position: absolute;
+}
+
+.diagram_title {
+    top: 45%;
+}
+
+.diagram_group {
+    position: absolute;
+    z-index: 3;
+}
+
+.diagram_group:nth-of-type(1) {
+    top: 45%;
+    left: 8rem;
+    text-align: right;
+}
+
+.diagram_group:nth-of-type(2) {
+    top: 45%;
+    right: 8rem;
+    text-align: left;
+} 
+
+.diagram_number {
+    position: static;
+}
+
+.diagram_number {
+    color: #90bb1d;
+}
+
+.digram_text {
+    text-align: right;
+    position: relative;
+}
+
+.digram_text:nth-of-type(1)::after {
+    z-index: 3;
+    position: absolute;
+    content: '';
+    display: block;
+    height: 0.0625rem;
+    background-color: #000000;
+    width: 17rem;
+}
+
+.diagram_left_side {
+    text-align: left;
+}
+
+.diagram_left_side::after {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 0.0625rem;
+    background-color: #000000;
+    width: 17rem;
+    right: 0rem;
+}
+
+.circle {
+    position: relative;
+    display: block;
+    transform: matrix(-0.57, 0.82, -0.82, -0.57, 0, 0);
+    -ms-transform: matrix(-0.57, 0.82, -0.82, -0.57, 0, 0);
+    -webkit-transform: matrix(-0.57, 0.82, -0.82, -0.57, 0, 0);
+}
+
+.circle circle {
+    fill: rgba(0, 0, 0, 0);
+    stroke: #aed348;
+    stroke-width: 110;
+    stroke-dasharray: 770px 770px;
+}
+
+
+.circle circle:nth-child(2n) {
+    fill: rgba(0, 0, 0, 0);
+    stroke: #90bb1d;
+    stroke-width: 110;
+}
+
+.market_progress_value {
+    animation: market_progress 2s infinite alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes market_progress {
+    from {
+        stroke-dashoffset: 350;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.market_progress__num_right {
+    animation: market_in_num_progress_right 2s infinite alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+
+@keyframes market_in_num_progress_right {
+    from {
+        opacity: 0;
+        transform:matrix(1.00,0.00,0.00,1.00,-50,0);
+        -ms-transform:matrix(1.00,0.00,0.00,1.00,-50,0);
+        -webkit-transform:matrix(1.00,0.00,0.00,1.00,-50,0);
+    }
+
+    to {
+        opacity: 1;
+        transform:matrix(1.00,0.00,0.00,1.00,0,0);
+        -ms-transform:matrix(1.00,0.00,0.00,1.00,0,0);
+        -webkit-transform:matrix(1.00,0.00,0.00,1.00,0,0);
+    }
+}
+
+.market_progress__num_left {
+    animation: market_in_num_progress_left 2s infinite alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+@keyframes market_in_num_progress_left {
+    from {
+        opacity: 0;
+        transform:matrix(1.00,0.00,0.00,1.00,50,0);
+        -ms-transform:matrix(1.00,0.00,0.00,1.00,50,0);
+        -webkit-transform:matrix(1.00,0.00,0.00,1.00,50,0);
+    }
+
+    to {
+        opacity: 1;
+        transform:matrix(1.00,0.00,0.00,1.00,0,0);
+        -ms-transform:matrix(1.00,0.00,0.00,1.00,0,0);
+        -webkit-transform:matrix(1.00,0.00,0.00,1.00,0,0);
+    }
+}
+
+.diagram_explanation {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.diagrem_exp_item {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagram_exp_text {
+    font-size: 0.875rem;
+    color: #000000;
+    font-family: "P TSans";
+}
+
+.first_mark {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-radius: 50%;
+    background-color: #90bb1d;
+    margin-right: 0.5rem;
+}
+
+.second_mark {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-radius: 50%;
+    background-color: #aed348;
+    margin-right: 0.5rem;
+}
+
+.product {
+    width: 100%;
+    padding: 7rem 8rem;
+}
+
+.product_content {
+    display: flex;
+    padding-top: 3.75rem;
+}
+
+.product_content__item:nth-of-type(1) {
+    width: 40%;
+    background-color: #f3f3f0;
+    margin-right: 6.8125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_content__item:nth-of-type(2) {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product_content__item_piece {
+    width: 45%;
+    margin: 0 auto;
+    border-top: 0.0625rem solid #000000;
+    padding: 3.5625rem 0;
+}
+
+.product_content__item_piece:nth-of-type(3),
+.product_content__item_piece:nth-of-type(4) {
+    border-bottom: 0.0625rem solid #000000;
+}
+
+.product_content__item_piece div {
+    width: 4.0625rem;
+    height: 4.0625rem;
+    border-radius: 2rem;
+    border: 0.0625rem solid #7eac01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.product_content__item_piece svg {
+    width: 60%;
+}
+
+.product_img {
+    width: 18.4375rem;
+}
+
+.my-slider div {
+    padding: 1rem;
+    padding-left: 1.875rem;
+}
+
+.tns-outer {
+    position: relative;
+}
+
+.tns-controls {
+    width: 100%;
+    position: absolute;
+    bottom: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news .tns-controls {
+    bottom: -3rem;
+}
+
+.news .tns-nav {
+    bottom: -2.7rem;
+}
+
+.tns-controls button {
+    position: relative;
+    background-color: unset;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: unset;
+    outline: none;
+    background-image: url(../img/header_slider.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.tns-controls button::before {
+    content: "";
+    display: block;
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    border: 1px solid #7eac01;
+    position: absolute;
+    position: absolute;
+    top: -1rem;
+    left: -0.8rem;
+
+}
+
+.tns-nav {
+    position: absolute;
+    bottom: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.tns-nav>[aria-controls] {
+    outline: none;
+    padding: 0;
+    margin: 0 0.375rem;
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #dedede;
+    border: unset;
+}
+
+.tns-nav>.tns-nav-active {
+    transform: scale(1.7);
+    position: relative;
+    background-color: #7eac01;
+}
+
+.tns-controls button:nth-of-type(1) {
+    transform: matrix(0.00, 1.00, -1.00, 0.00, 0, 0);
+    -ms-transform: matrix(0.00, 1.00, -1.00, 0.00, 0, 0);
+    -webkit-transform: matrix(0.00, 1.00, -1.00, 0.00, 0, 0);
+    position: absolute;
+    left: 20%;
+}
+
+.tns-controls button:nth-of-type(2) {
+    transform: matrix(-0.00, -1.00, 1.00, -0.00, 0, 0);
+    -ms-transform: matrix(-0.00, -1.00, 1.00, -0.00, 0, 0);
+    -webkit-transform: matrix(-0.00, -1.00, 1.00, -0.00, 0, 0);
+    position: absolute;
+    right: 20%
+}
+
+.table {
+    width: 100%;
+    padding: 7rem 8rem;
+}
+
+.table_content {
+    width: 100%;
+    padding-top: 3.75rem;
+}
+
+.table_content table {
+    width: 100%;
+}
+
+.table_title {
+    font-size: 1rem;
+    color: #000000;
+    font-family: "P TSans";
+    font-weight: bold;
+    width: 30%;
+    height: 3.5rem;
+    vertical-align: middle;
+    padding-left: 1.875rem;
+}
+
+.table_text {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: #000000;
+    font-family: "P TSans";
+    text-align: center;
+    width: 17.5%;
+    height: 3.5rem;
+    vertical-align: middle;
+    border-right: 3px solid #ffffff;
+}
+
+.styled_table_row {
+    background-color: #f3f3f0;
+    border-right: 3px solid #ffffff;
+}
+
+.colored_table_row {
+    background-color: #7eac01;
+    color: #ffffff;
+    border-right: 3px solid #ffffff;
+}
+
+.conditions {
+    width: 100%;
+    padding: 7rem 8rem;
+    background-color: #f3f3f0;
+}
+
+.conditions_content {
+    width: 100%;
+    position: relative;
+    padding-top: 3.75rem;
+}
+
+.conditions_content_item:nth-of-type(1) {
+    width: 70%;
+    background-image: url(../img/conditions_ing.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 5.5rem 3.5625rem;
+}
+
+.conditions_content_item:nth-of-type(2) {
+    position: absolute;
+    padding: 4.1875rem;
+    background-color: #ffffff;
+    right: 0rem;
+    top: 7rem;
+    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.05);
+}
+
+.conditions_content_item:nth-of-type(2) p {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    color: #000000;
+    font-family: "P TSans";
+}
+
+.conditions_content_item_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.6;
+}
+
+.conditions_content_item ol {
+    position: relative;
+}
+
+.conditions_content_item li {
+    padding: 0 0 1.875rem;
+}
+
+.condition_title,
+.conditions_content_item ol {
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    color: #ffffff;
+    font-family: "P TSans";
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.condition_text {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+    color: #ffffff;
+    font-family: "P TSans";
+}
+
+.conditions_content_item h2 {
+    font-size: 1.5rem;
+    line-height: 1.125rem;
+    color: #000000;
+    font-family: "P TSans";
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.conditions_content_item .main_section__styled_btn svg {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-right: 0.375rem;
+}
+
+.conditions_content_item .main_section__styled_btn:hover path {
+    fill: #7fad02;
+}
+
+.conditions_content_item .main_section__styled_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 0 1rem;
+    margin-top: 3.6875rem;
+}
+
+.conditions_content_item .main_section__styled_btn:hover {
+    color: #7fad02;
+}
+
+.conditions_content_item .main_section__styled_btn path {
+    fill: #ffffff;
+}
+
+.comparison {
+    width: 100%;
+    padding: 7rem 8rem;
+}
+
+.comparison_content {
+    width: 100%;
+}
+
+.comparison_content_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.paper_seller:nth-of-type(3) {
+    background-color: #90bb1d;
+}
+
+.paper_seller:nth-of-type(3) h3,
+.paper_seller:nth-of-type(3) .paper_seller_price,
+.paper_seller:nth-of-type(3) .paper_seller_price_text,
+.paper_seller:nth-of-type(3) .paper_seller_company {
+    color: #ffffff;
+}
+
+.comparison_content_item h3 {
+    font-size: 1.5rem;
+    color: #000000;
+    font-family: "P TSans";
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin-bottom: 1.9375rem;
+    margin-top: 4rem;
+}
+
+.paper_seller {
+    width: 32%;
+    border: 1px solid #90bb1d;
+    padding: 2.0625rem 2.5625rem;
+}
+
+.paper_seller_logo {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.paper_seller_logo_first {
+    background-image: url(../img/logo_other.jpg);
+    width: 3rem;
+    height: 3rem;
+}
+
+.paper_seller_logo_second {
+    background-image: url(../img/logo_other2.png);
+    width: 3rem;
+    height: 3rem;
+}
+
+.paper_seller_logo_third {
+    background-image: url(../img/company_logo_black.png);
+    width: 50%;
+    height: 3rem;
+}
+
+.paper_seller_price {
+    font-size: 2.5rem;
+    color: #000000;
+    font-family: "P TSans";
+    display: block;
+    margin-top: 2.0625rem;
+}
+
+.paper_seller_price_text {
+    font-size: 0.875rem;
+    color: #000000;
+    font-family: "P TSans";
+}
+
+.paper_seller_company {
+    display: block;
+    margin-top: 2rem;
+}
+
+.comparison_content_item:nth-of-type(2) {
+    justify-content: center;
+}
+
+.paper_seller_advantage {
+    position: relative;
+    width: 38%;
+    margin: 0 auto;
+    background-color: #f3f3f0;
+    padding: 3.6875rem 3.375rem;
+    margin-bottom: 2.5625rem;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.paper_seller_advantage_title {
+    display: block;
+    font-size: 1.125rem;
+    color: #000000;
+    font-family: "P TSans";
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+.paper_seller_advantage_text {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #000000;
+    font-family: "P TSans";
+}
+
+.paper_seller_advantage:hover {
+    background-color: #7fad02;
+}
+
+.paper_seller_advantage:hover .paper_seller_advantage_title {
+    color: #ffffff;
+}
+
+.paper_seller_advantage:hover .paper_seller_advantage_text {
+    color: #ffffff;
+}
+
+.paper_seller_advantage_number {
+    font-size: 3rem;
+    color: #7eac01;
+    font-family: "P TSans";
+    font-weight: bold;
+    position: absolute;
+    display: block;
+    top: 2.5rem;
+    left: -5rem;
+}
+
+.paper_seller_advantage_number::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 0.0625rem;
+    background-color: #7eac01;
+    position: absolute;
+    top: 1.8rem;
+    right: -3rem;
+}
+
+.apply_section {
+    width: 100%;
+    padding: 5rem 8rem;
+    background-color: #7eac01;
+}
+
+.apply_section .title_style {
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+}
+
+.apply_section p {
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: "P TSans";
+}
+
+.apply_sectionp {
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: "P TSans";
+}
+
+.apply_form {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6.375rem;
+}
+
+.apply_form_input {
+    border: unset;
+    outline: none;
+    height: 3.5rem;
+    width: 35%;
+    border-radius: 1.75rem;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+    color: #1f1f1f;
+    font-family: "P TSans";
+    text-align: center;
+}
+
+.apply_form_input::placeholder {
+    font-size: 0.875rem;
+    color: #1f1f1f;
+    font-family: "P TSans";
+    text-align: center;
+}
+
+.apply_form_input:nth-of-type(3) {
+    width: 12.5rem;
+    background-color: #15171b;
+    color: #ffffff;
+}
+
+.news {
+    width: 100%;
+    padding: 7rem 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news .main_section__styled_btn:hover {
+    color: #7eac01;
+}
+
+.news_content {
+    width: 100%;
+    display: flex;
+    padding-top: 3.5625rem;
+}
+
+.news .title_style {
+    display: block;
+}
+
+.news .title_style {
+    width: 50%;
+}
+
+.news_content_item {
+    width: 50%;
+}
+
+.news_content_item:nth-of-type(1) {
+    padding-right: 10%;
+}
+
+.news_img_wrap {
+    width: 100%;
+    height: 18.1875rem;
+    background-image: url(../img/news_img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.news_text_main {
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: #000000;
+    font-family: "P TSans";
+    margin: 1.8125rem 0;
+}
+
+.news_date {
+    font-size: 1rem;
+    color: #9c9c9c;
+    font-family: "P TSans";
+}
+
+.news_content__item_piece {
+    width: 45%;
+    margin: 0 auto;
+    border-top: 0.0625rem solid #000000;
+    padding: 3.5625rem 0;
+}
+
+.news_content__item_piece:nth-of-type(3),
+.news_content__item_piece:nth-of-type(4) {
+    border-bottom: 0.0625rem solid #000000;
+}
+
+.news_content__item_piece .news_date {
+    display: block;
+    margin-top: 1.875rem;
+}
+
+.news_slider_item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news_content__item_piece .common_text {
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.news_content__item_piece .common_text:hover {
+    color: #7eac01;
+}
+
+.footer_contacts_section {
+    width: 100%;
+    padding: 5rem 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1a1a1a;
+}
+
+.footer_item:nth-of-type(1) {
+    width: 60%;
+}
+
+.footer_item:nth-of-type(2) {
+    width: 40%;
+    display: flex;
+    padding-left: 4rem;
+}
+
+.footer_item:nth-of-type(2) iframe {
+    width: 100%;
+}
+
+.footer_links {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer_links div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer_links div:nth-of-type(2) {
+    align-items: flex-end;
+}
+
+.footer_logo {
+    background-image: url(../img/paper_logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 6.875rem;
+    height: 3.0625rem;
+    margin-right: 1.874rem;
+}
+
+.footer_info_link {
+    font-size: 1rem;
+    color: #666666;
+    font-family: "P TSans";
+    font-weight: bold;
+    text-decoration: unset;
+    padding-right: 2rem;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.footer_info_link:hover {
+    color: #ffffff;
+}
+
+.footer_links svg {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 1rem;
+}
+
+.footer_contacts_item,
+.footer_contacts {
+    width: 100%;
+}
+
+.footer_contacts_item:nth-of-type(1) {
+    justify-content: space-between;
+}
+
+.footer_contacts {
+    padding-top: 6.1875rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_contacts_title {
+    width: 100%;
+    font-size: 1.125rem;
+    color: #ffffff;
+    font-family: "P TSans";
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1.3125rem;
+}
+
+.footer_contacts_item {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 3.75rem;
+}
+
+.footer_contact_item_piece {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer_contact_item_piece:last-of-type {
+    width: auto;
+}
+
+.footer_contacts_item:last-of-type {
+    padding-bottom: 0;
+}
+
+.footer_contact_item_piece svg {
+    width: 50%;
+}
+
+.footer_contact_item_piece div {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0.0625rem solid #7eac01;
+    margin-right: 1rem;
+}
+
+.footer_contact_item_piece span {
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: "P TSans";
+}
+
+footer {
+    width: 100%;
+    padding: 1.875rem 8.125rem 9.8125rem;
+    display: flex;
+}
+
+.politics,
+.creator {
+    width: 50%;
+    display: flex;
+}
+
+.politics {
+    flex-wrap: wrap;
+}
+
+.creator {
+    justify-content: flex-end;
+    position: relative;
+}
+
+.politics span,
+.politics a,
+.creator span {
+    width: 100%;
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #000000;
+    font-family: "P TSans";
+}
+
+.creator_logo {
+    width: 4.1875rem;
+    height: 1.625rem;
+    background-image: url(../img/creator_logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.creator span {
+    width: auto;
+    position: absolute;
+    right: 0rem;
+    top: 1.8rem;
+}
+
+.overlay {
+    z-index: 1000;
+    position: fixed;
+    top: 0rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000000;
+    opacity: 0.7;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+} 
+
+.no_scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+.hidden_slider {
+    z-index: 1001;
+    position: fixed;
+    top: 9.75rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    margin: 0 auto;
+} 
+
+.invisible_item {
+    display: none;
+}
+
+.hidden_slider img {
+    width: 100%;
+    height: 25rem;
+}
+
+.hidden_slider .tns-controls, .hidden_slider .tns-nav {
+    bottom: -3rem;
+}
+
+.hidden_slider .tns-controls button:nth-of-type(1) {
+    left: 35%;
+}
+
+.hidden_slider .tns-controls button:nth-of-type(2) {
+    right: 35%;
+}
+
+.close_btn {
+    cursor: pointer;
+    position: absolute;
+    right: -4rem;
+    top: 0rem;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.5;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.close_btn:before,
+.close_btn:after {
+    position: absolute;
+    left: 0.9rem;
+    content: ' ';
+    height: 2rem;
+    width: 0.125rem;
+    background-color: #ffffff;
+}
+
+.close_btn:before {
+    transform: rotate(45deg);
+}
+
+.close_btn:after {
+    transform: rotate(-45deg);
+}
+
+.close_btn:hover {
+    opacity: 1;
+}
+
+.modal_window_first,
+.modal_window_second {
+    z-index: 9999;
+    background-color: #ffffff;
+    box-shadow: 0 0.125rem 1rem 0 rgba(155, 155, 155, 0.50);
+    padding: 2rem;
+    width: 50%;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.modal_window_first {
+    width: 30%;
+}
+
+.modal_window_second {
+    width: 40%;
+    padding: 2.5rem;
+}
+
+.modal_window_second a {
+    text-decoration: unset;
+}
+
+.modal_img_container {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    margin: 1rem auto;
+    border-radius: 100%;
+    background-color: rgba(227, 24, 125, 0);
+    border: 0.125rem solid #7eac01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.modal_title {
+    font-size: 1.5rem;
+    color: #000000;
+    font-family: "P TSans";
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal_text {
+    font-size: 1rem;
+    color: #000000;
+    font-family: "P TSans";
+    text-align: center;
+    margin: 1rem;
+}
+
+.modal_visible {
+    display: block;
+}
+
+.modal_window p {
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.modal_window_input,
+.modal_window_submit_btn {
+    outline: none;
+    display: block;
+    height: 3.5rem;
+    border-radius: 1.75rem;
+    border: 1px solid #7eac01;
+    width: 80%;
+    background-color: #ffffff;
+    margin: 1rem auto;
+    font-size: 0.875rem;
+    color: #b6b6b6;
+    font-family: "P TSans";
+    padding: 0.5rem;
+}
+
+.modal_window_input::placeholder {
+    font-size: 0.875rem;
+    color: #b6b6b6;
+    font-family: "P TSans";
+    padding-left: 1.5rem;
+
+}
+
+.modal_window_submit_btn {
+    box-shadow: 0rem 0.375rem 0.4375rem rgba(130, 104, 0, 0.36);
+    border: unset;
+    font-size: 0.9375rem;
+    color: #ffffff;
+    font-family: "P TSans";
+    font-weight: bold;
+    text-align: center;
+
+    background: -moz-linear-gradient(45deg, rgba(126,172,1,1) 0%, rgba(181,213,97,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(126,172,1,1)), color-stop(100%, rgba(181,213,97,1)));
+    background: -webkit-linear-gradient(45deg, rgba(126,172,1,1) 0%, rgba(181,213,97,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(126,172,1,1) 0%, rgba(181,213,97,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(126,172,1,1) 0%, rgba(181,213,97,1) 100%);
+    background: linear-gradient(45deg, rgba(126,172,1,1) 0%, rgba(181,213,97,1) 100%);
+}
+
+.modal_agreement {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #8b8b8b;
+    font-family: "P TSans";
+    text-align: center;
+}
+
+.modal_agreement a {
+    color: #8b8b8b;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.modal_btn, .modal_thanx_btn {
+    right: 1rem;
+    top: 1rem;
+}
+
+.modal_btn:before, .modal_btn:after, .modal_thanx_btn:before, .modal_thanx_btn:after {
+    position: absolute;
+    left: 0.9rem;
+    content: ' ';
+    height: 2rem;
+    width: 0.125rem;
+    background-color: #666666;
+}
