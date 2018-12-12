@@ -1,52 +1,53 @@
 window.onload = function () {
-  var slider = tns({
-    container: '.my-slider',
-    items: 1,
-    rewind: true,
-    swipeAngle: false,
-    gutter: 30,
-    speed: 400,
-    mouseDrag: true,
-    controlsText: [" ", " "],
-    controlsPosition: 'bottom',
-    navPosition: 'bottom',
-    navAsThumbnails: true,
-    arrowKeys: true,
-  })
+    var slider = tns({
+        container: '.my-slider',
+        items: 1,
+        rewind: true,
+        swipeAngle: false,
+        gutter: 30,
+        speed: 400,
+        mouseDrag: true,
+        controlsText: [" ", " "],
+        controlsPosition: 'bottom',
+        navPosition: 'bottom',
+        navAsThumbnails: true,
+        arrowKeys: true,
+    })
 
-  var slider = tns({
-    container: '.news-slider',
-    items: 1,
-    rewind: true,
-    swipeAngle: false,
-    gutter: 30,
-    speed: 400,
-    mouseDrag: true,
-    controlsText: [" ", " "],
-    controlsPosition: 'bottom',
-    navPosition: 'bottom',
-    navAsThumbnails: true,
-    arrowKeys: true,
-  })
+    var slider = tns({
+        container: '.news-slider',
+        items: 1,
+        rewind: true,
+        swipeAngle: false,
+        gutter: 30,
+        speed: 400,
+        mouseDrag: true,
+        controlsText: [" ", " "],
+        controlsPosition: 'bottom',
+        navPosition: 'bottom',
+        navAsThumbnails: true,
+        arrowKeys: true,
+    })
 
-  var slider = tns({
-    container: '.invisible-slider',
-    items: 1,
-    rewind: true,
-    swipeAngle: false,
-    gutter: 30,
-    speed: 400,
-    mouseDrag: true,
-    controlsText: [" ", " "],
-    controlsPosition: 'bottom',
-    navPosition: 'bottom',
-    navAsThumbnails: true,
-    arrowKeys: true,
-  })
+    var slider = tns({
+        container: '.invisible-slider',
+        items: 1,
+        rewind: true,
+        swipeAngle: false,
+        gutter: 30,
+        speed: 400,
+        mouseDrag: true,
+        controlsText: [" ", " "],
+        controlsPosition: 'bottom',
+        navPosition: 'bottom',
+        navAsThumbnails: true,
+        arrowKeys: true,
+    })
 }
 
 window.addEventListener("scroll", throttleScroll, false);
 
+var currentScrollTop = 0;
 var animation_start = document.getElementsByClassName('animation_start')[0];
 var progress_animation_item = document.getElementsByClassName('progress_animation_item')[0];
 var diagram_group = document.getElementsByClassName('diagram_group');
@@ -60,7 +61,6 @@ function throttleScroll(e) {
             isScrolling = false;
         });
     }
-    isScrolling = true;
 }
 
 document.addEventListener("DOMContentLoaded", scrolling, false);
@@ -85,60 +85,59 @@ function isPartiallyVisible(el) {
     return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
 
-var overlay = document.getElementsByClassName('overlay')[0];
-var invisible_slider = document.getElementsByClassName('hidden_slider')[0];
-var open_slider = document.getElementsByClassName('slider_trigger')[0];
-var close_btn = document.getElementById('close_btn_slider');
-var modal_btn = document.getElementById('modal_btn');
-var apply_modal = document.getElementsByClassName('modal_window_second')[0];
-var modal_trigger = document.getElementsByClassName('modal_trigger')[0];
-var modal_thanx_btn = document.getElementById('modal_thanx_btn');
-var close_btn_video = document.getElementById('close_btn_video');
-var hidden_video = document.getElementsByClassName('hidden_video')[0];
-var open_video = document.getElementsByClassName('circle_amimation_container')[0];
 
-open_slider.addEventListener('click', slider_start);
+    var overlay = document.getElementsByClassName('overlay')[0];
+    var invisible_slider = document.getElementsByClassName('hidden_slider')[0];
+    var open_slider = document.getElementsByClassName('slider_trigger')[0];
+    var close_btn = document.getElementById('close_btn_slider');
+    var modal_btn = document.getElementById('modal_btn');
+    var apply_modal = document.getElementsByClassName('modal_window_second')[0];
+    var modal_trigger = document.getElementsByClassName('modal_trigger')[0];
+    var modal_thanx_btn = document.getElementById('modal_thanx_btn');
+    var close_btn_video = document.getElementById('close_btn_video');
+    var hidden_video = document.getElementsByClassName('hidden_video')[0];
+    var open_video = document.getElementsByClassName('circle_amimation_container')[0];
 
-function slider_start() {
-    overlay.classList.toggle('invisible_item');
-    invisible_slider.classList.toggle('invisible_item');
-    document.documentElement.classList.add('no_scroll');
-}
+    open_slider.addEventListener('click', slider_start);
 
-close_btn_slider.addEventListener('click', function () {
-    overlay.classList.toggle('invisible_item');
-    invisible_slider.classList.toggle('invisible_item');
-    document.documentElement.classList.remove('no_scroll');
-})
+    function slider_start() {
+        overlay.classList.toggle('invisible_item');
+        invisible_slider.classList.toggle('invisible_item');
+        document.documentElement.classList.add('no_scroll');
+    }
 
-modal_trigger.addEventListener('click', function() {
-    apply_modal.classList.toggle('invisible_item');
-    overlay.classList.toggle('invisible_item');
-    document.documentElement.classList.add('no_scroll');
-})
+    close_btn_slider.addEventListener('click', function () {
+        overlay.classList.toggle('invisible_item');
+        invisible_slider.classList.toggle('invisible_item');
+        document.documentElement.classList.remove('no_scroll');
+    })
 
-modal_btn.addEventListener('click', function() {
-    apply_modal.classList.toggle('invisible_item');
-    overlay.classList.toggle('invisible_item');
-    document.documentElement.classList.remove('no_scroll');
-})
+    modal_trigger.addEventListener('click', function () {
+        apply_modal.classList.toggle('invisible_item');
+        overlay.classList.toggle('invisible_item');
+        document.documentElement.classList.add('no_scroll');
+    })
 
-modal_thanx_btn.addEventListener('click', function() {
-    apply_modal.classList.toggle('invisible_item');
-    overlay.classList.toggle('invisible_item');
-    document.documentElement.classList.remove('no_scroll');
-})
+    modal_btn.addEventListener('click', function () {
+        apply_modal.classList.toggle('invisible_item');
+        overlay.classList.toggle('invisible_item');
+        document.documentElement.classList.remove('no_scroll');
+    })
 
-open_video.addEventListener('click', function() {
-    hidden_video.classList.toggle('invisible_item');
-    overlay.classList.toggle('invisible_item');
-    document.documentElement.classList.add('no_scroll');
-})
+    modal_thanx_btn.addEventListener('click', function () {
+        apply_modal.classList.toggle('invisible_item');
+        overlay.classList.toggle('invisible_item');
+        document.documentElement.classList.remove('no_scroll');
+    })
 
-close_btn_video.addEventListener('click', function() {
-    hidden_video.classList.toggle('invisible_item');
-    overlay.classList.toggle('invisible_item');
-    document.documentElement.classList.remove('no_scroll');
-})
+    open_video.addEventListener('click', function () {
+        hidden_video.classList.toggle('invisible_item');
+        overlay.classList.toggle('invisible_item');
+        document.documentElement.classList.add('no_scroll');
+    })
 
-
+    close_btn_video.addEventListener('click', function () {
+        hidden_video.classList.toggle('invisible_item');
+        overlay.classList.toggle('invisible_item');
+        document.documentElement.classList.remove('no_scroll');
+    })
