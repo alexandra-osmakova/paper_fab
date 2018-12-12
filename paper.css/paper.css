@@ -1833,6 +1833,16 @@ footer {
     padding-bottom: 2.625rem;
 }
 
+.all_news .news_content__item_piece:hover .small_news_title{
+    color: #90bb1d;
+}
+
+.all_news .news_content__item_piece:hover .news_text{
+    color: #90bb1d;
+}
+
+
+
 .all_news_img {
     width: 100%;
     background-image: url(../img/all_news_img.jpg);
@@ -1850,6 +1860,18 @@ footer {
     font-family: "P TSans";
     font-weight: bold;
     margin-bottom: 0.9375rem;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.news_text {
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .more_news {
@@ -1870,6 +1892,13 @@ footer {
 
 .more_news_icon {
     fill: #ffffff;
+}
+
+.link_to_news {
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
 }
 
 
