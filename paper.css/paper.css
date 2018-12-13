@@ -137,6 +137,7 @@ header_item__button {
 }
 
 .header_item__button {
+    background: transparent;
     margin-left: 1.5rem;
     font-size: 0.9375rem;
     color: #000000;
@@ -321,7 +322,7 @@ header_item__button {
 }
 
 .progress_animation_item {
-    stroke-dasharray: 496px 620px;
+    stroke-dasharray: 31rem 38.75rem;
 }
 
 @keyframes progress_second {
@@ -373,17 +374,17 @@ header_item__button {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     animation: radial-pulse 1s infinite;
-  }
-  
-  @keyframes radial-pulse {
+}
+
+@keyframes radial-pulse {
     0% {
-      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
     }
-  
+
     100% {
-      box-shadow: 0 0 0 2.5rem rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 2.5rem rgba(255, 255, 255, 0);
     }
-  }
+}
 
 .advantages {
     width: 100%;
@@ -399,7 +400,9 @@ header_item__button {
     position: relative;
 }
 
-.diagram_title, .digram_text, .diagram_number {
+.diagram_title,
+.digram_text,
+.diagram_number {
     font-size: 1.125rem;
     color: #000000;
     font-family: "P TSans";
@@ -427,7 +430,7 @@ header_item__button {
     top: 45%;
     right: 8rem;
     text-align: left;
-} 
+}
 
 .diagram_number {
     position: static;
@@ -477,15 +480,15 @@ header_item__button {
 .circle circle {
     fill: rgba(0, 0, 0, 0);
     stroke: #aed348;
-    stroke-width: 110;
-    stroke-dasharray: 770px 770px;
+    stroke-width: 6.875rem;
+    stroke-dasharray: 48.125rem 48.125rem;
 }
 
 
 .circle circle:nth-child(2n) {
     fill: rgba(0, 0, 0, 0);
     stroke: #90bb1d;
-    stroke-width: 110;
+    stroke-width: 6.875rem;
 }
 
 .market_progress_value {
@@ -496,7 +499,7 @@ header_item__button {
 
 @keyframes market_progress {
     from {
-        stroke-dashoffset: 350;
+        stroke-dashoffset: 21.875rem;
     }
 
     to {
@@ -514,16 +517,12 @@ header_item__button {
 @keyframes market_in_num_progress_right {
     from {
         opacity: 0;
-        transform:matrix(1.00,0.00,0.00,1.00,-50,0);
-        -ms-transform:matrix(1.00,0.00,0.00,1.00,-50,0);
-        -webkit-transform:matrix(1.00,0.00,0.00,1.00,-50,0);
+        transform: translateX(-10rem)
     }
 
     to {
         opacity: 1;
-        transform:matrix(1.00,0.00,0.00,1.00,0,0);
-        -ms-transform:matrix(1.00,0.00,0.00,1.00,0,0);
-        -webkit-transform:matrix(1.00,0.00,0.00,1.00,0,0);
+        transform: translateX(0rem)
     }
 }
 
@@ -537,16 +536,12 @@ header_item__button {
 @keyframes market_in_num_progress_left {
     from {
         opacity: 0;
-        transform:matrix(1.00,0.00,0.00,1.00,50,0);
-        -ms-transform:matrix(1.00,0.00,0.00,1.00,50,0);
-        -webkit-transform:matrix(1.00,0.00,0.00,1.00,50,0);
+        transform: translateX(10rem)
     }
 
     to {
         opacity: 1;
-        transform:matrix(1.00,0.00,0.00,1.00,0,0);
-        -ms-transform:matrix(1.00,0.00,0.00,1.00,0,0);
-        -webkit-transform:matrix(1.00,0.00,0.00,1.00,0,0);
+        transform: translateX(0rem)
     }
 }
 
@@ -1398,7 +1393,7 @@ footer {
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-} 
+}
 
 .no_scroll {
     height: 100%;
@@ -1414,7 +1409,7 @@ footer {
     right: 0;
     width: 70%;
     margin: 0 auto;
-} 
+}
 
 
 .hidden_video {
@@ -1442,7 +1437,8 @@ footer {
     height: 25rem;
 }
 
-.hidden_slider .tns-controls, .hidden_slider .tns-nav {
+.hidden_slider .tns-controls,
+.hidden_slider .tns-nav {
     bottom: -3rem;
 }
 
@@ -1604,12 +1600,12 @@ footer {
     font-weight: bold;
     text-align: center;
 
-    background: -moz-linear-gradient(45deg, rgba(126,172,1,1) 0%, rgba(181,213,97,1) 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(126,172,1,1)), color-stop(100%, rgba(181,213,97,1)));
-    background: -webkit-linear-gradient(45deg, rgba(126,172,1,1) 0%, rgba(181,213,97,1) 100%);
-    background: -o-linear-gradient(45deg, rgba(126,172,1,1) 0%, rgba(181,213,97,1) 100%);
-    background: -ms-linear-gradient(45deg, rgba(126,172,1,1) 0%, rgba(181,213,97,1) 100%);
-    background: linear-gradient(45deg, rgba(126,172,1,1) 0%, rgba(181,213,97,1) 100%);
+    background: -moz-linear-gradient(45deg, rgba(126, 172, 1, 1) 0%, rgba(181, 213, 97, 1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(126, 172, 1, 1)), color-stop(100%, rgba(181, 213, 97, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(126, 172, 1, 1) 0%, rgba(181, 213, 97, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(126, 172, 1, 1) 0%, rgba(181, 213, 97, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(126, 172, 1, 1) 0%, rgba(181, 213, 97, 1) 100%);
+    background: linear-gradient(45deg, rgba(126, 172, 1, 1) 0%, rgba(181, 213, 97, 1) 100%);
 }
 
 .modal_agreement {
@@ -1629,12 +1625,16 @@ footer {
     cursor: pointer;
 }
 
-.modal_btn, .modal_thanx_btn {
+.modal_btn,
+.modal_thanx_btn {
     right: 1rem;
     top: 1rem;
 }
 
-.modal_btn:before, .modal_btn:after, .modal_thanx_btn:before, .modal_thanx_btn:after {
+.modal_btn:before,
+.modal_btn:after,
+.modal_thanx_btn:before,
+.modal_thanx_btn:after {
     position: absolute;
     left: 0.9rem;
     content: ' ';
@@ -1691,19 +1691,20 @@ footer {
     display: flex;
 }
 
-.subscribe_title{
+.subscribe_title {
     font-size: 1.5rem;
     color: #000000;
     font-family: "P TSans";
     font-weight: bold;
 }
 
-.subscribe .modal_window_input, .subscribe .modal_window_submit_btn {
+.subscribe .modal_window_input,
+.subscribe .modal_window_submit_btn {
     width: 13.75rem;
     margin: 1.1875rem 0 0.5625rem;
 }
 
-.subscribe .modal_window_submit_btn  {
+.subscribe .modal_window_submit_btn {
     margin: 0;
 }
 
@@ -1805,7 +1806,7 @@ footer {
 .video_date_title {
     width: 100%;
     display: block;
-    font-size:  1.5rem;
+    font-size: 1.5rem;
     line-height: 2.25rem;
     color: #ffffff;
     font-family: "P TSans";
@@ -1833,11 +1834,11 @@ footer {
     padding-bottom: 2.625rem;
 }
 
-.all_news .news_content__item_piece:hover .small_news_title{
+.all_news .news_content__item_piece:hover .small_news_title {
     color: #90bb1d;
 }
 
-.all_news .news_content__item_piece:hover .news_text{
+.all_news .news_content__item_piece:hover .news_text {
     color: #90bb1d;
 }
 
@@ -1895,10 +1896,133 @@ footer {
 }
 
 .link_to_news {
-display: flex;
-align-items: center;
-justify-content: center;
-text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 
+@media screen and (min-width: 2001px) and (max-width: 2560px) {
+    html,
+    body {
+        font-size: 34px;
+    }
+
+    @keyframes market_in_num_progress_left {
+        from {
+            opacity: 0;
+            transform: translateX(10rem)
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(2rem)
+        }
+    }
+
+    @keyframes market_in_num_progress_right {
+        from {
+            opacity: 0;
+            transform: translateX(-10rem)
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-2rem)
+        }
+    }
+}
+
+@media screen and (min-width: 1801px) and (max-width: 2000px) {
+    html,
+    body {
+        font-size: 25.6px;
+    }
+
+    @keyframes market_in_num_progress_left {
+        from {
+            opacity: 0;
+            transform: translateX(10rem)
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(3rem)
+        }
+    }
+
+    @keyframes market_in_num_progress_right {
+        from {
+            opacity: 0;
+            transform: translateX(-10rem)
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-3rem)
+        }
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1800px) {
+    html,
+    body {
+        font-size: 22.5px;
+    }
+
+    @keyframes market_in_num_progress_left {
+        from {
+            opacity: 0;
+            transform: translateX(10rem)
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(10rem)
+        }
+    }
+
+    @keyframes market_in_num_progress_right {
+        from {
+            opacity: 0;
+            transform: translateX(-10rem)
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-10rem)
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1440px) {
+    html,
+    body {
+        font-size: 18px;
+    }
+
+    @keyframes market_in_num_progress_left {
+        from {
+            opacity: 0;
+            transform: translateX(10rem)
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(3rem)
+        }
+    }
+
+    @keyframes market_in_num_progress_right {
+        from {
+            opacity: 0;
+            transform: translateX(-10rem)
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-3rem)
+        }
+    }
+}
