@@ -1658,13 +1658,22 @@ footer {
     text-decoration: none;
 }
 
-.navigation a:nth-of-type(1) {
+.navigation a:nth-of-type(1), .news_page_nav a:nth-of-type(2){
     color: #94ba2b;
     text-decoration: underline;
     font-weight: bold;
 }
 
 .navigation a:nth-of-type(2)::before {
+    content: ">";
+    color: #94ba2b;
+    text-decoration: unset;
+    font-weight: bold;
+    margin-right: 1rem;
+    margin-left: 0.1rem;
+}
+
+.navigation a:nth-of-type(3)::before {
     content: ">";
     color: #94ba2b;
     text-decoration: unset;
@@ -1901,6 +1910,114 @@ footer {
     justify-content: center;
     text-decoration: none;
 }
+
+.baner {
+    width: 100%;
+    height: 25rem;
+    background-image: url(../img/main_news.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.baner_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #15171b;
+    opacity: 0.6;
+}
+
+.news_page_img {
+    width: 100%;
+    height: 26.1875rem;
+    background-image: url(../img/conditions_ing.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1.625rem 0 1.8125rem 0;
+}
+
+.news_page_text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #000000;
+    font-family: "P TSans";
+}
+
+.news_page_text:nth-of-type(2),
+.news_page_text:nth-of-type(3),
+.news_page_text:nth-of-type(4),
+.news_page_text:nth-of-type(5) {
+    margin-bottom: 1.8125rem;
+}
+
+.publishing_date {
+    font-size: 1rem;
+    color: #9c9c9c;
+    font-family: "P TSans";
+    display: block;
+    width: 100%;
+    padding: 1rem 0 1.6875rem;
+    border-bottom: 0.0625rem solid #ececec;
+}
+
+.button_block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.news_arrow_btn {
+    display: flex;
+    background: unset;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.news_arrow_btn div {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    border: 0.0625rem solid #7eac01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news_arrow_btn svg {
+    width: 45%;
+}
+
+.prev_page {
+    transform: rotate(90deg);
+}
+
+.next_page {
+    transform: rotate(-90deg);
+}
+
+.prev_page_text {
+    display: block;
+    margin-left: 1rem;
+    font-size: 1rem;
+    color: #6e9505;
+    font-family: "P TSans";
+}
+
+.next_page_text {
+    display: block;
+    margin-right: 1rem;
+    font-size: 1rem;
+    color: #6e9505;
+    font-family: "P TSans";
+}
+
 
 
 @media screen and (min-width: 2001px) and (max-width: 2560px) {
