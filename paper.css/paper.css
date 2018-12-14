@@ -1914,6 +1914,14 @@ footer {
     position: fixed;
 }
 
+.fixed_content_news_page {
+    top: 4rem;
+}
+
+.fixed_content_all_news {
+    top: 17rem;
+}
+
 .news_block_item_content {
     width: 100%;
     padding-top: 1.75rem;

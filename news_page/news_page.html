@@ -110,7 +110,7 @@
             </div>
         </div>
         <div class="news_block_item">
-            <div class="subscribe_content">
+            <div class="subscribe_content fixed_content_news_page invisible_item">
                 <h3 class='subscribe_title'>Подписаться <br> на рассылку</h3>
                 <section class="subscribe">
                     <form id="prompt-form" method="post" action="thanks_window.php">
@@ -212,14 +212,27 @@
         window.addEventListener("scroll", hide_el);
 
         function hide_el() {
+            appear_el()
             var offset = window.scrollY;
             var windowHeight = document.documentElement.scrollHeight;
             var item_to_scroll = document.getElementsByClassName('subscribe_content')[0];
 
-            if (offset > (windowHeight * 0.50)) {
+            if (offset > (windowHeight * 0.65) || offset < (windowHeight * 0.2)) {
                 item_to_scroll.classList.add('invisible_item');
             } else {
                 item_to_scroll.classList.remove('invisible_item');
+            }
+        }
+
+        function appear_el() {
+            var offset = window.scrollY;
+            var windowHeight = document.documentElement.scrollHeight;
+            var item_to_scroll = document.getElementsByClassName('subscribe_content')[0];
+
+            if (offset < (windowHeight * 0.2)) {
+                item_to_scroll.classList.remove('invisible_item');
+            } else {
+                item_to_scroll.classList.add('invisible_item');
             }
         }
     </script>
