@@ -2087,7 +2087,6 @@ footer {
 
 .more_news {
     margin: 3.8125rem auto;
-    display: block;
     width: 12.5rem;
     display: flex;
     align-items: center;
@@ -2177,6 +2176,7 @@ footer {
     width: 100%;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .news_arrow_btn {
@@ -2232,7 +2232,7 @@ footer {
 
     html,
     body {
-        font-size: 34px;
+        font-size: 28px;
     }
 
     @keyframes market_in_num_progress_left {
@@ -2243,7 +2243,7 @@ footer {
 
         to {
             opacity: 1;
-            transform: translateX(2rem)
+            transform: translateX(-3rem)
         }
     }
 
@@ -2255,7 +2255,7 @@ footer {
 
         to {
             opacity: 1;
-            transform: translateX(-2rem)
+            transform: translateX(3rem)
         }
     }
 }
@@ -2297,6 +2297,14 @@ footer {
     html,
     body {
         font-size: 22.5px;
+    }
+
+    header, .navigation {
+        padding: 1.625rem 4.9375rem;
+    }
+
+    .news_block {
+        padding-left: 4.9375rem;
     }
 
     @keyframes market_in_num_progress_left {
@@ -2363,8 +2371,44 @@ footer {
         font-size: 12px
     }
 
-    .condition_title, .conditions_content_item ol {
+    .more_news {
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        left: 25%;    
+    }
+
+    .next_page_text, 
+    .prev_page_text {
+        display: block;
+        width: 60%;
+    }
+
+    .button_block {
+        height: 10rem;
+        align-items: flex-start;
+    }
+
+    .news_arrow_btn {
+        padding-top: 1rem;
+    }
+
+    .navigation, .news_block_item:nth-of-type(2) {
+        display: none;
+    }
+
+    .condition_title, .conditions_content_item ol, 
+    .news_block_item:nth-of-type(1),
+    .all_news .news_content__item_piece {
         width: 100%;
+    }
+
+    .all_news_img {
+        height: 18rem;
+    }
+
+    .news_block_item_content {
+        padding-right: 0;
     }
 
     .news_all_content {
@@ -2383,7 +2427,7 @@ footer {
         display: none;
     }
 
-    header {
+    header, .news_block  {
         padding: 1.5rem 1.66rem;
     }
 
@@ -2728,6 +2772,11 @@ footer {
     .close_btn {
         right: 1rem;
         top: -4rem;
+    }
+
+    .modal_btn, .modal_thanx_btn {
+        right: 1rem!important;
+        top: 1rem!important;
     }
 
     .hidden_slider .tns-controls {
@@ -2742,8 +2791,42 @@ footer {
         font-size: 13px
     }
 
-    .condition_title, .conditions_content_item ol {
+    .more_news {
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        left: 28%;    
+    }
+
+    .button_block {
+        height: 10rem;
+        align-items: flex-start;
+    }
+
+    .news_arrow_btn {
+        padding-top: 1rem;
+    }
+
+    header, .news_block {
+        padding: 1.5rem 1.66rem;
+    }
+
+    .navigation, .news_block_item:nth-of-type(2) {
+        display: none;
+    }
+
+    .condition_title, .conditions_content_item ol, 
+    .news_block_item:nth-of-type(1),
+    .all_news .news_content__item_piece {
         width: 100%;
+    }
+
+    .all_news_img {
+        height: 18rem;
+    }
+
+    .news_block_item_content {
+        padding-right: 0;
     }
 
     .product_img {
@@ -2764,10 +2847,6 @@ footer {
 
     .header_item {
         display: none;
-    }
-
-    header {
-        padding: 1.5rem 1.66rem;
     }
 
     .main_section {
@@ -3113,6 +3192,11 @@ footer {
         top: -4rem;
     }
 
+    .modal_btn, .modal_thanx_btn {
+        right: 1rem!important;
+        top: 1rem!important;
+    }
+
     .hidden_slider .tns-controls {
         display: none;
     }
@@ -3123,6 +3207,30 @@ footer {
     html,
     body {
         font-size: 14px
+    }
+
+    
+
+    header, .news_block {
+        padding: 1.5rem 1.66rem;
+    }
+
+    .navigation, .news_block_item:nth-of-type(2) {
+        display: none;
+    }
+
+    .condition_title, .conditions_content_item ol, 
+    .news_block_item:nth-of-type(1),
+    .all_news .news_content__item_piece {
+        width: 100%;
+    }
+
+    .all_news_img {
+        height: 18rem;
+    }
+
+    .news_block_item_content {
+        padding-right: 0;
     }
 
     .condition_title, .conditions_content_item ol {
@@ -3147,10 +3255,6 @@ footer {
 
     .header_item {
         display: none;
-    }
-
-    header {
-        padding: 1.5rem 1.66rem;
     }
 
     .main_section {
@@ -3496,6 +3600,11 @@ footer {
         top: -4rem;
     }
 
+    .modal_btn, .modal_thanx_btn {
+        right: 1rem!important;
+        top: 1rem!important;
+    }
+
     .hidden_slider .tns-controls {
         display: none;
     }
@@ -3506,6 +3615,31 @@ footer {
     html,
     body {
         font-size: 14px
+    }
+
+    header, .news_block, .navigation {
+        padding: 1.5rem 1.66rem;
+    }
+
+    .news_block_item:nth-of-type(2) {
+        display: none;
+    }
+
+    .condition_title, .conditions_content_item ol, 
+    .news_block_item:nth-of-type(1){
+        width: 100%;
+    }
+
+    .all_news .news_content__item_piece {
+        width: 48%;
+    }
+
+    .all_news_img {
+        height: 18rem;
+    }
+
+    .news_block_item_content {
+        padding-right: 0;
     }
 
     .condition_title, .conditions_content_item ol {
@@ -3871,8 +4005,8 @@ footer {
     }
 
     .modal_btn, .modal_thanx_btn {
-        right: 1rem;
-        top: 1rem;
+        right: 1rem!important;
+        top: 1rem!important;
     }
 
     .hidden_slider .tns-controls {
@@ -3887,8 +4021,29 @@ footer {
         font-size: 15px
     }
 
-    header {
+    header, .news_block, .navigation {
         padding: 1.5rem 1.66rem;
+    }
+
+    .news_block_item:nth-of-type(2) {
+        display: none;
+    }
+
+    .condition_title, .conditions_content_item ol, 
+    .news_block_item:nth-of-type(1){
+        width: 100%;
+    }
+
+    .news_block_item_content {
+        padding-right: 0;
+    }
+
+    .all_news .news_content__item_piece {
+        width: 48%;
+    }
+
+    .all_news_img {
+        height: 18rem;
     }
 
     .news_all_content {
@@ -4246,8 +4401,8 @@ footer {
     }
 
     .modal_btn, .modal_thanx_btn {
-        right: 1rem;
-        top: 1rem;
+        right: 1rem!important;
+        top: 1rem!important;
     }
 
     .hidden_slider .tns-controls {
@@ -4293,8 +4448,12 @@ footer {
         font-size: 15px
     }
 
-    header {
+    header, .navigation, .news_block {
         padding: 1.625rem 4rem;
+    }
+
+    .news_block {
+        padding: 0 0 0 4rem;
     }
 
     .main_section {
