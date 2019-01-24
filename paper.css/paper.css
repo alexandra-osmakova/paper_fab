@@ -164,9 +164,14 @@ header nav {
     font-size: 2rem;
 }
 
-.hidden_menu_item .header_item__telephone_wrap div {
+.hidden_menu_item .header_phone_icon {
     width: 2.75rem;
     height: 2.75rem;
+}
+
+.hidden_menu_item .ask_for_call {
+    width: 50%;
+    padding: 0.5rem 0;
 }
 
 .hidden_menu_item:nth-of-type(1) {
@@ -257,7 +262,7 @@ header_item__button {
     align-items: center;
 }
 
-.header_item__telephone_wrap div {
+.header_phone_icon {
     width: 1.75rem;
     height: 1.75rem;
     border-radius: 50%;
@@ -266,6 +271,20 @@ header_item__button {
     align-items: center;
     justify-content: center;
     margin-right: 0.8rem;
+}
+
+.phone_to_call {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.ask_for_call {
+    border-bottom: 0.125rem dashed #7eac01;
+    color: #7eac01;
+    width: 85%;
+    cursor: pointer;
+
 }
 
 .header_item__telephone_wrap svg {
@@ -763,6 +782,31 @@ header_item__button {
     padding: 7rem 8rem;
 }
 
+.slider_content {
+    width: 100%;
+    height: 18rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+}
+
+.first_product_slide {
+    background-image: url(../img/carton1.png);
+}
+
+.second_product_slide{
+    background-image: url(../img/carton2.png);
+}
+
+.third_product_slide {
+    background-image: url(../img/carton3.png);
+}
+
+.fourth_product_slide {
+    background-image: url(../img/carton4.png);
+}
+
 .product_content {
     display: flex;
     padding-top: 3.75rem;
@@ -817,7 +861,6 @@ header_item__button {
 
 .my-slider div {
     padding: 1rem;
-    padding-left: 1.875rem;
 }
 
 .tns-outer {
@@ -1088,6 +1131,10 @@ header_item__button {
     justify-content: space-between;
 }
 
+.comparison_content_item:nth-of-type(1) {
+    display: none;
+}
+
 .paper_seller:nth-of-type(3) {
     background-color: #90bb1d;
 }
@@ -1186,11 +1233,22 @@ header_item__button {
     margin-bottom: 1.25rem;
 }
 
-.paper_seller_advantage_text {
+.paper_seller_advantage_text, .paper_seller_advantage li {
     font-size: 0.875rem;
     line-height: 1.125rem;
     color: #000000;
     font-family: "P TSans";
+    padding-bottom: 0.5rem;
+}
+
+
+.paper_seller_advantage li {
+    padding-bottom: 0.5rem;
+    list-style-type: disc;
+}
+
+.paper_seller_advantage ul {
+    padding-left: 1rem;
 }
 
 .paper_seller_advantage:hover {
@@ -1587,9 +1645,9 @@ footer {
 .hidden_slider {
     z-index: 1001;
     position: fixed;
-    top: 9.75rem;
+    top: 15%;
     left: 0;
-    bottom: 0;
+    bottom: 15%;
     right: 0;
     width: 70%;
     margin: 0 auto;
@@ -1599,9 +1657,9 @@ footer {
 .hidden_video {
     z-index: 1001;
     position: fixed;
-    top: 9.75rem;
+    top: 15%;
     left: 0;
-    bottom: 0;
+    bottom: 15%;
     right: 0;
     width: 70%;
     margin: 0 auto;
