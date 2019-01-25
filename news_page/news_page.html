@@ -305,8 +305,12 @@
 
         function hide_el() {
             appear_el()
-            var offset = window.scrollY;
-            var windowHeight = document.documentElement.scrollHeight;
+            var offset = window.pageYOffset || document.documentElement.scrollTop;;
+            var windowHeight = Math.max(
+                document.body.scrollHeight, document.documentElement.scrollHeight,
+                document.body.offsetHeight, document.documentElement.offsetHeight,
+                document.body.clientHeight, document.documentElement.clientHeight
+            );
             var item_to_scroll = document.getElementsByClassName('subscribe_content')[0];
 
             if (offset > (windowHeight * 0.65) || offset < (windowHeight * 0.2)) {
@@ -317,8 +321,12 @@
         }
 
         function appear_el() {
-            var offset = window.scrollY;
-            var windowHeight = document.documentElement.scrollHeight;
+            var offset = window.pageYOffset || document.documentElement.scrollTop;
+            var windowHeight = Math.max(
+                document.body.scrollHeight, document.documentElement.scrollHeight,
+                document.body.offsetHeight, document.documentElement.offsetHeight,
+                document.body.clientHeight, document.documentElement.clientHeight
+            );
             var item_to_scroll = document.getElementsByClassName('subscribe_content')[0];
 
             if (offset < (windowHeight * 0.2)) {
