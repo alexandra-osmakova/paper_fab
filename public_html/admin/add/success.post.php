@@ -1,5 +1,5 @@
 <?php
-header("Refresh: 5; url=/admin", true, 301);
+header("Refresh: 2; url=/admin", true, 301);
 
 session_start();
 
@@ -8,7 +8,18 @@ require __DIR__ . "/../../../app/database/db.php";
 
 use App\Util\Encoder;
 
-if(isset($_POST["title"])) {
+if(isset($_POST["id"])) {
+    $post = R::load("posts", $_POST["id"]);
+
+    move_uploaded_file($_FILES["file"]["tmp_name"], "../../img/".$_FILES["file"]["name"]);
+
+    $post->date = date("Y-m-d H-i-s");
+    $post->title = $_POST["title"];
+    $post->text = $_POST["text"];
+    $post->bg = "/img/" . $_FILES["file"]["name"];
+
+    R::store($post);
+}else if(isset($_POST["title"])) {
     $post = R::dispense("posts");
 
     move_uploaded_file($_FILES["file"]["tmp_name"], "../../img/".$_FILES["file"]["name"]);

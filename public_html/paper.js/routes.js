@@ -55,3 +55,7 @@ function editPost(id) {
 function viewPost(id) {
     location.href = "/post/" + id;
 }
+
+function deletePost(id) {
+    location.href = "/admin/delete/post/" + id;
+}

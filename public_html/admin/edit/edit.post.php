@@ -136,13 +136,14 @@ if (isset($_SESSION["user"])) {
 	c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
 </svg>
                     </button>
-                    <form class="post" action="/admin/add/success/post/" enctype="multipart/form-data">
+                    <form method="post" class="post" action="/admin/add/success/post" enctype="multipart/form-data">
                         <input type="text" id="title" name="title" placeholder="Заголовок" value="<?=$post->title?>">
                         <textarea id="text" name="text" placeholder="Текст"><?=$post->text?></textarea>
                         <input type="file" id="file" name="file" hidden>
+                        <input type="hidden" name="id" value="<?=$post->id?>">
                     </form>
                     <div class="controls">
-                        <button class="btn save">
+                        <button id="submit" class="btn save">
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  width="488.446px" height="488.446px" viewBox="0 0 488.446 488.446"
@@ -189,6 +190,10 @@ if (isset($_SESSION["user"])) {
                     $("#fiz").css("display", "none");
                     $("#yur").css("display", "block");
                 }
+            });
+
+            $("#submit").on("click", function () {
+                $("form").submit();
             });
         </script>
         </body>
