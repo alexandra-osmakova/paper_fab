@@ -17,7 +17,7 @@
     <header>
         <nav>
             <div class="menu_bar">
-                <div class="header_logo"></div>
+                <a class="header_logo" href="./index.html"></a>
                 <div class="menu_buttons">
                     <div class="enter">
                         <svg enable-background="new 0 0 67 67" version="1.1" viewBox="0 0 67 67" xml:space="preserve">
@@ -60,7 +60,7 @@
             </div>
         </nav>
         <div class="header_item">
-            <div class="header_logo"></div>
+            <a class="header_logo" href="./index.html"></a>
             <span class="header_logo_text">Производство гофрокартона<br> и гофротары</span>
         </div>
         <div class="header_item">
@@ -84,12 +84,28 @@
         </div>
     </header>
     <section class="enter_content">
-        <form class="login_container">
+        <form class="login_container enter_content_container">
             <h2>Вход в личный кабинет</h2>
             <input type="text" class="modal_window_input" placeholder="Ведите ваш E-mail">
             <input type="text" class="modal_window_input" placeholder="Ведите ваш пароль">
             <button type="submit" class="modal_window_submit_btn">Вход</button>
-            <span class="remind_pass">Забыли пароль?</span>
+            <span class="remind_pass" id="remind_pass_btn">Забыли пароль?</span>
+        </form>
+        <form action="" class="remind_pass_container enter_content_container invisible_item">
+            <h2>Забыли пароль?</h2>
+            <p class="remind_pass">Для восстановления пароля введите e-mail,<br> который Вы указывали при регистрации.</p>
+            <input type="text" class="modal_window_input" placeholder="Ведите ваш E-mail">
+            <button type="submit" class="modal_window_submit_btn">Восстановить пароль</button>
+        </form>
+        <form action="" class="remind_message_container enter_content_container invisible_item">
+            <svg enable-background="new 0 0 52 52" version="1.1" viewBox="0 0 52 52" xml:space="preserve">
+                <path fill="#7eac01" d="M26,0C11.7,0,0,11.7,0,26s11.7,26,26,26s26-11.7,26-26S40.3,0,26,0z M26,50C12.8,50,2,39.2,2,26S12.8,2,26,2s24,10.8,24,24   S39.2,50,26,50z" />
+                <path fill="#7eac01" d="m22.6 38h-0.3c-0.3-0.1-0.6-0.4-0.6-0.7l-0.4-7-10.2-3.1c-0.6-0.2-1-0.7-1.1-1.4 0-0.6 0.3-1.2 0.9-1.5l26.3-10.7c0.1 0 0.2-0.1 0.3-0.1 0.2 0 0.4 0.1 0.5 0.2 0.2 0.2 0.4 0.5 0.3 0.8l-4.3 21.8c-0.2 0.7-0.8 1.2-1.5 1.2-0.3 0-0.6-0.1-0.9-0.3l-5-3.5-3.5 3.9c0 0.3-0.3 0.4-0.5 0.4zm10-2.3l3.6-18.5-12.7 12.3 9.1 6.2zm-9.3-0.6l2-2.3-2.2-1.5 0.2 3.8zm-1.4-6.5l12.4-12-22.1 9 9.7 3z" />
+            </svg>
+            <h2>Проверьте почтовый ящик</h2>
+            <p class="remind_pass">На указанный e-mail отправлено письмо <br>
+                с инструкцией о восстановлении пароля.</p>
+            <button type="submit" class="modal_window_submit_btn">Вход</button>
         </form>
     </section>
     <footer>
@@ -117,6 +133,13 @@
 
         menu__icon.addEventListener('click', function () {
             header_burger_menu.classList.toggle('menu_state_open');
+        })
+
+        var remind_pass_btn = document.getElementById('remind_pass_btn');
+        var enter_content_container = document.getElementsByClassName('enter_content_container');
+        remind_pass_btn.addEventListener('click', function() {
+            enter_content_container[0].classList.add('invisible_item');
+            enter_content_container[1].classList.remove('invisible_item');
         })
     </script>
 </body>
