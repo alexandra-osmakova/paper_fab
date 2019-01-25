@@ -2,22 +2,20 @@
 
 session_start();
 
-require __DIR__ . "/../vendor/autoload.php";
+require __DIR__ . "/util/Encoder.php";
+require __DIR__ . "/database/db.php";
 
-use App\Database\UserRepo;
 use App\Util\Encoder;
 
 if (isset($_POST["log"])) {
-    $repo = new UserRepo();
-
     $login = $_POST["login"];
     $pwd = $_POST["pwd"];
 
-    $user = $repo->getByLogin($login);
+    $user = R::findOne("users", "WHERE login=:login", ["login" => $login]);
 
     if ($user !== null) {
         if (Encoder::decode($user->password) === $pwd) {
-            if ($user->login === "administrator" && $user->role === "admin") {
+            if ($user->login === "administrator") {
                 $location = "/admin";
             } else {
                 $location = "/user";

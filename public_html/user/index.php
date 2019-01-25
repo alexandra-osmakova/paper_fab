@@ -32,13 +32,18 @@ if (isset($_SESSION["user"])) {
             </div>
 
             <div class="links">
-                <a href="">
+                <a href="/user">
                     <div class="link active">
                         <div class="logo">
-                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;"
+                                 xml:space="preserve">
 <style type="text/css">
-    .st0{stroke:#FFFFFF;stroke-miterlimit:10;}
+    .st0 {
+        stroke: #FFFFFF;
+        stroke-miterlimit: 10;
+    }
 </style>
                                 <path class="st0" d="M321.2,451.2H130c-71.5,0-130-58.5-130-130V130C0,58.5,58.5,0,130,0h191.2c71.5,0,130,58.5,130,130v191.2
 	C451.2,392.7,392.7,451.2,321.2,451.2z"/>
@@ -54,54 +59,13 @@ if (isset($_SESSION["user"])) {
                         <h4>Главная</h4>
                     </div>
                 </a>
-                <a href="">
+                <a href="/user/docs">
                     <div class="link">
                         <div class="logo">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 viewBox="0 0 57.924 57.924" style="enable-background:new 0 0 57.924 57.924;" xml:space="preserve">
-<g>
-    <path d="M31,26.924h26.924C56.94,12.503,45.421,0.983,31,0V26.924z"/>
-    <path d="M50.309,48.577c4.343-4.71,7.151-10.858,7.614-17.653H32.656L50.309,48.577z"/>
-    <path d="M27,30.924V0C11.918,1.028,0,13.58,0,28.924c0,16.016,12.984,29,29,29
-		c6.99,0,13.396-2.479,18.401-6.599L27,30.924z"/>
-</g>
-</svg>
-                        </div>
-                        <h4>Мои дивиденты</h4>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="link">
-                        <div class="logo">
-                            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<path d="M76,270c3.8,0,7.7-1.5,10.6-4.4L196,156.2l49.4,49.4c5.9,5.9,15.4,5.9,21.2,0L421,51.2V75c0,8.3,6.7,15,15,15s15-6.7,15-15
-	V15c0-0.5,0-1-0.1-1.5c0-0.2-0.1-0.5-0.1-0.7s-0.1-0.5-0.1-0.7c-0.1-0.3-0.1-0.6-0.2-0.9c-0.1-0.2-0.1-0.4-0.1-0.6
-	c-0.1-0.3-0.2-0.6-0.3-0.9c-0.1-0.2-0.1-0.3-0.2-0.5c-0.1-0.3-0.3-0.6-0.4-0.9c-0.1-0.1-0.1-0.3-0.2-0.4c-0.2-0.3-0.4-0.6-0.6-0.9
-	c-0.1-0.1-0.1-0.2-0.2-0.3c-0.3-0.4-0.6-0.8-0.9-1.2l0,0c-0.6-0.8-1.4-1.5-2.2-2.2l0,0c-0.4-0.3-0.8-0.6-1.2-0.9
-	c-0.1-0.1-0.2-0.1-0.3-0.2c-0.3-0.2-0.6-0.4-0.9-0.6c-0.1-0.1-0.3-0.1-0.4-0.2c-0.3-0.1-0.6-0.3-0.9-0.4c-0.2-0.1-0.3-0.1-0.5-0.2
-	c-0.3-0.1-0.6-0.2-0.9-0.3c-0.2-0.1-0.4-0.1-0.6-0.1c-0.3-0.1-0.6-0.2-0.9-0.2c-0.2,0-0.5-0.1-0.7-0.1S437.6,0,437.4,0
-	c-0.4,0-0.9,0-1.4,0h-60c-8.3,0-15,6.7-15,15s6.7,15,15,15h23.8L256,173.8l-49.4-49.4c-5.9-5.9-15.4-5.9-21.2,0l-120,120
-	c-5.9,5.9-5.9,15.4,0,21.2C68.3,268.5,72.2,270,76,270z"/>
-                                <path d="M0,497c0,8.3,6.7,15,15,15h120c8.3,0,15-6.7,15-15v-21H0V497z"/>
-                                <path d="M135,410H15c-8.3,0-15,6.7-15,15v21h150v-21C150,416.7,143.3,410,135,410z"/>
-                                <path d="M181,497c0,8.3,6.7,15,15,15h120c8.3,0,15-6.7,15-15v-21H181V497z"/>
-                                <path d="M497,212H377c-8.3,0-15,6.7-15,15v21h150v-21C512,218.7,505.3,212,497,212z"/>
-                                <path d="M362,248h150v228H362V248z"/>
-                                <path d="M362,497c0,8.3,6.7,15,15,15h120c8.3,0,15-6.7,15-15v-21H362V497z"/>
-                                <path d="M181,375.7h150V476H181V375.7z"/>
-                                <path d="M316,344H196c-8.3,0-15,6.7-15,15v21h150v-21C331,350.7,324.3,344,316,344z"/>
-                                <path d="M0,441.3h150v36.9H0V441.3z"/>
-</svg>
-                        </div>
-                        <h4>Финансовый отчет</h4>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="link">
-                        <div class="logo">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 width="438.533px" height="438.533px" viewBox="0 0 438.533 438.533" style="enable-background:new 0 0 438.533 438.533;"
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="438.533px" height="438.533px" viewBox="0 0 438.533 438.533"
+                                 style="enable-background:new 0 0 438.533 438.533;"
                                  xml:space="preserve">
 	<g>
         <path d="M382.58,108.493l-89.078-89.081c-9.521-9.517-22.087-15.706-37.692-18.558v145.324h145.326
@@ -152,11 +116,54 @@ if (isset($_SESSION["user"])) {
                     <button class="header_item__button" onclick="logout()">Выход</button>
                 </div>
             </header>
+
+            <div class="container">
+                <h1>Главная</h1>
+
+                <div style="display: flex;margin-top: 2rem;">
+                    <div class="money percent">
+                        <h3>Моя доля</h3>
+                        <h1>9%</h1>
+                    </div>
+                    <div class="money">
+                        <h3>Собрано денег</h3>
+                        <div class="status">
+                            <div id="done" class="done"></div>
+                            <div id="remain" class="remain">
+                                <h5><span id="d">125</span> млн. из <span id="r">500</span> млн.</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="money question">
+                    <h3>Задайте вопрос инициатору проекта</h3>
+                    <button>
+                        <span>
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 92 92" style="enable-background:new 0 0 92 92;" xml:space="preserve">
+<g>
+	<path d="M45.386,0.004C19.983,0.344-0.333,21.215,0.005,46.619c0.34,25.393,21.209,45.715,46.611,45.377
+		c25.398-0.342,45.718-21.213,45.38-46.615C91.656,19.986,70.786-0.335,45.386,0.004z M45.25,74l-0.254-0.004
+		c-3.912-0.116-6.67-2.998-6.559-6.852c0.109-3.788,2.934-6.538,6.717-6.538l0.227,0.004c4.021,0.119,6.748,2.972,6.635,6.937
+		C51.904,71.346,49.123,74,45.25,74z M61.705,41.341c-0.92,1.307-2.943,2.93-5.492,4.916l-2.807,1.938
+		c-1.541,1.198-2.471,2.325-2.82,3.434c-0.275,0.873-0.41,1.104-0.434,2.88l-0.004,0.451H39.43l0.031-0.907
+		c0.131-3.728,0.223-5.921,1.768-7.733c2.424-2.846,7.771-6.289,7.998-6.435c0.766-0.577,1.412-1.234,1.893-1.936
+		c1.125-1.551,1.623-2.772,1.623-3.972c0-1.665-0.494-3.205-1.471-4.576c-0.939-1.323-2.723-1.993-5.303-1.993
+		c-2.559,0-4.311,0.812-5.359,2.478c-1.078,1.713-1.623,3.512-1.623,5.35v0.457H27.936l0.02-0.477
+		c0.285-6.769,2.701-11.643,7.178-14.487C37.947,18.918,41.447,18,45.531,18c5.346,0,9.859,1.299,13.412,3.861
+		c3.6,2.596,5.426,6.484,5.426,11.556C64.369,36.254,63.473,38.919,61.705,41.341z"/>
+</g>
+</svg>
+                        </span>
+                        Задать вопрос
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../paper.js/routes.js"></script>
+    <script src="/paper.js/routes.js"></script>
     <script>
         function logout() {
             $.post(
@@ -167,10 +174,22 @@ if (isset($_SESSION["user"])) {
                 }
             );
         }
+
+        $(document).ready(function () {
+            var d = parseInt($("#d").text());
+            var r = parseInt($("#r").text());
+
+            var done = (d * 100) / r;
+            var remain = 100 - done;
+
+            $("#done").css("width", done + "%");
+            $("#remain").css("width", remain + "%");
+        });
+
     </script>
     </body>
     </html>
-<?
+    <?
 } else {
     header("Location: /login");
 }

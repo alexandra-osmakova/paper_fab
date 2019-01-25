@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+Options -Indexes
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#RewriteRule ^(?!posts$|add/(post$|user$)|edit/(post$|user$)|user/(\d+)?$|delete/(post|user)/(\d+)?$).* index.php [QSA,L]
+RewriteRule ^posts$ posts.php [QSA,L]
+RewriteRule ^add/(post$|user$|success$) add/ [QSA,L]
+RewriteRule ^edit/(post$|user$) edit/ [QSA,L]
+RewriteRule ^user/(\d+)?$ user.info.php?id=$1
+
+</IfModule>
