@@ -154,7 +154,7 @@ if(isset($_SESSION["user"])) {
     });
     $("input#forgot").on("click", function (e) {
         $.post(
-            "/app/forgot.php",
+            "forgot.php",
             {
                 email: $("input#email").val()
             },

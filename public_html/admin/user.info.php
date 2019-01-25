@@ -39,7 +39,7 @@ if (isset($_SESSION["user"])) {
 
                 <div class="links">
                     <a href="/admin/posts">
-                        <div class="link">
+                        <div class="link active">
                             <div class="logo">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                      version="1.1" x="0px" y="0px" viewBox="0 0 50 50"
@@ -52,7 +52,7 @@ if (isset($_SESSION["user"])) {
                         </div>
                     </a>
                     <a href="/admin">
-                        <div class="link active">
+                        <div class="link">
                             <div class="logo">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -111,28 +111,23 @@ if (isset($_SESSION["user"])) {
                     </div>
                 </header>
                 <div class="container">
-                    <h1>Все пользователи</h1>
+                    <h1>Информация об инвесторе</h1>
 
-                    <div class="controls">
-                        <button class="btn" onclick="addUser()">+</button>
-                        <span>Показано 1 из 6</span>
+                    <div class="info">
+                        <?= ViewGenerator::userInfo($_GET["id"]) ?>
                     </div>
 
-                    <table>
-                        <thead>
-                        <tr>
-                            <td>№ договора</td>
-                            <td>ФИО</td>
-                            <td>Телефон</td>
-                            <td>Данные</td>
-                            <td>Сумма</td>
-                            <td>Действия</td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <?=ViewGenerator::generateUsers()?>
-                        </tbody>
-                    </table>
+                    <button class="btn" style="transform: rotateZ(180deg);margin-top: 1rem" onclick="back()">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;"
+                             xml:space="preserve">
+                            <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+	                            C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
+	                            c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z">
+                            </path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>

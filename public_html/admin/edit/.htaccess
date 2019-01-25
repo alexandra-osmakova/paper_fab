@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+Options -Indexes
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^post/(\d+)?$ edit.post.php?id=$1 [QSA,L]
+RewriteRule ^user/(\d+)?$ edit.user.php?id=$1 [QSA,L]
+
+</IfModule>

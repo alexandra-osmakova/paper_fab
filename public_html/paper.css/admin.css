@@ -422,7 +422,7 @@ input[type="submit"] {
 }
 
 #admin .second button {
-    margin: 1rem 0 0;
+    margin: -2rem 1rem 0;
     float: right;
 }
 
@@ -445,6 +445,10 @@ input[type="submit"] {
     background-color: lightgray;
     height: 18rem;
     margin-top: 1rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
 
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -517,6 +521,172 @@ input[type="submit"] {
     width: 75%;
 }
 
+#user .docs {
+    display: flex;
+    margin-top: 2rem;
+    width: 35rem;
+}
+
+#user .docs .doc {
+    width: 8rem;
+    height: 10rem;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-right: 1rem;
+}
+
+#user .docs .doc:last-child {
+    margin: 0;
+}
+
+#user .docs .doc h3 {
+    text-align: center;
+}
+
+#user .docs .doc .pic {
+    background: #f5f5f5;
+    height: 8rem;
+    margin-bottom: .7rem;
+    border-radius: 3px;
+}
+
+#user .docs .doc .pic:hover {
+    background: #b5b5b5;
+    cursor: pointer;
+}
+
+
+#user .docs .doc .pic:hover button {
+    opacity: 1;
+}
+
+#user .docs .doc .pic svg {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    margin: 2rem;
+}
+
+#user .docs .doc .pic:hover svg {
+    opacity: .2;
+}
+
+#user .docs .doc .pic button {
+    width: 4rem;
+    height: 4rem;
+    margin: 2rem;
+    border: none;
+    background: none;
+    outline: none;
+    opacity: 0;
+    position: absolute;
+}
+
+#user .docs .doc .pic button > svg {
+    width: 3rem;
+    height: 3rem;
+    fill: white;
+    margin: 0;
+    position: relative;
+    opacity: 1!important;
+}
+
+#user .money {
+    width: 65%;
+    background-color: #f5f5f5;
+    height: 13rem;
+    box-shadow: 0 0 2rem 0 lightgrey;
+    padding: 1rem 2rem;
+}
+
+#user .percent {
+    width: 30%;
+    margin-right: 5%;
+}
+
+#user .percent h1 {
+    color: #8eba19;
+    margin: 2.7rem 1.6rem;
+    font-size: 6rem;
+}
+
+#user .money .status {
+    margin-top: 3.5rem;
+    display: flex;
+    height: 2rem;
+}
+
+#user .money .status .done{
+    width: 50%;
+    background: #8eba19;
+    border-radius: 1rem 0 0 1rem;
+}
+
+#user .money .status .remain {
+    width: 50%;
+    background: white;
+    border-radius: 0 1rem 1rem 0;
+}
+
+#user .money .status .remain h5 {
+    float: right;
+    margin-right: 1rem;
+    margin-top: .5rem;
+    font-size: .8rem;
+    color: grey;
+}
+
+#user .question {
+    margin-top: 2rem;
+    height: 9rem;
+    width: 100%;
+    text-align: center;
+}
+
+#user .question button {
+    display: flex;
+    width: 14rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    align-items: center;
+    padding-left: 3.5rem;
+    background: #8eba19;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    margin: 2rem auto;
+}
+
+#user .question button span {
+    width: 12%;
+}
+
+#user .question button span svg {
+    height: 1rem;
+    margin-top: .1rem;
+    fill: #fff;
+}
+
+#admin .info {
+    margin-top: 2rem;
+    background: #f5f5f5;
+    padding: 1rem;
+    -webkit-box-shadow: 0 0 1rem 0 lightgray;
+    -moz-box-shadow: 0 0 1rem 0 lightgray;
+    box-shadow: 0 0 1rem 0 lightgray;
+}
+
+#admin .success {
+    margin: auto;
+    padding: 6rem;
+    color: #8eba19;
+    -webkit-box-shadow: 0 0 50rem 0 #8eba19;
+    -moz-box-shadow: 0 0 50rem 0 #8eba19;
+    box-shadow: 0 0 50rem 0 #8eba19;
+}
 
 @media screen and (max-width: 1096px) and (min-width: 320px) {
     #admin .header_item,

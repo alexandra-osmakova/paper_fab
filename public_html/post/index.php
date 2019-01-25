@@ -1,4 +1,9 @@
-    <!DOCTYPE html>
+<?php
+require __DIR__ . "/../../app/database/db.php";
+
+$post = R::load("posts", $_GET["id"]);
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>

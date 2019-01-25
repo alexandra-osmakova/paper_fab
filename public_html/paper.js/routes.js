@@ -3,19 +3,21 @@ function login() {
 }
 
 function addUser() {
-    location.href = "/admin/add.user.php";
+    location.href = "/admin/add/user";
 }
 
-function addPost() {
-    location.href = "/admin/add.post.php";
+function editUser(id) {
+    location.href = "/admin/edit/user/" + id;
 }
 
-function view(userid) {
-    location.href = "/admin/view.user.php?id=" + userid;
+function deleteUser(id) {
+    if(confirm("Вы действительно хотите удалить пользователя?")) {
+        location.href = "/admin/delete/user/" + id;
+    }
 }
 
-function remove(userid) {
-    location.href = "/admin/delete.user.php?id=" + userid;
+function viewUser(userid) {
+    location.href = "/admin/user/" + userid;
 }
 
 function addTel() {
@@ -35,13 +37,21 @@ function delTel(id) {
 }
 
 function back() {
-    location.href = "/admin/posts.php";
+    location.href = "/admin";
 }
 
 function file() {
     $("input#file").click();
 }
 
+function addPost() {
+    location.href = "/admin/add/post";
+}
+
 function editPost(id) {
-    location.href = "/admin/edit.post.php?id=" + id;
+    location.href = "/admin/edit/post/" + id;
+}
+
+function viewPost(id) {
+    location.href = "/post/" + id;
 }

@@ -2,11 +2,12 @@
 
 session_start();
 
-require __DIR__ . "/../../app/util/Encoder.php";
-require __DIR__ . "/../../app/util/ViewGenerator.php";
+require __DIR__ . "/../../../app/util/Encoder.php";
+require __DIR__ . "/../../../app/database/db.php";
+
+$post = R::load("posts", $_GET["id"]);
 
 use App\Util\Encoder;
-use App\Util\ViewGenerator;
 
 if (isset($_SESSION["user"])) {
     if (Encoder::decode($_SESSION["user"]) === "administrator") {
@@ -39,7 +40,7 @@ if (isset($_SESSION["user"])) {
 
                 <div class="links">
                     <a href="/admin/posts">
-                        <div class="link">
+                        <div class="link active">
                             <div class="logo">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                      version="1.1" x="0px" y="0px" viewBox="0 0 50 50"
@@ -52,7 +53,7 @@ if (isset($_SESSION["user"])) {
                         </div>
                     </a>
                     <a href="/admin">
-                        <div class="link active">
+                        <div class="link">
                             <div class="logo">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -110,31 +111,61 @@ if (isset($_SESSION["user"])) {
                         <button class="header_item__button" onclick="logout()">Выход</button>
                     </div>
                 </header>
-                <div class="container">
-                    <h1>Все пользователи</h1>
-
-                    <div class="controls">
-                        <button class="btn" onclick="addUser()">+</button>
-                        <span>Показано 1 из 6</span>
+                <div class="background" style="background-image: url('<?=$post->bg?>')">
+                    <div onclick="file()" class="icon">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+	<g>
+        <path d="M50,40c-8.285,0-15,6.718-15,15c0,8.285,6.715,15,15,15c8.283,0,15-6.715,15-15
+			C65,46.718,58.283,40,50,40z M90,25H78c-1.65,0-3.428-1.28-3.949-2.846l-3.102-9.309C70.426,11.28,68.65,10,67,10H33
+			c-1.65,0-3.428,1.28-3.949,2.846l-3.102,9.309C25.426,23.72,23.65,25,22,25H10C4.5,25,0,29.5,0,35v45c0,5.5,4.5,10,10,10h80
+			c5.5,0,10-4.5,10-10V35C100,29.5,95.5,25,90,25z M50,80c-13.807,0-25-11.193-25-25c0-13.806,11.193-25,25-25
+			c13.805,0,25,11.194,25,25C75,68.807,63.805,80,50,80z M86.5,41.993c-1.932,0-3.5-1.566-3.5-3.5c0-1.932,1.568-3.5,3.5-3.5
+			c1.934,0,3.5,1.568,3.5,3.5C90,40.427,88.433,41.993,86.5,41.993z"/>
+    </g>
+</svg>
                     </div>
-
-                    <table>
-                        <thead>
-                        <tr>
-                            <td>№ договора</td>
-                            <td>ФИО</td>
-                            <td>Телефон</td>
-                            <td>Данные</td>
-                            <td>Сумма</td>
-                            <td>Действия</td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <?=ViewGenerator::generateUsers()?>
-                        </tbody>
-                    </table>
                 </div>
-            </div>
+                <div class="post-body">
+                    <button class="arrow" onclick="back()">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+<path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+	C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
+	c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"/>
+</svg>
+                    </button>
+                    <form class="post" action="/admin/add/success/post/" enctype="multipart/form-data">
+                        <input type="text" id="title" name="title" placeholder="Заголовок" value="<?=$post->title?>">
+                        <textarea id="text" name="text" placeholder="Текст"><?=$post->text?></textarea>
+                        <input type="file" id="file" name="file" hidden>
+                    </form>
+                    <div class="controls">
+                        <button class="btn save">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="488.446px" height="488.446px" viewBox="0 0 488.446 488.446"
+                                 style="enable-background:new 0 0 488.446 488.446;"
+                                 xml:space="preserve">
+		<g>
+            <path d="M153.029,90.223h182.404c5.427,0,9.873-4.43,9.873-9.869V0H143.137v80.354C143.137,85.793,147.571,90.223,153.029,90.223
+				z"/>
+            <path d="M480.817,122.864L377.88,19.494v60.859c0,23.404-19.043,42.447-42.447,42.447H153.029
+				c-23.409,0-42.447-19.043-42.447-42.447V0H44.823C20.068,0,0.002,20.07,0.002,44.808v398.831
+				c0,24.736,20.066,44.808,44.821,44.808h398.813c24.74,0,44.808-20.068,44.808-44.808V141.325
+				C488.444,134.392,485.698,127.758,480.817,122.864z M412.461,385.666c0,14.434-11.703,26.154-26.168,26.154H102.137
+				c-14.451,0-26.153-11.722-26.153-26.154V249.303c0-14.43,11.702-26.148,26.153-26.148h284.156
+				c14.465,0,26.168,11.72,26.168,26.148V385.666z"/>
+            <path d="M356.497,265.131H131.949c-9.008,0-16.294,7.273-16.294,16.28s7.286,16.28,16.294,16.28h224.549
+				c8.988,0,16.277-7.273,16.277-16.28S365.487,265.131,356.497,265.131z"/>
+            <path d="M323.936,330.264H164.508c-8.994,0-16.28,7.273-16.28,16.28c0,8.989,7.286,16.28,16.28,16.28h159.427
+				c8.994,0,16.281-7.291,16.281-16.28C340.217,337.537,332.93,330.264,323.936,330.264z"/>
+        </g>
+</svg>
+                        </button>
+                    </div>
+                </div>
         </section>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -149,6 +180,16 @@ if (isset($_SESSION["user"])) {
                     }
                 );
             }
+
+            $("input[type='radio']").on("change", function (e) {
+                if (e.currentTarget.id === "t1") {
+                    $("#fiz").css("display", "block");
+                    $("#yur").css("display", "none");
+                } else if (e.currentTarget.id === "t2") {
+                    $("#fiz").css("display", "none");
+                    $("#yur").css("display", "block");
+                }
+            });
         </script>
         </body>
         </html>
