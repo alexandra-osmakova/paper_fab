@@ -137,11 +137,28 @@ class ViewGenerator {
     }
 
     public static function userInfo($id) {
-        $user = \R::findOne("info", "WHERE userid=:userid", ["userid" => $id]);
+        $user = \R::findOne("users", "WHERE id=:id", ["id" => $id]);
+        $info = \R::findOne("info", "WHERE userid=:userid", ["userid" => $id]);
+        $type = \R::findOne($user->type, "WHERE userid=:userid", ["userid" => $id]);
 
-        $message = "<b>Дата вложения :</b> " . $user->date . "<br>" .
-                    "<b>Наименование компании :</b> " . $user->company . "<br>" .
-                    "<b>Доп. информация :</b> " . $user->addition;
+        $message = "<b>Дата вложения :</b> " . $info["date"] .
+                    "<br><b>Дополнительный контакт :</b> " . $info["phonesecondary"] .
+                    "<br><b>Доп. информация :</b> " . $info["addition"];
+
+        switch ($user->type) {
+            case "company" :
+                $message .= "<hr><b>Наименование компании :</b> " . $type["name"] .
+                            "<br><b>ИНН :</b> " . $type["inn"] .
+                            "<br><b>КПП :</b> " . $type["kpp"] .
+                            "<br><b>ОГРН :</b> " . $type["ogrn"];
+                break;
+            case "physical" :
+                $message .= "<hr><b>Пасспорт :</b> " . $type["serie"] . " " . $type["number"] .
+                            "<br><b>Выдан :</b> " . $type["structure"] .
+                            "<br><b>Дата выдачи :</b> " . $type["date"] .
+                            "<br><b>Код подразделения :</b> " . $type["code"];
+                break;
+        }
 
         return $message;
     }

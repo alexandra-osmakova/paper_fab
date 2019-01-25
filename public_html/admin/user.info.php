@@ -39,7 +39,7 @@ if (isset($_SESSION["user"])) {
 
                 <div class="links">
                     <a href="/admin/posts">
-                        <div class="link active">
+                        <div class="link">
                             <div class="logo">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                      version="1.1" x="0px" y="0px" viewBox="0 0 50 50"
@@ -52,7 +52,7 @@ if (isset($_SESSION["user"])) {
                         </div>
                     </a>
                     <a href="/admin">
-                        <div class="link">
+                        <div class="link active">
                             <div class="logo">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

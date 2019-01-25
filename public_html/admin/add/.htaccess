@@ -9,6 +9,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^user$ add.user.php [QSA,L]
 RewriteRule ^post$ add.post.php [QSA,L]
 RewriteRule ^success/user$ success.user.php [QSA,L]
+RewriteRule ^success/user/(\d+)+$ success.user.php?id=$1 [QSA,L]
 RewriteRule ^success/post$ success.post.php [QSA,L]
 
 </IfModule>

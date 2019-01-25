@@ -57,5 +57,6 @@ function viewPost(id) {
 }
 
 function deletePost(id) {
-    location.href = "/admin/delete/post/" + id;
+    if(confirm("Вы действительно хотите удалить пост?"))
+        location.href = "/admin/delete/post/" + id;
 }
