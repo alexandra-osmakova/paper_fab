@@ -115,12 +115,12 @@ if (isset($_SESSION["user"])) {
                     <form action="/admin/add/success/user" method="post" enctype="multipart/form-data">
                         <div class="client_type">
                             <div class="radio">
-                                <input type="radio" id="t1" name="client_type" value="Физическое лицо">
+                                <input type="radio" id="t1" name="client_type" value="Физическое лицо" required>
                                 <label for="t1">Физическое лицо</label>
                             </div>
 
                             <div class="radio">
-                                <input type="radio" id="t2" name="client_type" value="Юридическое лицо">
+                                <input type="radio" id="t2" name="client_type" value="Юридическое лицо" required>
                                 <label for="t2">Юридическое лицо</label>
                             </div>
 
@@ -169,13 +169,13 @@ if (isset($_SESSION["user"])) {
                                 </div>
                                 <div class="body">
                                     <label for="surname">Фамилия</label>
-                                    <input type="text" id="surname" name="surname" placeholder="Фамилия">
+                                    <input type="text" id="surname" name="surname" placeholder="Фамилия" required>
 
                                     <label for="name">Имя</label>
-                                    <input type="text" id="name" name="name" placeholder="Имя">
+                                    <input type="text" id="name" name="name" placeholder="Имя" required>
 
                                     <label for="middlename">Фамилия</label>
-                                    <input type="text" id="middlename" name="middlename" placeholder="Отчество">
+                                    <input type="text" id="middlename" name="middlename" placeholder="Отчество" required>
                                 </div>
                             </div>
 
@@ -188,14 +188,14 @@ if (isset($_SESSION["user"])) {
 
                                     <div class="tel">
                                         <input type="tel" id="tel" name="tel" placeholder="Телефон"
-                                               style="width: 72%;margin-right: 5%">
+                                               style="width: 72%;margin-right: 5%" required>
                                         <button type="button" class="btn" style="width: 17%;margin-top: -0.3rem;"
                                                 onclick="addTel()">+
                                         </button>
                                     </div>
 
                                     <label for="email">E-mail</label>
-                                    <input type="email" id="email" name="email" placeholder="E-mail">
+                                    <input type="email" id="email" name="email" placeholder="E-mail" required>
 
                                     <input type="hidden" value=1 id="count">
                                 </div>
@@ -261,11 +261,11 @@ if (isset($_SESSION["user"])) {
                                     <div style="display: flex;">
                                         <div style="width: 47.5%;">
                                             <label for="m_amount">Сумма вложения</label>
-                                            <input type="number" id="m_amount" name="m_amount">
+                                            <input type="number" id="m_amount" name="m_amount" required>
                                         </div>
                                         <div style="width: 47.5%;margin-left: 5%">
                                             <label for="m_date">Дата</label>
-                                            <input type="date" id="m_date" name="m_date">
+                                            <input type="date" id="m_date" name="m_date" required>
                                         </div>
                                     </div>
 
@@ -355,7 +355,7 @@ if (isset($_SESSION["user"])) {
                     "                   </g>" +
                     "                   </svg>" +
                     "               </button>" +
-                    "               <input type=\"file\" name=\"files[]\" accept='application/pdf' id=\"file" + id + "\" hidden>" +
+                    "               <input type=\"file\" name=\"files[]\" id=\"file" + id + "\" hidden>" +
                     "           </div>");
 
                 $("#files").append(item);

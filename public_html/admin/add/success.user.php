@@ -9,7 +9,7 @@ require __DIR__ . "/../../../app/database/db.php";
 use App\Util\Encoder;
 
 try {
-    if (isset($_POST["client_type"])) {
+    if (isset($_POST["name"])) {
         $client_type = $_POST["client_type"];
         $surname = $_POST["surname"];
         $name = $_POST["name"];
@@ -43,7 +43,7 @@ try {
         if(isset($_GET["id"])) {
             $user = R::load("users", $_GET["id"]);
             $userInfo = R::findOne("info", "WHERE userid=:userid", ["userid" => $user->id]);
-            $store = R::findOne($client_type, "WHERE userid=:userid", ["userid" => $user->id]);
+            $store = R::findOne($user->type, "WHERE userid=:userid", ["userid" => $user->id]);
             $file = R::findOne("docs", "WHERE userid=:userid", ["userid" => $user->id]);
         }else {
             $user = R::dispense("users");
@@ -53,6 +53,8 @@ try {
         $user->login = $email;
         $user->password = base64_encode("password");
         $user->type = $client_type;
+
+        R::store($user);
 
         $user = R::findOne("users", "WHERE login=:login", ["login" => $email]);
 
@@ -101,11 +103,12 @@ try {
             }
         }
 
-        R::store($user);
         R::store($userInfo);
         R::store($store);
     }
 }catch (Exception $e) {
+    echo $e->getMessage();
+    var_dump($e->getTrace());
     echo "<h1 style='color: red; margin: auto;'>Не удалось сохранить пользователя!</h1>";
     die();
 }

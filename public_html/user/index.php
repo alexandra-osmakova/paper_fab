@@ -2,6 +2,16 @@
 
 session_start();
 
+require __DIR__ . "/../../app/database/db.php";
+
+$money = R::getAll("SELECT info.investement FROM info");
+$amount = 0;
+
+foreach ($money as $item) {
+    $amount += $item["investement"];
+}
+
+$amount /= 1000000;
 if (isset($_SESSION["user"])) {
     ?>
     <!DOCTYPE html>
@@ -130,7 +140,7 @@ if (isset($_SESSION["user"])) {
                         <div class="status">
                             <div id="done" class="done"></div>
                             <div id="remain" class="remain">
-                                <h5><span id="d">125</span> млн. из <span id="r">500</span> млн.</h5>
+                                <h5><span id="d"><?=$amount?></span> млн. из <span id="r">500</span> млн.</h5>
                             </div>
                         </div>
                     </div>

@@ -529,7 +529,7 @@ input[type="submit"] {
 
 #user .docs .doc {
     width: 8rem;
-    height: 10rem;
+    min-height: 10rem;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;

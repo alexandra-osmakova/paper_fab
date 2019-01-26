@@ -143,15 +143,15 @@ if (isset($_SESSION["user"])) {
 </svg>
 
                                 </button>
-                                <button type="button" class="btn delete" onclick="login()">
-                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                         viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;"
+                                <button type="button" class="btn delete" style="transform: rotateZ(180deg)" onclick="login()">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;"
                                          xml:space="preserve">
-	<g id="delete">
-        <path d="M76.5,408c0,28,22.9,51,51,51h204c28,0,51-23,51-51V102h-306V408z M408,25.5h-89.2L293.2,0H165.8l-25.5,25.5H51v51h357
-			V25.5z"/>
-    </g>
+<g>
+    <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+		L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+		c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+</g>
 </svg>
                                 </button>
                             </div>
@@ -233,16 +233,16 @@ if (isset($_SESSION["user"])) {
                                 </div>
                                 <div class="body">
                                     <label for="j_name">Наименование</label>
-                                    <input type="text" id="j_name" name="j_name">
+                                    <input type="text" id="j_name" name="j_name" value="<?=$type->name?>">
 
                                     <label for="inn">ИНН</label>
-                                    <input type="text" id="inn" name="inn">
+                                    <input type="text" id="inn" name="inn" value="<?=$type->inn?>">
 
                                     <label for="kpp">КПП</label>
-                                    <input type="text" id="kpp" name="kpp">
+                                    <input type="text" id="kpp" name="kpp" value="<?=$type->kpp?>">
 
                                     <label for="ogrn">ОГРН</label>
-                                    <input type="text" id="ogrn" name="ogrn">
+                                    <input type="text" id="ogrn" name="ogrn" value="<?=$type->ogrn?>">
                                 </div>
                             </div>
                         </div>
@@ -256,16 +256,16 @@ if (isset($_SESSION["user"])) {
                                     <div style="display: flex;">
                                         <div style="width: 47.5%;">
                                             <label for="m_amount">Сумма вложения</label>
-                                            <input type="number" id="m_amount" name="m_amount">
+                                            <input type="number" id="m_amount" name="m_amount" value="<?=$info->investement?>">
                                         </div>
                                         <div style="width: 47.5%;margin-left: 5%">
                                             <label for="m_date">Дата</label>
-                                            <input type="date" id="m_date" name="m_date">
+                                            <input type="date" id="m_date" name="m_date" value="<?=$info->date?>">
                                         </div>
                                     </div>
 
                                     <label for="addition">Дополнительная информация</label>
-                                    <textarea name="addition" id="addition"></textarea>
+                                    <textarea name="addition" id="addition"><?=$info->addition?></textarea>
                                 </div>
                             </div>
                             <div class="block">

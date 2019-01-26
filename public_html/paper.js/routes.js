@@ -44,6 +44,10 @@ function file() {
     $("input#file").click();
 }
 
+function openFile(href) {
+    location.href = href;
+}
+
 function addPost() {
     location.href = "/admin/add/post";
 }
