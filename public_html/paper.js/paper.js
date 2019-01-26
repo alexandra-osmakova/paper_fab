@@ -109,11 +109,11 @@ function isPartiallyVisible(el) {
     var close_btn = document.getElementById('close_btn_slider');
     var modal_btn = document.getElementById('modal_btn');
     var apply_modal = document.getElementsByClassName('modal_window_second')[0];
-    var modal_trigger = document.getElementsByClassName('modal_trigger')[0];
     var modal_thanx_btn = document.getElementById('modal_thanx_btn');
     var close_btn_video = document.getElementById('close_btn_video');
     var hidden_video = document.getElementsByClassName('hidden_video')[0];
     var open_video = document.getElementsByClassName('circle_amimation_container')[0];
+    var modal_trigger = document.getElementsByClassName('modal_trigger');
 
     open_slider.addEventListener('click', slider_start);
 
@@ -129,11 +129,15 @@ function isPartiallyVisible(el) {
         document.documentElement.classList.remove('no_scroll');
     })
 
-    modal_trigger.addEventListener('click', function () {
-        apply_modal.classList.toggle('invisible_item');
-        overlay.classList.toggle('invisible_item');
-        document.documentElement.classList.add('no_scroll');
+    document.body.addEventListener('click', function(event) {
+        var target = event.target;
+        if(target.classList.contains('modal_trigger')) {
+            apply_modal.classList.toggle('invisible_item');
+            overlay.classList.toggle('invisible_item');
+            document.documentElement.classList.add('no_scroll');
+        }
     })
+
 
     modal_btn.addEventListener('click', function () {
         apply_modal.classList.toggle('invisible_item');
