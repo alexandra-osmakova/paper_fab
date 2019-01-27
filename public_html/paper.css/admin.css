@@ -197,12 +197,12 @@ input[type="submit"] {
 #user .header_item__button {
     float: right;
     width: 6.25rem;
-    margin-top: 1rem;
 }
 
 #admin header,
 #user header {
     padding: 0;
+    margin-top: 1rem;
 }
 
 #admin .header_info_link,
@@ -227,6 +227,7 @@ input[type="submit"] {
     font-size: 1.5rem;
     font-weight: 100;
     border-radius: 0.3rem;
+    line-height: 1rem;
 }
 
 #admin .btn svg {

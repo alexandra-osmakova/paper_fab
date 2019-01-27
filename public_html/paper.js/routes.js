@@ -2,6 +2,16 @@ function login() {
     location.href = "/login";
 }
 
+function logout() {
+    $.post(
+        "../login/logout.php",
+        {},
+        function () {
+            location.href = "/login";
+        }
+    );
+}
+
 function addUser() {
     location.href = "/admin/add/user";
 }
