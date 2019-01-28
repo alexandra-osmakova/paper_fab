@@ -17,6 +17,21 @@ input::-moz-focus-inner {
     padding: 0;
 }
 
+input[type=text],
+input[type=submit],
+input[type=password],
+input[type=email] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type=submit] {
+    border: none;
+    -moz-border: none;
+    -webkit-border: none;
+}
+
 
 @font-face {
     font-family: "P TSans";
@@ -721,6 +736,40 @@ header_item__button {
     justify-content: center;
     position: relative;
     overflow: hidden;
+}
+
+.advantages_content__icons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 4.3125rem;
+    padding-bottom: 7.3125rem;
+}
+
+.advantages_content__icons_item {
+    width: 20%;
+    padding: 0 1rem 0 0;
+}
+
+.advantages_content__icons_item div {
+    width: 4.0625rem;
+    height: 4.0625rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.0625rem solid #7eac01;
+    margin-bottom: 2rem;
+}
+
+.advantages_content__icons_item svg {
+    width: 50%;
+}
+
+.advantages_content__icons_item .common_text {
+    line-height: 1.5rem;
+    color: #000000;
+    font-weight: 400;
 }
 
 .diagram_title,
@@ -1963,7 +2012,7 @@ footer {
 }
 
 .invisible_item {
-    display: none!important;
+    display: none !important;
 }
 
 .hidden_slider img {
@@ -2665,7 +2714,9 @@ footer {
     justify-content: center;
 }
 
-.login_container, .remind_pass_container, .remind_message_container {
+.login_container,
+.remind_pass_container,
+.remind_message_container {
     padding: 4.5rem 2.5rem;
     box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
@@ -2676,7 +2727,8 @@ footer {
     width: 35%;
 }
 
-.login_container h2, .remind_pass_container h2,
+.login_container h2,
+.remind_pass_container h2,
 .remind_message_container h2 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -2694,8 +2746,8 @@ footer {
     cursor: pointer;
 }
 
-.remind_pass_container .remind_pass, 
-.remind_message_container .remind_pass{
+.remind_pass_container .remind_pass,
+.remind_message_container .remind_pass {
     text-decoration: unset;
     display: block;
     cursor: unset;
@@ -3142,7 +3194,27 @@ footer {
         font-size: 12px
     }
 
-    .login_container, .remind_pass_container, .remind_message_container  {
+    .advantages_content__icons {
+        padding-bottom:  unset;
+    }
+
+    .advantages_content__icons_item div {
+        width: 6.0625rem;
+        height: 6.0625rem;
+    }
+
+    .advantages_content__icons_item {
+        width: 100%;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .login_container,
+    .remind_pass_container,
+    .remind_message_container {
         width: 100%;
     }
 
@@ -3156,7 +3228,7 @@ footer {
         overflow-y: scroll;
     }
 
-    .more_news {
+    .button_block .more_news {
         position: absolute;
         bottom: 0;
         margin: 0 auto;
@@ -3596,7 +3668,28 @@ footer {
         font-size: 13px
     }
 
-    .login_container, .remind_pass_container, .remind_message_container  {
+    .advantages_content__icons {
+        padding-bottom:  unset;
+    }
+
+    .advantages_content__icons_item div {
+        width: 6.0625rem;
+        height: 6.0625rem;
+    }
+
+
+    .advantages_content__icons_item {
+        width: 100%;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .login_container,
+    .remind_pass_container,
+    .remind_message_container {
         width: 100%;
     }
 
@@ -3610,7 +3703,7 @@ footer {
         overflow-y: scroll;
     }
 
-    .more_news {
+    .button_block .more_news {
         position: absolute;
         bottom: 0;
         margin: 0 auto;
@@ -4048,7 +4141,27 @@ footer {
         font-size: 14px
     }
 
-    .login_container, .remind_pass_container, .remind_message_container  {
+    .advantages_content__icons_item {
+        width: 50%;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .advantages_content__icons {
+        padding-bottom:  unset;
+    }
+
+    .advantages_content__icons_item div {
+        width: 6.0625rem;
+        height: 6.0625rem;
+    }
+
+    .login_container,
+    .remind_pass_container,
+    .remind_message_container {
         width: 80%;
     }
 
@@ -4489,8 +4602,28 @@ footer {
         font-size: 14px
     }
 
-    .login_container, .remind_pass_container, .remind_message_container  {
+    .login_container,
+    .remind_pass_container,
+    .remind_message_container {
         width: 55%;
+    }
+
+    .advantages_content__icons {
+        padding-bottom:  unset;
+    }
+
+    .advantages_content__icons_item div {
+        width: 6.0625rem;
+        height: 6.0625rem;
+    }
+
+    .advantages_content__icons_item {
+        width: 33%;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .table_content {
@@ -4927,7 +5060,28 @@ footer {
         font-size: 15px
     }
 
-    .login_container, .remind_pass_container, .remind_message_container  {
+    .advantages_content__icons {
+        padding-bottom:  unset;
+    }
+
+    .advantages_content__icons_item div {
+        width: 6.0625rem;
+        height: 6.0625rem;
+    }
+
+
+    .advantages_content__icons_item {
+        width: 33%;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .login_container,
+    .remind_pass_container,
+    .remind_message_container {
         width: 50%;
     }
 
@@ -5346,7 +5500,9 @@ footer {
         font-size: 14px
     }
 
-    .login_container, .remind_pass_container, .remind_message_container  {
+    .login_container,
+    .remind_pass_container,
+    .remind_message_container {
         width: 45%;
     }
 
