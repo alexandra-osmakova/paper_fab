@@ -392,8 +392,8 @@
         <h1 class="title_style">Оставьте заявку на инвестирование</h1>
         <p>Заполните форму, и мы перезвоним Вам, чтобы обсудить все детали</p>
         <form action="" class="apply_form">
-            <input type="text" class="apply_form_input" placeholder="Введите Ваше имя">
-            <input type="text" class="apply_form_input" placeholder="Контактный телефон">
+            <input type="text" class="apply_form_input" id="masked_name_second" placeholder="Введите Ваше имя">
+            <input type="text" class="apply_form_input phone-number" id="selector" placeholder="Контактный телефон">
             <input type="submit" class="apply_form_input" placeholder="Оставить заявку" readonly>
         </form>
     </section>
@@ -592,19 +592,25 @@
         <div id="close_btn_slider" class="close_btn slider_btn"></div>
         <div class="invisible-slider">
             <div>
-                <img src="./img/invisible_slider1.png" alt="">
+                <img src="./img/hidden_slider/plan1.png" alt="">
             </div>
             <div>
-                <img src="./img/invisible_slider1.png" alt="">
+                <img src="./img/hidden_slider/plan2.png" alt="">
             </div>
             <div>
-                <img src="./img/invisible_slider1.png" alt="">
+                <img src="./img/hidden_slider/plan3.png" alt="">
             </div>
             <div>
-                <img src="./img/invisible_slider1.png" alt="">
+                <img src="./img/hidden_slider/plan4.png" alt="">
             </div>
             <div>
-                <img src="./img/invisible_slider1.png" alt="">
+                <img src="./img/hidden_slider/plan5.png" alt="">
+            </div>
+            <div>
+                <img src="./img/hidden_slider/plan6.png" alt="">
+            </div>
+            <div>
+                <img src="./img/hidden_slider/plan7.png" alt="">
             </div>
         </div>
     </div>
@@ -629,8 +635,8 @@
         <div id="modal_btn" class="close_btn modal_btn">
         </div>
         <form id="prompt-form" method="post" action="thanks_window.php">
-            <input class="modal_window_input" name="name" type="text" placeholder="Введите Ваше имя">
-            <input class="modal_window_input" id="phone-number" name="phone-number" type="text" maxlength="14"
+            <input class="modal_window_input" id="masked_name" name="name" type="text" placeholder="Введите Ваше имя">
+            <input class="modal_window_input phone-number" id="selector_second" name="phone-number" type="text"
                 placeholder="Контактный телефон" required="">
             <button class="modal_window_submit_btn" name="modal_btn" type="submit">Оставить заявку</button>
         </form>
@@ -643,6 +649,7 @@
             allowfullscreen></iframe>
     </section>
     <div class="modal_window_done"></div>
+    <script src="https://unpkg.com/imask"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/min/tiny-slider.js"></script>
     <script src="./paper.js/paper.js"></script>
 </body>
