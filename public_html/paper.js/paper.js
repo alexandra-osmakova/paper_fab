@@ -176,8 +176,8 @@ var second_mask = new IMask(phoneToMask_second, maskOptions);
 var name_mask = document.getElementById('masked_name');
 var name_mask_second = document.getElementById('masked_name_second')
 var patternMask = new IMask(name_mask, {
-    mask: '[аaaaaаaaaaаaaaaаaaaaаaaaaаaaaaаaaaaаaaaa]'
+    mask: '[aaaaaaaaaaaaaaaaaa][ ][aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]'
 });
 var patternMask = new IMask(masked_name_second, {
-    mask: '[аaaaaаaaaaаaaaaаaaaaаaaaaаaaaaаaaaaаaaaa]'
+    mask: '[aaaaaaaaaaaaaaaaaa][ ][aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]'
 });

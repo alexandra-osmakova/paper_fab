@@ -163,7 +163,8 @@
                 <h3 class='subscribe_title'>Подписаться <br> на рассылку</h3>
                 <section class="subscribe">
                     <form id="prompt-form" method="post" action="thanks_window.php">
-                        <input class="modal_window_input" name="name" type="text" placeholder="Введите Ваш E-mail">
+                        <input class="modal_window_input" name="name" id="masked_email" type="email" pattern='[A-Za-z]^[ 0-9]+$\D [^0-9]'
+                            placeholder="Введите Ваш E-mail">
                         <button class="modal_window_submit_btn" name="modal_btn" type="submit">Подписаться</button>
                     </form>
                 </section>
@@ -268,9 +269,9 @@
         <div id="modal_btn" class="close_btn modal_btn">
         </div>
         <form id="prompt-form" method="post" action="thanks_window.php">
-            <input class="modal_window_input" name="name" type="text" placeholder="Введите Ваше имя">
-            <input class="modal_window_input phone-number" id="selector" name="phone-number" type="text"
-                placeholder="Контактный телефон" required="">
+            <input class="modal_window_input" name="name" type="text" id="masked_name" placeholder="Введите Ваше имя">
+            <input class="modal_window_input phone-number" id="selector" name="phone-number" type="text" placeholder="Контактный телефон"
+                required="">
             <button class="modal_window_submit_btn" name="modal_btn" type="submit">Оставить заявку</button>
         </form>
         <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="">политикой
@@ -363,6 +364,21 @@
             mask: '+{7}(000)000-00-00'
         };
         var mask = new IMask(phoneToMask, maskOptions);
+
+        var name_mask = document.getElementById('masked_name');
+        var patternMask = new IMask(name_mask, {
+            mask: '[aaaaaaaaaaaaaaaaaa][ ][aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]'
+        });
+
+        var masked_email = document.getElementById('masked_email');
+        masked_email.addEventListener('input', function () {
+
+            var reg = /[А-Яа-яЁё]/;
+            if(masked_email.value.search(reg) !=  -1) {
+                masked_email.value  =  masked_email.value.replace(reg, '');
+            }
+
+        })
     </script>
 </body>
 
