@@ -148,7 +148,6 @@ class ViewGenerator
         $count = 1;
 
         foreach ($docs as $doc) {
-            echo $count;
             if ($count === 1) {
                 $page .= "<div class='docs'>";
             }
@@ -243,5 +242,17 @@ class ViewGenerator
         }
 
         return $message;
+    }
+
+    public static function getUserName($login) {
+        $user_name = \R::getAssocRow("SELECT info.name, info.surname FROM info JOIN users ON info.userid=users.id WHERE users.login=:login", ["login" => base64_decode($login)]);
+
+        return $user_name;
+    }
+
+    public static function getTotalMoney() {
+        $money = \R::getAll("SELECT info.investement FROM info");
+
+        return $money;
     }
 }
