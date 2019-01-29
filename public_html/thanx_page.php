@@ -1,3 +1,6 @@
+<?php
+header("Refresh: 6; url=/", true, 301);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
