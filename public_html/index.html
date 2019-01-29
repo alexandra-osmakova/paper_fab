@@ -306,7 +306,58 @@
     <section class="table">
         <h1 class="title_style">Доходность проекта</h1>
         <div class="table_content">
-            <table>
+            <div class="table_content_item">
+                <div class="table_content_item__switch_btn">
+                    <button class="table_switch_btn table_switch_btn_activ" id='rub'>в рублях</button>
+                    <button class="table_switch_btn" id='tonn'>в тоннах</button>
+                </div>
+                <div class="table_content_item_income">
+                    <div class="table_content_item_income_row">
+                        <div class="table_content_item_income_item table_content_item_income_item_first">186
+                            млн.руб/месяц</div>
+                        <span>Доход</span>
+                    </div>
+                    <div class="table_content_item_income_row">
+                        <div class="table_content_item_income_item table_content_item_income_item_second">95
+                            млн.руб/месяц</div>
+                        <span>Расход</span>
+                    </div>
+                    <div class="table_content_item_income_row">
+                        <div class="table_content_item_income_item table_content_item_income_item_third">91
+                            млн.руб/месяц</div>
+                        <span>Прибыль</span>
+                    </div>
+                </div>
+            </div>
+            <div class="table_content_item">
+                <div class="table_content_item_header">
+                    <h3 class="table_content_item_calc_title">Сумма инвестиций</h3>
+                    <div class="range-slider-container">
+                        <input type="range" class="range-slider" />
+                        <span id="range-value-bar"></span>
+                        <span id="range-value"></span>
+                    </div>
+                    <div class="range_slider_number">
+                        <span class="range_slider_input">1 370 000</span>
+                        руб.
+                    </div>
+                </div>
+                <div class="table_content_item_body">
+                    <div class="table_content_item_body_wrap"></div>
+                    <div class="table_content_item_body_content">
+                        <div class="table_content_calc_item">
+                            <h3 class="table_content_item_calc_title">Ежемесячная прибыль</h3>
+                            <span class="table_content_calc_item_number"><span>30</span> <span>млн.</span></span>
+                        </div>
+                        <div class="table_content_calc_item">
+                            <h3 class="table_content_item_calc_title">Окупаемость через</h3>
+                            <span class="table_content_calc_item_number"><span>11</span> месяцев</span>
+                        </div>
+                        <button class="main_section__styled_btn modal_trigger">Инвестировать</button>
+                    </div>
+                </div>
+            </div>
+            <!--    <table>
                 <tr>
                     <td class="table_title styled_table_row">Период</td>
                     <td class="table_text styled_table_row">2019</td>
@@ -342,7 +393,7 @@
                     <td class="table_text colored_table_row">15%</td>
                     <td class="table_text colored_table_row">15%</td>
                 </tr>
-            </table>
+            </table> -->
         </div>
     </section>
     <section class="conditions">

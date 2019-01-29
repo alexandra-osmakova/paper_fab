@@ -1302,47 +1302,329 @@ header_item__button {
 .table_content {
     width: 100%;
     padding-top: 3.75rem;
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.table_content table {
+.table_content_item {
+    box-shadow: 0rem 0.125rem 2.5rem rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    padding: 3.6875rem 2.75rem;
+}
+
+.table_content_item:nth-of-type(1) {
+    width: 39%;
+}
+
+.table_content_item:nth-of-type(2) {
+    width: 59%;
+    padding: 0;
+}
+
+.table_content_item__switch_btn {
     width: 100%;
-    min-width: 737px;
-    overflow: hidden;
+    display: flex;
 }
 
-.table_title {
-    font-size: 1rem;
-    color: #000000;
-    font-family: "P TSans";
-    font-weight: bold;
-    width: 30%;
-    height: 3.5rem;
-    vertical-align: middle;
-    padding-left: 1.875rem;
+.table_switch_btn {
+    font-size: 0.875rem;
+    color: #7eac01;
+    font-weight: 700;
+    padding: 0 1.75rem;
+    height: 2.8125rem;
+    border: 0.0625rem solid #7eac01;
+    border-radius: 1.375rem;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
-.table_text {
-    font-size: 1rem;
-    line-height: 1.125rem;
-    color: #000000;
-    font-family: "P TSans";
-    text-align: center;
-    width: 17.5%;
-    height: 3.5rem;
-    vertical-align: middle;
-    border-right: 0.1875rem solid #ffffff;
+.table_switch_btn:nth-of-type(1) {
+    margin-right: 0.5rem
 }
 
-.styled_table_row {
-    background-color: #f3f3f0;
-    border-right: 0.1875rem solid #ffffff;
-}
-
-.colored_table_row {
-    background-color: #7eac01;
+.table_switch_btn_activ {
     color: #ffffff;
-    border-right: 0.1875rem solid #ffffff;
+    box-shadow: 0 0 2.5rem 2.5rem #7fad02 inset, 0 0 0 0 #7fad02;
+}
+
+.table_content_item_income {
+    width: 100%;
+    padding: 4.5625rem 0;
+}
+
+.table_content_item_income_item {
+    height: 3.3125rem;
+    border-radius: 1.6875rem;
+    font-size: 1.125rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.table_content_item_income_item_first {
+    width: 75%;
+    background-color: #83b009;
+}
+
+.table_content_item_income_item_second {
+    width: 65%;
+    background-color: #9ac32a;
+    margin-left: 5%;
+}
+
+.table_content_item_income_item_third {
+    width: 55%;
+    background-color: #aed348;
+    margin-left: 10%;
+}
+
+.table_content_item_income_row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.table_content_item_income span {
+    font-size: 0.875rem;
+    color: #010101;
+    font-weight: 700;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.table_content_item_header {
+    padding: 3.6875rem 2.5rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.range_slider_number {
+    width: 44%;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.range_slider_input {
+    border-radius: 1.75rem;
+    background-color: transparent;
+    border: 0.0625rem solid #e8e8e5;
+    height: 3.5rem;
+    padding: 0 25px;
+    margin-right: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table_content_item_calc_title {
+    font-size: 1.125rem;
+    color: #000000;
+    font-weight: 400;
+    width: 100%;
+}
+
+.table_content_item_header::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.625rem 0.625rem 0 0.625rem;
+    border-color: #fcfcfc transparent transparent transparent;
+    position: absolute;
+    bottom: -0.625rem;
+    z-index: 10;
+    left: 49%;
+}
+
+.table_content_item_body {
+    width: 100%;
+    padding: 3.6875rem 2.75rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/calc_bg.png);
+    position: relative;
+}
+
+.table_content_item_body_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.6;
+}
+
+
+.table_content_calc_item .table_content_item_calc_title {
+    color: #ffffff;
+}
+
+.table_content_item_body_content {
+    position: relative;
+}
+
+.table_content_calc_item_number {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.table_content_calc_item:nth-of-type(1) {
+    padding-bottom: 3.125rem;
+}
+
+.table_content_item_body .main_section__styled_btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#calk_range {
+    width: 60%;
+}
+
+.range-slider-container {
+    position: relative;
+    width: 52%;
+    transform: translateY(-50%);
+    margin-top: 3.2rem;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin: 0;
+}
+
+#range-value-bar {
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background-image: linear-gradient(-90deg, #7eac01 0%, #b6d661 100%);
+    width: 100%;
+    content: "0";
+    position: absolute;
+    top: 0.3125rem;
+    margin: 0;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-moz-focus-outer {
+    border: 0;
+    }
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.5rem;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0rem 0rem 0rem #000000, 0rem 0rem 0rem #0d0d0d;
+    background: #e8e8e5;
+    border-radius: 0.25rem;
+    margin-top: 0.3125rem;
+    border: 0rem solid #000101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.08);
+    border: 0.6875rem solid #7eac01;
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -0.84375rem;
+    position: relative;
+    z-index: 10001;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.08);
+    border: 0.6875rem solid #7eac01;
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    background: #7eac01!important;
+    cursor: pointer;
+    -moz-appearance: none;
+    position: relative;
+    z-index: 1000000000;
+    box-sizing: border-box;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 0.5rem;
+    position: absolute;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0rem 0rem 0rem #000000, 0rem 0rem 0rem #0d0d0d;
+    background: #e8e8e5;
+    border-radius: 0.25rem;
+    border: 0rem solid #000101;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 0.8125rem;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    border-width: 2.4375rem 0;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #e8e8e5;
+    border: 0rem solid #000101;
+    border-radius: 3.125rem;
+    box-shadow: 0rem 0rem 0rem #000000, 0rem 0rem 0rem #0d0d0d;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #7eac01;
+    border: 0rem solid #000101;
+    border-radius: 3.125rem;
+    box-shadow: 0rem 0rem 0rem #000000, 0rem 0rem 0rem #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 0rem 0rem 0rem #000000, 0rem 0rem 0rem #0d0d0d;
+    border: 0rem solid #000000;
+    height: 1.25rem;
+    width: 2.4375rem;
+    border-radius: 0.4375rem;
+    background: #7eac01;
+    cursor: pointer;
 }
 
 .conditions {
@@ -3194,8 +3476,12 @@ footer {
         font-size: 12px
     }
 
+    .table_content_item {
+        width: 100%!important;
+    }
+
     .advantages_content__icons {
-        padding-bottom:  unset;
+        padding-bottom: unset;
     }
 
     .advantages_content__icons_item div {
@@ -3393,12 +3679,70 @@ footer {
     }
 
     .table {
-        padding: 0 0 5.833rem;
+        padding: 0 1.75rem 5.833rem
     }
 
-    .table_title,
-    .table_text {
-        font-size: 1.166rem;
+    .table_content_item_income_row {
+        flex-direction: column-reverse;
+    }
+
+    .table_content_item__switch_btn {
+        justify-content: space-between;
+    }
+
+    .table_switch_btn,
+    .table_content_item_income span {
+        font-size: 1.16rem;
+    }
+
+    .table_content_item_income_item {
+        font-size: 1.5rem;
+    }
+
+    .table_content_item_income_item_first {
+        width: 100%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item_income_item_second {
+        width: 90%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item_income_item_third {
+        width: 80%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item, .table_content_item_header,
+    .table_content_item_body {
+        padding: 3.6875rem 1.2rem;
+    }
+
+    .table_switch_btn,
+    .table_content_item_income_item {
+        padding: 0.5rem 2rem;
+    }
+
+    .table_content_item_body .main_section__styled_btn {
+        position: static;
+        width: 80%;
+        display: block;
+        margin: 2rem auto 0;
+    }
+
+    .range-slider-container,
+    .range_slider_number {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .range_slider_number {
+        justify-content: flex-start;
+    }
+
+    .table_content_item_calc_title {
+        font-size: 1.5rem;
     }
 
     .conditions {
@@ -3669,7 +4013,7 @@ footer {
     }
 
     .advantages_content__icons {
-        padding-bottom:  unset;
+        padding-bottom: unset;
     }
 
     .advantages_content__icons_item div {
@@ -3864,14 +4208,78 @@ footer {
     .table .title_style {
         margin-left: 1.75rem;
     }
-
     .table {
-        padding: 0 0 5.833rem;
+        padding: 0 1.75rem 5.833rem
     }
 
-    .table_title,
-    .table_text {
-        font-size: 1.166rem;
+    .table_content_item_income_row {
+        flex-direction: column-reverse;
+    }
+
+    .table_content_item {
+        width: 100%!important;
+    }
+
+    .table_content_item__switch_btn {
+        justify-content: space-between;
+    }
+
+    .table_switch_btn,
+    .table_content_item_income span {
+        font-size: 1.16rem;
+    }
+
+    .table_content_item_income_item {
+        font-size: 1.5rem;
+    }
+
+    .table_content_item_income_item_first {
+        width: 100%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item_income_item_second {
+        width: 90%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item_income_item_third {
+        width: 80%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item, .table_content_item_header,
+    .table_content_item_body {
+        padding: 3.6875rem 1.2rem;
+    }
+
+    .table_switch_btn {
+        height: 3rem;
+    }
+   
+     .table_content_item_income_item {
+        height: 3.7rem;
+    }
+
+    .table_content_item_body .main_section__styled_btn {
+        position: static;
+        width: 80%;
+        display: block;
+        margin: 2rem auto 0;
+    }
+
+    .range-slider-container,
+    .range_slider_number {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .range_slider_number {
+        justify-content: flex-start;
+    }
+
+    .table_content_item_calc_title {
+        font-size: 1.5rem;
     }
 
     .conditions {
@@ -4151,7 +4559,7 @@ footer {
     }
 
     .advantages_content__icons {
-        padding-bottom:  unset;
+        padding-bottom: unset;
     }
 
     .advantages_content__icons_item div {
@@ -4327,12 +4735,77 @@ footer {
     }
 
     .table {
-        padding: 0 0 5.833rem;
+        padding: 0 1.75rem 5.833rem
     }
 
-    .table_title,
-    .table_text {
-        font-size: 1.166rem;
+    .table_content_item_income_row {
+        flex-direction: column-reverse;
+    }
+
+    .table_content_item {
+        width: 100%!important;
+    }
+
+    .table_content_item__switch_btn {
+        justify-content: space-between;
+    }
+
+    .table_switch_btn,
+    .table_content_item_income span {
+        font-size: 1.16rem;
+    }
+
+    .table_content_item_income_item {
+        font-size: 1.5rem;
+    }
+
+    .table_content_item_income_item_first {
+        width: 100%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item_income_item_second {
+        width: 90%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item_income_item_third {
+        width: 80%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item, .table_content_item_header,
+    .table_content_item_body {
+        padding: 3.6875rem 1.2rem;
+    }
+
+    .table_switch_btn {
+        height: 3rem;
+    }
+   
+     .table_content_item_income_item {
+        height: 3.7rem;
+    }
+
+    .table_content_item_body .main_section__styled_btn {
+        position: static;
+        width: 80%;
+        display: block;
+        margin: 2rem auto 0;
+    }
+
+    .range-slider-container,
+    .range_slider_number {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .range_slider_number {
+        justify-content: flex-start;
+    }
+
+    .table_content_item_calc_title {
+        font-size: 1.5rem;
     }
 
     .conditions {
@@ -4609,7 +5082,7 @@ footer {
     }
 
     .advantages_content__icons {
-        padding-bottom:  unset;
+        padding-bottom: unset;
     }
 
     .advantages_content__icons_item div {
@@ -4787,12 +5260,72 @@ footer {
     }
 
     .table {
-        padding: 0 0 5.833rem;
+        padding: 0 1.75rem 5.833rem
     }
 
-    .table_title,
-    .table_text {
-        font-size: 1.166rem;
+    .table_content_item_income_row {
+        flex-direction: column-reverse;
+    }
+
+    .table_content_item {
+        width: 100%!important;
+    }
+
+    .table_content_item__switch_btn {
+        justify-content: space-between;
+    }
+
+    .table_switch_btn,
+    .table_content_item_income span {
+        font-size: 1.16rem;
+    }
+
+    .table_content_item_income_item {
+        font-size: 1.5rem;
+    }
+
+    .table_content_item_income_item_first {
+        width: 100%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item_income_item_second {
+        width: 90%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item_income_item_third {
+        width: 80%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_switch_btn {
+        height: 3rem;
+    }
+   
+     .table_content_item_income_item {
+        height: 3.7rem;
+    }
+
+    .table_content_item_body .main_section__styled_btn {
+        position: static;
+        width: 80%;
+        display: block;
+        margin: 2rem auto 0;
+    }
+
+    .range-slider-container,
+    .range_slider_number {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .range_slider_number {
+        justify-content: flex-start;
+    }
+
+    .table_content_item_calc_title {
+        font-size: 1.5rem;
     }
 
     .conditions {
@@ -5061,7 +5594,7 @@ footer {
     }
 
     .advantages_content__icons {
-        padding-bottom:  unset;
+        padding-bottom: unset;
     }
 
     .advantages_content__icons_item div {
@@ -5226,13 +5759,74 @@ footer {
         margin-left: 1.75rem;
     }
 
+ 
     .table {
-        padding: 0 0 5.833rem;
+        padding: 0 1.75rem 5.833rem
     }
 
-    .table_title,
-    .table_text {
-        font-size: 1.166rem;
+    .table_content_item_income_row {
+        flex-direction: column-reverse;
+    }
+
+    .table_content_item {
+        width: 100%!important;
+    }
+
+    .table_content_item__switch_btn {
+        justify-content: space-between;
+    }
+
+    .table_switch_btn,
+    .table_content_item_income span {
+        font-size: 1.16rem;
+    }
+
+    .table_content_item_income_item {
+        font-size: 1.5rem;
+    }
+
+    .table_content_item_income_item_first {
+        width: 100%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item_income_item_second {
+        width: 90%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_content_item_income_item_third {
+        width: 80%;
+        margin: 1rem auto 2rem;
+    }
+
+    .table_switch_btn {
+        height: 3rem;
+    }
+   
+     .table_content_item_income_item {
+        height: 3.7rem;
+    }
+
+    .table_content_item_body .main_section__styled_btn {
+        position: static;
+        width: 80%;
+        display: block;
+        margin: 2rem auto 0;
+    }
+
+    .range-slider-container,
+    .range_slider_number {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .range_slider_number {
+        justify-content: flex-start;
+    }
+
+    .table_content_item_calc_title {
+        font-size: 1.5rem;
     }
 
     .conditions {
@@ -5504,6 +6098,18 @@ footer {
     .remind_pass_container,
     .remind_message_container {
         width: 45%;
+    }
+
+    .range-slider-container,
+    .range_slider_number {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .table_content_item_body,
+    .table_content_item_header,
+    .table_content_item {
+        padding: 3.6875rem 1.5rem;
     }
 
     @-webkit-keyframes market_in_num_progress_right {

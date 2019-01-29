@@ -181,3 +181,77 @@ var patternMask = new IMask(name_mask, {
 var patternMask = new IMask(masked_name_second, {
     mask: '[aaaaaaaaaaaaaaaaaa][ ][aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]'
 });
+
+var rub_arr = ['186 млн.руб/месяц', '95 млн.руб/месяц', '91 млн.руб/месяц'];
+var tonn_arr = ['41500 руб/тонна', '21300 руб/тонна', '20200 руб/тонна'];
+var table_content_item_income_item = document.getElementsByClassName('table_content_item_income_item');
+var table_content_item__switch_btn = document.getElementsByClassName('table_content_item__switch_btn')[0];
+
+table_content_item__switch_btn.addEventListener('click', function (event) {
+    var target = event.target;
+    if (target.id == 'rub') {
+        table_content_item__switch_btn.children[1].classList.remove('table_switch_btn_activ');
+        target.classList.add('table_switch_btn_activ');
+        for (var i = 0; i < table_content_item_income_item.length; i++) {
+            table_content_item_income_item[i].innerHTML = rub_arr[i];
+        }
+    } else if (target.id == 'tonn') {
+        table_content_item__switch_btn.children[0].classList.remove('table_switch_btn_activ');
+        target.classList.add('table_switch_btn_activ');
+        for (var i = 0; i < table_content_item_income_item.length; i++) {
+            table_content_item_income_item[i].innerHTML = tonn_arr[i];
+        }
+    }
+})
+
+const rangeSlider = document.querySelector('.range-slider');
+const rangeValueBar = document.querySelector('#range-value-bar');
+const rangeValue = document.querySelector('#range-value');
+const percent_equal = (450000000 - 1000000) / 100;
+const range_slider_input = document.getElementsByClassName('range_slider_input')[0];
+
+
+let isDown = false;
+
+function dragHandler() {
+    isDown = !isDown;
+    if (!isDown) {
+        getInputNumber(rangeSlider.value)}
+         else {
+        getInputNumber(rangeSlider.value) 
+        }
+    }
+
+    function getInputNumber(value) {
+        let input_num = Number(value*percent_equal+1000000);
+        range_slider_input.innerHTML = input_num.toLocaleString();
+        const parent = document.getElementsByClassName('table_content_calc_item_number');
+        let month_income = 44590000*(input_num*100/450000000)/100;
+        if(String(Math.round(month_income)).length < 7) {
+            parent[0].children[1].innerHTML = 'тыс.'
+        }
+        else {
+            parent[0].children[1].innerHTML = 'млн.'
+        }
+        parent[0].children[0].innerHTML = Math.round(month_income).toLocaleString();
+    }
+
+    function dragOn(e) {
+        if (!isDown) return;
+        rangeValueHandler();
+    }
+
+    function rangeValueHandler() {
+        rangeValueBar.style.setProperty('width', `${rangeSlider.value}%`);
+        rangeValue.style.setProperty('transform', `translateX(-${this.value}%)`);
+        getInputNumber(rangeSlider.value);
+    }
+
+    rangeValueHandler();
+    rangeSlider.addEventListener('mousedown', dragHandler);
+    rangeSlider.addEventListener('mousemove', dragOn);
+    rangeSlider.addEventListener('mouseup', dragHandler);
+    rangeSlider.addEventListener('click', rangeValueHandler);
+    rangeSlider.addEventListener("touchstart", dragHandler, false);
+    rangeSlider.addEventListener("touchend", dragHandler, false);
+    rangeSlider.addEventListener("touchmove", dragOn, false);
