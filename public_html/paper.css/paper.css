@@ -736,6 +736,7 @@ header_item__button {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 2rem 0;
 }
 
 .advantages_content__icons {
@@ -3494,8 +3495,6 @@ footer {
         margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 
     .login_container,
@@ -4027,8 +4026,6 @@ footer {
         margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 
     .login_container,
@@ -4554,8 +4551,6 @@ footer {
         margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 
     .advantages_content__icons {
@@ -5095,8 +5090,6 @@ footer {
         margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 
     .table_content {
@@ -5608,8 +5601,6 @@ footer {
         margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 
     .login_container,
