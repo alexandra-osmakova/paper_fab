@@ -92,8 +92,8 @@ if (isset($_SESSION["user"])) {
             <div class="content">
                 <header>
                     <div class="header_item">
-                        <a href="" class="header_info_link">Проект</a>
-                        <a href="/news/news.html" class="header_info_link">Новости</a>
+                        <a href="/" class="header_info_link">Проект</a>
+                        <a href="/news" class="header_info_link">Новости</a>
                     </div>
                     <div class="header_item">
                         <div class="header_item__telephone_wrap">
