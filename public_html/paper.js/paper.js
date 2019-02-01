@@ -165,6 +165,7 @@ close_btn_video.addEventListener('click', function () {
 
 var phoneToMask = document.getElementById('selector');
 var phoneToMask_second = document.getElementById('selector_second');
+var phoneToMask_third = document.getElementById('selector_third');
 var maskOptions = {
     mask: '+{7}(000)000-00-00'
 };
@@ -172,12 +173,19 @@ var mask = new IMask(phoneToMask, maskOptions);
 
 var second_mask = new IMask(phoneToMask_second, maskOptions);
 
+var third_mask = new IMask(phoneToMask_third, maskOptions);
+
 
 var name_mask = document.getElementById('masked_name');
 var name_mask_second = document.getElementById('masked_name_second')
+var masked_name_third_window = document.getElementById('masked_name_third_window');
 var patternMask = new IMask(name_mask, {
     mask: '[aaaaaaaaaaaaaaaaaa][ ][aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]'
 });
+var patternMask = new IMask(masked_name_third_window, {
+    mask: '[aaaaaaaaaaaaaaaaaa][ ][aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]'
+});
+
 var patternMask = new IMask(masked_name_second, {
     mask: '[aaaaaaaaaaaaaaaaaa][ ][aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa]'
 });
@@ -255,3 +263,21 @@ function dragHandler() {
     rangeSlider.addEventListener("touchstart", dragHandler, false);
     rangeSlider.addEventListener("touchend", dragHandler, false);
     rangeSlider.addEventListener("touchmove", dragOn, false);
+
+    var download_about = document.getElementsByClassName('conditions_content_item')[1];
+
+    download_about.addEventListener('click', function(event) { 
+        var target = event.target;
+        if(target.id == 'download_about') {
+            document.getElementsByClassName('modal_window_third')[0].classList.remove('invisible_item');
+            overlay.classList.toggle('invisible_item');
+            document.documentElement.classList.add('no_scroll');
+        }
+    })
+
+    document.getElementById('third_modal_btn').addEventListener('click',
+    function() {
+        document.getElementsByClassName('modal_window_third')[0].classList.add('invisible_item');
+        overlay.classList.toggle('invisible_item');
+        document.documentElement.classList.remove('no_scroll');
+    })

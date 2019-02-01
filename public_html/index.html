@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="В 2018 году в г. Набережные Челны начал строиться завод по производству гофрокартона. Проект инвестиционный - это значит, что каждый может вложиться в проект и получать дивиденды после начала функционирования завода.">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.8/tiny-slider.css">
     <link href="https://fonts.googleapis.com/css?family=Cuprum&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="./paper.css/reset.css">
@@ -404,7 +406,7 @@
                 <ol>
                     <li>
                         <h3 class="condition_title">Как высчитывается доля инвестора?</h3>
-                        <p class="condition_text">% доли + стоимость доли + срок возврата инвестиций.</p>
+                        <p class="condition_text">Процент доли + стоимость доли + срок возврата инвестиций.</p>
                     </li>
                     <li>
                         <h3 class="condition_title">Какой общий % доли в бизнесе?</h3>
@@ -421,7 +423,7 @@
                 <h2>Скачать подробную презентацию</h2>
                 <p>Получите презентацию с точными графиками <br> доходности, а также список возможных <br> рисков,
                     оставив заявку на сайте</p>
-                <button class="main_section__styled_btn">
+                <button class="main_section__styled_btn" id="download_about">
                     <svg enable-background="new 0 0 433.5 433.5" version="1.1" viewBox="0 0 433.5 433.5" xml:space="preserve">
                         <path d="M395.25,153h-102V0h-153v153h-102l178.5,178.5L395.25,153z M38.25,382.5v51h357v-51H38.25z"></path>
                     </svg>
@@ -658,17 +660,6 @@
                         </div>
                         <span>f-karton@mail.ru</span>
                     </div>
-                    <div class="footer_contact_item_piece">
-                        <div>
-                            <svg enable-background="new 0 0 14 14" version="1.1" viewBox="0 0 14 14" xml:space="preserve">
-                                <path fill="#77a103" d="M7,9L5.3,7.5l-5,4.2C0.5,11.9,0.7,12,1,12h12c0.3,0,0.5-0.1,0.7-0.3L8.7,7.5L7,9z" />
-                                <path fill="#77a103" d="M13.7,2.3C13.5,2.1,13.3,2,13,2H1C0.7,2,0.5,2.1,0.3,2.3L7,8L13.7,2.3z" />
-                                <polygon fill="#77a103" points="0 2.9 0 11.2 4.8 7.1" />
-                                <polygon fill="#77a103" points="9.2 7.1 14 11.2 14 2.9" />
-                            </svg>
-                        </div>
-                        <span>www.f-karton.ru</span>
-                    </div>
                 </div>
                 <div class="footer_contacts_item">
                     <h3 class="footer_contacts_title">Где мы находимся?</h3>
@@ -691,7 +682,7 @@
     <footer>
         <div class="politics">
             <span>Все права защищены. © Фабрика Картона 2018</span>
-            <a href="">Политика конфиденциальности</a>
+            <a href="./politikaconf.pdf" target="_blank">Политика конфиденциальности</a>
         </div>
         <div class="creator">
             <div class="creator_logo"></div>
@@ -751,7 +742,22 @@
                 placeholder="Контактный телефон" required="">
             <button class="modal_window_submit_btn" name="modal_btn" type="submit">Оставить заявку</button>
         </form>
-        <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="">политикой
+        <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="./politikaconf.pdf" target="_blank">политикой
+                конфиденциальности</a></p>
+    </section>
+    <section class="modal_window_third invisible_item">
+        <h2 class="modal_title">Оставьте заявку</h2>
+        <p class="modal_text">Заполните форму и получите презентацию. <br> В презентации расписана общая финансовая
+            модель <br> со всеми категориями расходов и доходов.</p>
+        <div id="third_modal_btn" class="close_btn modal_btn">
+        </div>
+        <form id="prompt-form" method="post" action="/mail">
+            <input class="modal_window_input" id="masked_name_third_window" name="name" type="text" placeholder="Введите Ваше имя">
+            <input class="modal_window_input phone-number" id="selector_third" name="phone-number" type="text"
+                placeholder="Контактный телефон" required="">
+            <button class="modal_window_submit_btn" name="modal_btn" type="submit">Оставить заявку</button>
+        </form>
+        <p class="modal_agreement">Отправляя заявку, вы подтверждаете свое согласие с <a href="./politikaconf.pdf" target="_blank">политикой
                 конфиденциальности</a></p>
     </section>
     <section class="hidden_video invisible_item">
