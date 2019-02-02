@@ -662,7 +662,7 @@ use App\Util\ViewGenerator;
             модель <br> со всеми категориями расходов и доходов.</p>
         <div id="third_modal_btn" class="close_btn modal_btn">
         </div>
-        <form id="prompt-form" method="post" action="/mail">
+        <form id="prompt-form" method="post" action="/mail/index.php">
             <input class="modal_window_input" id="masked_name_third_window" name="name" type="text" placeholder="Введите Ваше имя">
             <input class="modal_window_input phone-number" id="selector_third" name="phone-number" type="text"
                 placeholder="Контактный телефон" required="">
