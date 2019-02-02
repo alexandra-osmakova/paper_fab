@@ -1,6 +1,10 @@
+<?php
+require __DIR__ . "/../../app/util/ViewGenerator.php";
+
+use App\Util\ViewGenerator;
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,56 +120,10 @@
                     </div>
                 </div>
                 <div class="all_news">
-                    <div class="news_content__item_piece">
-                        <div class="all_news_img"></div>
-                        <h3 class="small_news_title">Укрепление и развитие</h3>
-                        <p class="common_text news_text">Не следует, однако забывать, что укрепление
-                            и развитие структуры требуют определения
-                            уточнения существенных финансовых</p>
-                        <span class="news_date">21 ноября в 17:05</span>
-                    </div>
-                    <div class="news_content__item_piece">
-                        <div class="all_news_img"></div>
-                        <h3 class="small_news_title">Укрепление и развитие</h3>
-                        <p class="common_text news_text">Не следует, однако забывать, что укрепление
-                            и развитие структуры требуют определения
-                            уточнения существенных финансовых</p>
-                        <span class="news_date">21 ноября в 17:05</span>
-                    </div>
-                    <div class="news_content__item_piece">
-                        <div class="all_news_img"></div>
-                        <h3 class="small_news_title">Укрепление и развитие</h3>
-                        <p class="common_text news_text">Не следует, однако забывать, что укрепление
-                            и развитие структуры требуют определения
-                            уточнения существенных финансовых</p>
-                        <span class="news_date">21 ноября в 17:05</span>
-                    </div>
-                    <div class="news_content__item_piece">
-                        <div class="all_news_img"></div>
-                        <h3 class="small_news_title">Укрепление и развитие</h3>
-                        <p class="common_text news_text">Не следует, однако забывать, что укрепление
-                            и развитие структуры требуют определения
-                            уточнения существенных финансовых</p>
-                        <span class="news_date">21 ноября в 17:05</span>
-                    </div>
-                    <div class="news_content__item_piece">
-                        <div class="all_news_img"></div>
-                        <h3 class="small_news_title">Укрепление и развитиe</h3>
-                        <p class="common_text news_text">Не следует, однако забывать, что укрепление
-                            и развитие структуры требуют определения
-                            уточнения существенных финансовых</p>
-                        <span class="news_date">21 ноября в 17:05</span>
-                    </div>
-                    <div class="news_content__item_piece">
-                        <div class="all_news_img"></div>
-                        <h3 class="small_news_title">Укрепление и развитие </h3>
-                        <p class="common_text news_text">Не следует, однако забывать, что укрепление
-                            и развитие структуры требуют определения
-                            уточнения существенных финансовых</p>
-                        <span class="news_date">21 ноября в 17:05</span>
-                    </div>
+                    <?=ViewGenerator::getNews(1)?>
                 </div>
-                <button class="more_news modal_window_submit_btn">
+                <input type="hidden" id="count" value="1">
+                <button class="more_news modal_window_submit_btn" onclick="moreNews()">
                     Показать еще
                     <svg enable-background="new 0 0 155.724 155.723" version="1.1" viewBox="0 0 155.72 155.72"
                         xml:space="preserve">
@@ -292,6 +250,8 @@
             <span>Разработка сайта</span>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script>
         var menu__icon = document.getElementsByClassName('menu__icon')[0];
@@ -367,6 +327,22 @@
             }
 
         })
+
+        function moreNews() {
+            var count = parseInt($("input#count").val());
+            count++;
+            $("input#count").val(count);
+
+            $.ajax({
+                url: "/news/get_news.php",
+                type: "POST",
+                data: {method: "getNews", count: count},
+                success: function (data) {
+                    console.log(data);
+                    $("div.all_news").append($(data));
+                }
+            });
+        }
     </script>
 </body>
 

@@ -310,4 +310,32 @@ class ViewGenerator
 
         return $page;
     }
+
+    public static function getNews($count) {
+        $news = \R::findAll("posts");
+        $news = array_reverse($news, true);
+
+        $page = "";
+
+        $from = $count + (5*($count-1));
+        $to = $count * 6;
+
+        $c = 1;
+
+        foreach ($news as $post) {
+            if($c < $from) { $c++; continue;}
+            if($c === $to+1) {break;}
+
+            $page .= "<div class=\"news_content__item_piece\">
+                          <div class=\"all_news_img\" style=\"background-image: url('" . $post["bg"] . "')\"></div>
+                          <h3 class=\"small_news_title\">" . $post["title"] . "</h3>
+                          <p class=\"common_text news_text\">" . $post["text"] . "</p>
+                          <span class=\"news_date\">" . $post["date"] . "</span>
+                      </div>";
+
+            $c++;
+        }
+
+        return $page;
+    }
 }

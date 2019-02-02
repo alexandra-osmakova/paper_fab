@@ -531,7 +531,7 @@ use App\Util\ViewGenerator;
                 <div class="footer_links_container">
                     <div>
                         <a href="" class="footer_info_link">Проект</a>
-                        <a href="news/index.html" class="footer_info_link">Новости</a>
+                        <a href="news/index.php" class="footer_info_link">Новости</a>
                     </div>
                     <div>
                         <svg enable-background="new 0 0 96.124 96.123" version="1.1" viewBox="0 0 96.124 96.123"
