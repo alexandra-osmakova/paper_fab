@@ -51,8 +51,8 @@ if(isset($_SESSION["user"])) {
             </div>
             <div class="hidden_menu menu_visible">
                 <div class="hidden_menu_item">
-                    <a href="">Проект</a>
-                    <a href="./news/news.html">Новости</a>
+                    <a href="/">Проект</a>
+                    <a href="/news">Новости</a>
                 </div>
                 <div class="hidden_menu_item">
                         <span class="hidden_menu_text">ООО «Фабрика картона» <br>
@@ -80,7 +80,7 @@ if(isset($_SESSION["user"])) {
     </div>
     <div class="header_item">
         <a href="" class="header_info_link">Проект</a>
-        <a href="./news/news.html" class="header_info_link">Новости</a>
+        <a href="/news" class="header_info_link">Новости</a>
     </div>
     <div class="header_item">
         <div class="header_item__telephone_wrap">

@@ -67,7 +67,7 @@ $post = R::load("posts", $_GET["id"]);
     </div>
     <div class="header_item">
         <a href="" class="header_info_link">Проект</a>
-        <a href="./news/news.html" class="header_info_link">Новости</a>
+        <a href="/news" class="header_info_link">Новости</a>
     </div>
     <div class="header_item">
         <div class="header_item__telephone_wrap">
@@ -90,8 +90,8 @@ $post = R::load("posts", $_GET["id"]);
     </section>
     <section class="navigation">
         <nav class="news_page_nav">
-            <a href="../paper.html"><span class="nav_link">Главная</span></a>
-            <a href="../news/news.html"><span class="nav_link">Новости</span></a>
+            <a href="/"><span class="nav_link">Главная</span></a>
+            <a href="/news"><span class="nav_link">Новости</span></a>
             <a href=""><span class="last_nav_title">Статья</span></a>
         </nav>
     </section>

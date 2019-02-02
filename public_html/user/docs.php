@@ -6,6 +6,8 @@ require __DIR__ . "/../../app/util/ViewGenerator.php";
 
 use App\Util\ViewGenerator;
 
+$user_name = ViewGenerator::getUserName($_SESSION["user"]);
+
 if (isset($_SESSION["user"])) {
     ?>
     <!DOCTYPE html>
@@ -31,7 +33,7 @@ if (isset($_SESSION["user"])) {
             </a>
 
             <div class="user">
-                <h3>Алексей Петров</h3>
+                <h3><?=$user_name[0]["surname"] . " " . $user_name[0]["name"]?></h3>
                 <h4>Пользователь</h4>
             </div>
 
@@ -96,7 +98,7 @@ if (isset($_SESSION["user"])) {
             <header>
                 <div class="header_item">
                     <a href="" class="header_info_link">Проект</a>
-                    <a href="/news/news.html" class="header_info_link">Новости</a>
+                    <a href="/news" class="header_info_link">Новости</a>
                 </div>
                 <div class="header_item">
                     <div class="header_item__telephone_wrap">

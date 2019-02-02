@@ -1,6 +1,6 @@
 <?php
 
-header('Refresh: 5; url=/', true, 301);
+header('Refresh: 0; url=/thanx_page.php', true, 301);
 
 if (isset($_POST["modal_btn"])) {
     $to = "example@mail.ru";
