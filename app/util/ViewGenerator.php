@@ -255,4 +255,59 @@ class ViewGenerator
 
         return $money;
     }
+
+    public static function getNewsMain() {
+        $news = \R::findAll("posts");
+        $news = array_reverse($news, true);
+        $count = 0;
+        $page = "<div class=\"news_content_item\">";
+
+        foreach ($news as $post) {
+            $post["text"] = strip_tags(mb_substr($post["text"], 0, 100));
+
+            if($count === 0) {
+                $page .= "
+                    <div class=\"news_img_wrap\" style=\"background-image: url('" . $post["bg"] . "')\"></div>
+                    <p class=\"news_text_main\"><a href=\"/post/" . $post["id"] . "\">" . $post["text"] . "</a></p>
+                    <span class=\"news_date\">" . $post["date"] . "</span>
+                   </div>";
+
+                $count = 1;
+            }else {
+                if($count === 1) {
+                    $page .= "
+                        <div class=\"news_content_item\">
+                            <div class=\"news-slider\">
+                            <div><div class=\"news_slider_item\">
+                                  <div class=\"news_content__item_piece\">
+                                      <p class=\"common_text\"><a href=\"/post/" . $post["id"] . "\">" . $post["text"] . "</a></p>
+                                      <span class=\"news_date\">" . $post["date"] . "</span>
+                                  </div>";
+                    $count = 3;
+                }else {
+                    if($count === 2) {
+                        $page .= "
+                            <div><div class=\"news_slider_item\">";
+                    }
+
+                    $page .= "
+                        <div class=\"news_content__item_piece\">
+                            <p class=\"common_text\">" . $post["text"] . "</p>
+                            <span class=\"news_date\">" . $post["date"] . "</span>
+                        </div>";
+
+                    $count++;
+
+                    if($count === 6) {
+                        $page .= "</div></div>";
+                        $count = 2;
+                    }
+                }
+            }
+        }
+
+        $page .= "</div></div>";
+
+        return $page;
+    }
 }

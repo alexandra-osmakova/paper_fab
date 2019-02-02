@@ -1,3 +1,8 @@
+<?php
+require __DIR__ . "/../app/util/ViewGenerator.php";
+
+use App\Util\ViewGenerator;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -515,101 +520,7 @@
         <div class="news_all_content">
             <a class='main_section__styled_btn link_to_news' href="/news">Все новости</a>
             <div class="news_content">
-                <div class="news_content_item">
-                    <div class="news_img_wrap"></div>
-                    <p class="news_text_main">Не следует, однако забывать, что укрепление
-                        и развитие структуры требуют определения
-                        уточнения существенных финансовых</p>
-                    <span class="news_date">21 ноября в 17:05</span>
-                </div>
-                <div class="news_content_item">
-                    <div class="news-slider">
-                        <div>
-                            <div class="news_slider_item">
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="news_slider_item">
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="news_slider_item">
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                                <div class="news_content__item_piece">
-                                    <p class="common_text">Не следует, однако забывать, что укрепление
-                                        и развитие структуры требуют определения
-                                        уточнения существенных финансовых</p>
-                                    <span class="news_date">21 ноября в 17:05</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?=ViewGenerator::getNewsMain()?>
             </div>
         </div>
     </section>
