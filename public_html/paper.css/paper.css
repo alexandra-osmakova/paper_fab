@@ -2019,7 +2019,8 @@ input[type=range]::-ms-thumb {
 }
 
 .news_text_main > a,
-.news_content__item_piece .common_text > a{
+.news_content__item_piece .common_text > a,
+.small_news_title > a{
     text-decoration: none;
     color: inherit;
     font-family: inherit;

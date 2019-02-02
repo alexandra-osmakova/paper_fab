@@ -328,8 +328,8 @@ class ViewGenerator
 
             $page .= "<div class=\"news_content__item_piece\">
                           <div class=\"all_news_img\" style=\"background-image: url('" . $post["bg"] . "')\"></div>
-                          <h3 class=\"small_news_title\">" . $post["title"] . "</h3>
-                          <p class=\"common_text news_text\">" . $post["text"] . "</p>
+                          <h3 class=\"small_news_title\"><a href='/post/" . $post["id"] . "'>" . $post["title"] . "</a></h3>
+                          <p class=\"common_text news_text\"><a href='/post/" . $post["id"] . "'>" . $post["text"] . "</a></p>
                           <span class=\"news_date\">" . $post["date"] . "</span>
                       </div>";
 
