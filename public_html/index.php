@@ -509,9 +509,9 @@ use App\Util\ViewGenerator;
     <section class="apply_section">
         <h1 class="title_style">Оставьте заявку на инвестирование</h1>
         <p>Заполните форму, и мы перезвоним Вам, чтобы обсудить все детали</p>
-        <form action="" class="apply_form">
-            <input type="text" class="apply_form_input" id="masked_name_second" placeholder="Введите Ваше имя">
-            <input type="text" class="apply_form_input phone-number" id="selector" placeholder="Контактный телефон">
+        <form action="/mail/index.php" method="post" class="apply_form">
+            <input type="text" name="name" class="apply_form_input" id="masked_name_second" placeholder="Введите Ваше имя">
+            <input type="text" name="phone-number" class="apply_form_input phone-number" id="selector" placeholder="Контактный телефон">
             <input type="submit" class="apply_form_input" placeholder="Оставить заявку" readonly>
         </form>
     </section>
