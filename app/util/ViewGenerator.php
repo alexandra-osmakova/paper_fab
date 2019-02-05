@@ -338,4 +338,24 @@ class ViewGenerator
 
         return $page;
     }
+
+    public static function getPost($id) {
+        $post = [];
+
+        $post["post"] = \R::load("posts", $id);
+
+        $keys = \R::getAssocRow("SELECT posts.id FROM posts");
+
+        if($keys !== null) {
+            for($i = 0; $i < count($keys); $i++) {
+                if($keys[$i]["id"] === $id) {
+                    $post["prev"] = $keys[$i-1]["id"];
+                    $post["next"] = $keys[$i+1]["id"];
+                    break;
+                }
+            }
+        }
+
+        return $post;
+    }
 }

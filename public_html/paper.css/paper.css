@@ -2827,6 +2827,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .more_news svg {
@@ -2923,6 +2924,7 @@ footer {
     outline: none;
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .news_arrow_btn div {

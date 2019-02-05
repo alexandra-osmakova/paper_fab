@@ -1,7 +1,11 @@
 <?php
-require __DIR__ . "/../../app/database/db.php";
+require __DIR__ . "/../../app/util/ViewGenerator.php";
 
-$post = R::load("posts", $_GET["id"]);
+use App\Util\ViewGenerator;
+
+$opt = ViewGenerator::getPost($_GET["id"]);
+
+$post = $opt["post"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -136,7 +140,7 @@ $post = R::load("posts", $_GET["id"]);
 <!--                    форм развития.</p>-->
                 <span class="publishing_date"><?=$post->date?></span>
                 <div class="button_block">
-                    <button class="news_arrow_btn">
+                    <a href="/post/<?=($opt["prev"] === null) ? $_GET["id"] : $opt["prev"]?>" class="news_arrow_btn">
                         <div>
                             <svg class="prev_page" enable-background="new 0 0 86.001 86.001" version="1.1" viewBox="0 0 86.001 86.001"
                                 xml:space="preserve">
@@ -144,11 +148,11 @@ $post = R::load("posts", $_GET["id"]);
                             </svg>
                         </div>
                         <span class="prev_page_text">Предыдущая статья</span>
-                    </button>
-                    <button class="more_news modal_window_submit_btn">
+                    </a>
+                    <a href="/news" class="more_news modal_window_submit_btn">
                         Все Новости
-                    </button>
-                    <button class="news_arrow_btn">
+                    </a>
+                    <a href="/post/<?=($opt["next"] === null) ? $_GET["id"] : $opt["next"]?>" class="news_arrow_btn">
                             <span class="next_page_text">Следующая статья</span>
                         <div>
                             <svg class="next_page" enable-background="new 0 0 86.001 86.001" version="1.1" viewBox="0 0 86.001 86.001"
@@ -156,7 +160,7 @@ $post = R::load("posts", $_GET["id"]);
                                 <path fill="#7eac01" d="m5.907 21.004c-1.352-1.338-3.542-1.338-4.894 0-1.35 1.336-1.352 3.506 0 4.844l39.54 39.15c1.352 1.338 3.542 1.338 4.894 0l39.54-39.15c1.351-1.338 1.352-3.506 0-4.844s-3.542-1.338-4.894-2e-3l-37.093 35.705-37.093-35.703z" />
                             </svg>
                         </div>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
