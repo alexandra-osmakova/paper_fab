@@ -413,4 +413,39 @@ window.onload = function () {
         navAsThumbnails: true,
         arrowKeys: true,
     })
-}
+};
+
+function createChart(data) {
+    var ctx = document.getElementById('chart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+            datasets: [{
+                backgroundColor: 'rgba(159, 205, 94, .5)',
+                borderColor: 'rgba(159, 205, 94)',
+                pointBackgroundColor: 'rgba(159, 205, 94)',
+                pointBorderColor: 'rgba(0, 0, 0, .5)',
+                pointHoverRadius: 6,
+                pointRadius: 5,
+                data: data
+            }]
+        },
+
+        options: {
+            legend: {display: false},
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return Number(tooltipItem.yLabel) + " руб.";
+                    }
+                }
+            }
+        }
+    });
+};

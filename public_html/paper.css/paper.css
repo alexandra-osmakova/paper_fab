@@ -734,8 +734,8 @@ header_item__button {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    /*align-items: center;*/
+    justify-content: space-between;
     position: relative;
     overflow: hidden;
     padding: 2rem 0;
@@ -7164,4 +7164,131 @@ footer {
             transform: translateX(-1rem)
         }
     }
+}
+
+.chart__controls {
+    border-bottom: 2px solid lightgrey;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.chart__controls .main_section__styled_btn {
+    padding: 0.75rem 0.5625rem;
+    font-size: .7rem;
+    font-weight: 100;
+    margin-left: 1rem;
+}
+
+.chart__controls h6 {
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.chart__wrap {
+    border: 2px solid lightgrey;
+    width: 50%;
+}
+
+.chart__container {
+    padding: 1.5rem;
+}
+
+.quote__wrap {
+    width: 40%;
+    height: 18.8rem;
+}
+
+.quote__label,
+.quote__video {
+    width: 35%;
+    height: 11rem;
+    position: absolute;
+    border-radius: 15px;
+}
+
+.quote__label {
+    background-image: linear-gradient(113deg, #9fcd5e, #71aa27);
+    z-index: 2;
+    top: 9rem;
+    height: 13rem;
+}
+
+.quote__video {
+    top: 3rem;
+    left: 3rem;
+    z-index: 3;
+    width: 38%;
+    overflow: auto;
+    border: 2px solid #9fcd5e;
+}
+
+.quote__video iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 5rem;
+}
+
+.quote__video--hover {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    border-radius: 15px;
+    transition: .5s;
+    position: absolute;
+}
+
+.quote__video--play {
+    width: 5rem;
+    height: 5rem;
+    background-image: linear-gradient(113deg, #9fcd5e, #71aa27);
+    border-radius: 5rem;
+    position: absolute;
+    top: calc(50% - 2.5rem);
+    left: calc(50% - 2.5rem);
+    opacity: 0;
+    transition: .5s;
+    cursor: pointer
+}
+
+.quote__video--label {
+    position: absolute;
+    color: white;
+    font-size: .8rem;
+    font-weight: 500;
+    top: 5rem;
+    left: 14rem;
+    opacity: 0;
+}
+
+.quote__label--text {
+    position: absolute;
+    top: 6.5rem;
+    left: 2rem;
+    color: white;
+}
+
+.quote__label--text h6 {
+    margin-bottom: .5rem;
+}
+
+.quote__video_play_icon {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.7rem;
+}
+
+.quote__video:hover .quote__video--hover {
+    opacity: .5;
+    transition: .5s;
+}
+
+.quote__video:hover .quote__video--play,
+.quote__video:hover .quote__video--label {
+    opacity: 1;
+    transition: .5s;
 }
