@@ -201,8 +201,9 @@ input[type="submit"] {
 
 #admin header,
 #user header {
-    padding: 0;
     margin-top: 1rem;
+    padding: 0 0 .6rem;
+    border-bottom: 2px solid #f1f1f1;
 }
 
 #admin .header_info_link,
@@ -688,6 +689,64 @@ input[type="submit"] {
     -webkit-box-shadow: 0 0 50rem 0 #8eba19;
     -moz-box-shadow: 0 0 50rem 0 #8eba19;
     box-shadow: 0 0 50rem 0 #8eba19;
+}
+
+#admin .main_page__block {
+    width: 64%;
+    box-shadow: 0 0 20px 0 lightgrey;
+    margin-bottom: 3rem;
+    position: absolute;
+}
+
+#admin .main_page__block iframe {
+    width: 100%;
+    height: 18rem;
+    overflow: hidden;
+}
+
+#admin .main_page__block .main_page__block--cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, .9);
+    opacity: 0;
+    transition: .5s
+}
+
+#admin .main_page__block .main_page__block--edit {
+    position: absolute;
+    left: calc(50% - 4rem);
+    top: calc(50% - 1rem);
+    width: 8rem;
+    height: 2rem;
+    background: linear-gradient(90deg, #9FCD5E 0%, #71AA27 100%);
+    border-radius: 28px;
+    text-align: center;
+    color: white;
+    font-size: .8rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: .5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#admin .main_page__block .main_page__block--edit svg {
+    width: 1rem;
+    fill: white;
+}
+
+#admin .main_page__block .main_page__block--edit p {
+    line-height: 1.9rem;
+}
+
+#admin .main_page__block:hover .main_page__block--cover,
+#admin .main_page__block:hover .main_page__block--edit {
+    opacity: 1;
+    transition: .5s
 }
 
 @media screen and (max-width: 1096px) and (min-width: 320px) {

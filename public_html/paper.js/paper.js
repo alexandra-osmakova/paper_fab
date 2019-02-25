@@ -14,19 +14,11 @@ menu__icon.addEventListener('click', function () {
     header_burger_menu.classList.toggle('menu_state_open');
 })
 
-var productionStagesContent = document.getElementsByClassName('production_stages_content')[0];
 var productionImg = document.getElementsByClassName('production_stages_content_img');
 var productionSteps = document.getElementsByClassName('production_step_number');
 var productPaginationBullet = document.getElementsByClassName('product_pagination_bullet');
 var productionStepLine = document.getElementsByClassName('production_step_item_wrap');
 var productionStepLineSecond = document.getElementsByClassName('production_step_item_layer');
-
-productionStagesContent.addEventListener('click', function (event) {
-    var target = event.target;
-    if (target.classList.contains('production_step_number')) {
-        changeProductionPic(target.id)
-    }
-})
 
 function changeProductionPic(a) {
     switch (a) {
@@ -234,12 +226,10 @@ function getInputNumber(value) {
     let input_num = Number(value * percent_equal + 1000000);
     range_slider_input.innerHTML = input_num.toLocaleString();
     const parent = document.getElementsByClassName('table_content_calc_item_number');
-    let month_income = 44590000 * (input_num * 100 / 450000000) / 100;
-    if (String(Math.round(month_income)).length < 7) {
-        parent[0].children[1].innerHTML = 'тыс.'
-    } else {
-        parent[0].children[1].innerHTML = 'млн.'
-    }
+    // let month_income = 44590000 * (input_num * 100 / 450000000) / 100;
+   let month_income = input_num + (5 * input_num * 0.5);
+    console.log(input_num);
+
     parent[0].children[0].innerHTML = Math.round(month_income).toLocaleString();
 }
 
@@ -415,7 +405,7 @@ window.onload = function () {
     })
 };
 
-function createChart(data) {
+function createChart(x, y) {
     var ctx = document.getElementById('chart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -423,7 +413,7 @@ function createChart(data) {
 
         // The data for our dataset
         data: {
-            labels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+            labels: x,
             datasets: [{
                 backgroundColor: 'rgba(159, 205, 94, .5)',
                 borderColor: 'rgba(159, 205, 94)',
@@ -431,7 +421,7 @@ function createChart(data) {
                 pointBorderColor: 'rgba(0, 0, 0, .5)',
                 pointHoverRadius: 6,
                 pointRadius: 5,
-                data: data
+                data: y
             }]
         },
 

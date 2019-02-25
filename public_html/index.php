@@ -50,7 +50,8 @@ use App\Util\ViewGenerator;
             </div>
             <div class="hidden_menu menu_visible">
                 <div class="hidden_menu_item">
-                    <a href="">Проект</a>
+                    <a href="/">Проект</a>
+                    <a href="/faq">Вопросы</a>
                     <a href="/news">Новости</a>
                 </div>
                 <div class="hidden_menu_item">
@@ -79,7 +80,8 @@ use App\Util\ViewGenerator;
         <span class="header_logo_text">Производство гофрокартона<br> и гофротары</span>
     </div>
     <div class="header_item">
-        <a href="" class="header_info_link">Проект</a>
+        <a href="/" class="header_info_link">Проект</a>
+        <a href="/faq" class="header_info_link">Вопросы</a>
         <a href="/news" class="header_info_link">Новости</a>
     </div>
     <div class="header_item">
@@ -177,44 +179,6 @@ use App\Util\ViewGenerator;
     <div class="safety_content">
         <div class="safety_content_item">
             <div>
-                <svg enable-background="new 0 0 424.98 424.98" version="1.1" viewBox="0 0 424.98 424.98"
-                     xml:space="preserve">
-                        <path fill="#ffffff"
-                              d="m241.4 282.3c-1.587-1.738-3.595-3.038-5.67-4.121-4.518-2.356-9.459-3.785-14.365-5.075v38.016c7.963-0.9 17.105-3.79 21.286-11.224 1.996-3.551 2.393-7.914 1.58-11.867-0.441-2.142-1.352-4.108-2.831-5.729z"/>
-                    <path fill="#ffffff"
-                          d="m242.6 299.97c0.016-0.027 0.025-0.044 0.042-0.073-0.014 0.024-0.028 0.048-0.042 0.073z"/>
-                    <path fill="#ffffff"
-                          d="m184.01 221.53c-1.369 1.999-2.228 4.27-2.465 6.684-0.237 2.419-0.104 5.11 0.815 7.387 0.875 2.17 2.708 3.772 4.6 5.062 2.123 1.444 4.458 2.572 6.836 3.528 1.995 0.803 4.239 1.571 6.658 2.313v-34.4c-6.111 1.304-12.788 4.088-16.444 9.426z"/>
-                    <path fill="#ffffff"
-                          d="m242.8 299.62c-0.05 0.089-0.104 0.182-0.157 0.28 0.062-0.114 0.111-0.198 0.157-0.28z"/>
-                    <path fill="#ffffff" d="m243 299.26c0.013-0.024 0.015-0.026 0 0z"/>
-                    <path fill="#ffffff"
-                          d="m234.75 92.469c32.329-27.158 53.931-88.341 40.637-91.017-17.664-3.557-56.022 12.04-74.562 14.788-26.296 3.175-54.936-28.515-71.012-10.851-13.071 14.362 9.371 66.592 44.482 89.346-104.75 51.484-251.99 309.94 4.873 328.69 355.41 25.949 177.44-280.79 55.582-330.96zm30.523 203.83c-1.093 10.076-6.433 19.188-14.415 25.374-8.428 6.532-18.999 9.57-29.502 10.421v11.133c0 2.979-1.301 5.86-3.531 7.832-3.065 2.712-7.569 3.381-11.289 1.667-3.673-1.69-6.086-5.457-6.086-9.499v-12.168c-1.801-0.342-3.589-0.749-5.356-1.234-9.816-2.697-18.921-7.954-25.572-15.732-3.313-3.877-6.014-8.276-7.882-13.025-0.488-1.241-0.923-2.505-1.304-3.783-0.345-1.157-0.701-2.333-0.824-3.539-0.207-2.023 0.194-4.087 1.137-5.889 1.938-3.707 6.022-5.946 10.192-5.574 4.104 0.364 7.701 3.212 8.993 7.124 0.398 1.205 0.668 2.44 1.115 3.632 0.443 1.184 0.978 2.335 1.607 3.431 1.242 2.158 2.798 4.148 4.59 5.875 3.694 3.559 8.399 5.872 13.304 7.248v-41.362c-9.591-2.483-19.491-5.69-27.411-11.848-3.849-2.994-7.115-6.714-9.254-11.117-2.257-4.647-3.192-9.824-3.23-14.966-0.039-5.221 0.953-10.396 3.131-15.153 2.04-4.454 4.977-8.453 8.578-11.768 7.7-7.087 17.928-11.04 28.187-12.492v-11.557c0-2.978 1.301-5.86 3.531-7.832 3.066-2.711 7.568-3.381 11.289-1.667 3.672 1.691 6.086 5.457 6.086 9.499v11.494c1.367 0.172 2.73 0.378 4.086 0.624 10.074 1.823 19.927 5.983 27.294 13.246 3.49 3.44 6.347 7.539 8.356 12.009 0.561 1.247 1.052 2.523 1.477 3.824 0.396 1.213 0.794 2.462 0.983 3.728 0.302 2.021-6e-3 4.109-0.871 5.958-1.772 3.788-5.746 6.2-9.927 6.021-4.108-0.179-7.83-2.854-9.301-6.694-0.438-1.142-0.657-2.351-1.104-3.49-0.451-1.153-1.035-2.253-1.708-3.292-1.308-2.02-3.003-3.752-4.938-5.179-4.19-3.094-9.272-4.706-14.35-5.607v39.582c6.035 1.445 12.075 3.021 17.857 5.301 8.739 3.446 17.02 8.73 21.79 17.062-0.74-1.298-1.46-2.563 0.025 0.043 1.458 2.56 0.762 1.34 0.03 0.057 3.795 6.688 5.042 14.685 4.217 22.282z"/>
-                    <path fill="#ffffff"
-                          d="m242.49 300.17c-0.061 0.109-0.114 0.205-0.156 0.278 0.036-0.063 0.09-0.158 0.156-0.278z"/>
-                    </svg>
-            </div>
-            <span class="common_text">относительно быстрая окупаемость</span>
-        </div>
-        <div class="safety_content_item">
-            <div>
-                <svg width="512pt" height="512pt" version="1.1" viewBox="0 0 512 512">
-                    <g>
-                        <path fill="#ffffff"
-                              d="m77.109 401.66h-21.945c-30.418 0-55.164 24.75-55.164 55.168v40.168c0 8.2852 6.7148 15 15 15h64.691c-1.668-4.6953-2.582-9.7422-2.582-15z"/>
-                        <path fill="#ffffff"
-                              d="m184.22 321.33h-21.941c-30.418 0-55.168 24.75-55.168 55.168v120.5c0 8.2852 6.7148 15 15 15h64.691c-1.6641-4.6953-2.582-9.7422-2.582-15z"/>
-                        <path fill="#ffffff"
-                              d="m509.05 150.67l-107.11-144.6c-2.832-3.8164-7.3008-6.0703-12.055-6.0703-4.7539 0-9.2266 2.2539-12.055 6.0703l-107.11 144.6c-3.3711 4.5508-3.8906 10.617-1.3438 15.676 2.5508 5.0586 7.7305 8.2539 13.398 8.2539h38.555v322.4c0 8.2852 6.7148 15 15 15h107.11c8.2852 0 15-6.7148 15-15v-322.4h38.559c5.6641 0 10.848-3.1953 13.395-8.2539 2.5508-5.0586 2.0312-11.125-1.3398-15.676z"/>
-                        <path fill="#ffffff"
-                              d="m291.33 241h-21.945c-30.418 0-55.168 24.746-55.168 55.164v200.84c0 8.2852 6.7188 15 15 15h64.691c-1.6641-4.6953-2.5781-9.7422-2.5781-15z"/>
-                    </g>
-                </svg>
-            </div>
-            <span class="common_text">рост стоимости каждый год</span>
-        </div>
-        <div class="safety_content_item">
-            <div>
                 <svg width="512pt" height="512pt" version="1.1" viewBox="-38 0 512 512.00142">
                     <g>
                         <path fill="#ffffff"
@@ -224,32 +188,8 @@ use App\Util\ViewGenerator;
                     </g>
                 </svg>
             </div>
-            <span class="common_text">риски застрахованы в страховой компании</span>
-        </div>
-        <div class="safety_content_item">
-            <div>
-                <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-                        <path fill="#ffffff"
-                              d="m493.56 431.87l-58.716-125.91c-32.421 47.207-83.042 80.822-141.64 91.015l49.152 105.4c6.284 13.487 25.732 12.587 30.793-1.341l25.193-69.204 5.192-2.421 69.205 25.193c13.887 5.096 27.096-9.296 20.82-22.73z"/>
-                    <path fill="#ffffff"
-                          d="m256 0c-101.19 0-183.52 82.325-183.52 183.52s82.331 183.52 183.52 183.52c101.19 0 183.52-82.325 183.52-183.52s-82.329-183.52-183.52-183.52zm89.294 170.03l-32.541 31.722 7.69 44.804c2.351 13.679-12.062 23.956-24.211 17.585l-40.231-21.148-40.231 21.147c-12.219 6.416-26.549-3.982-24.211-17.585l7.69-44.804-32.541-31.722c-9.89-9.642-4.401-26.473 9.245-28.456l44.977-6.533 20.116-40.753c6.087-12.376 23.819-12.387 29.913 0l20.116 40.753 44.977 6.533c13.644 1.982 19.132 18.814 9.242 28.457z"/>
-                    <path fill="#ffffff"
-                          d="m77.156 305.96l-58.716 125.91c-6.305 13.497 7.023 27.81 20.821 22.727l69.204-25.193 5.192 2.421 25.193 69.205c5.051 13.899 24.496 14.857 30.793 1.342l49.152-105.4c-58.597-10.192-109.22-43.806-141.64-91.014z"/>
-                    </svg>
-            </div>
-            <span class="common_text">проект включен в ТОСЭР</span>
-        </div>
-        <div class="safety_content_item">
-            <div>
-                <svg width="493.35px" height="493.35px" enable-background="new 0 0 493.353 493.353" version="1.1"
-                     viewBox="0 0 493.353 493.353" xml:space="preserve">
-                        <path fill="#ffffff"
-                              d="m62.384 38.114c-7.138-7.133-15.752-10.706-25.837-10.706-10.089 0-18.702 3.576-25.841 10.706-7.135 7.139-10.706 15.753-10.706 25.841 0 13.703 6.088 24.173 18.271 31.405v361.45c0 2.475 0.902 4.617 2.714 6.424 1.807 1.807 3.949 2.71 6.423 2.71h18.271c2.474 0 4.615-0.896 6.423-2.71 1.809-1.807 2.712-3.949 2.712-6.424v-361.45c12.185-7.236 18.271-17.703 18.271-31.405 0-10.085-3.567-18.698-10.701-25.841z"/>
-                    <path fill="#ffffff"
-                          d="m487.93 69.385c-3.62-3.617-7.905-5.426-12.854-5.426-2.471 0-7.659 1.997-15.558 5.996-7.897 3.999-16.275 8.47-25.125 13.418-8.843 4.949-19.321 9.419-31.401 13.418-12.087 3.999-23.271 5.996-33.544 5.996-9.521 0-17.895-1.809-25.133-5.424-23.982-11.231-44.816-19.607-62.522-25.127-17.7-5.519-36.732-8.277-57.099-8.277-35.214 0-75.279 11.418-120.2 34.258-11.043 5.52-18.56 9.613-22.557 12.277-5.902 4.38-8.854 9.611-8.854 15.703v211.84c0 4.948 1.812 9.236 5.429 12.847 3.612 3.62 7.898 5.428 12.847 5.428 3.044 0 6.18-0.855 9.419-2.567 51.772-27.791 95.93-41.685 132.48-41.685 13.893 0 27.454 2.094 40.678 6.279 13.229 4.188 24.222 8.758 32.976 13.702 8.761 4.948 19.082 9.521 30.978 13.709 11.902 4.179 23.654 6.276 35.262 6.276 29.314 0 64.433-11.036 105.35-33.119 5.144-2.663 8.897-5.277 11.276-7.848 2.381-2.569 3.572-6.231 3.572-10.995v-217.84c1e-3 -4.947-1.806-9.226-5.42-12.841z"/>
-                    </svg>
-            </div>
-            <span class="common_text">проект поддержан и контролируется правительством РТ</span>
+            <h6>Застрахованные риски</h6>
+            <span class="common_text">инвестиции застрахованы<br>в страховой компании "Согласие"</span>
         </div>
         <div class="safety_content_item">
             <div>
@@ -267,86 +207,103 @@ use App\Util\ViewGenerator;
                     </g>
                 </svg>
             </div>
+            <h6>Спрос превышает предложение</h6>
             <span class="common_text">спрос на гофрокартон превышает
                     предложение и не имеет сезонности</span>
         </div>
-    </div>
-</section>
-<section class="production_stages">
-    <h1 class="title_style">Как выглядит производство гофрокартона?</h1>
-    <div class="production_stages_content">
-        <div class="production_stages_content_item">
-            <div class="production_step">
-                <div id="first_step" class="production_step_number production_step_number_activ">1</div>
-                <div class="production_step_item">1 этап
-                    <div class="production_step_item_wrap animated_produnction_line_go"></div>
-                    <div class="production_step_item_layer"></div>
-                </div>
-                <div class="production_step__text">Газеты, бумажные пакеты,<br>
-                    старые картонки летят в завод
-                </div>
+        <div class="safety_content_item">
+            <div>
+                <svg width="493.35px" height="493.35px" enable-background="new 0 0 493.353 493.353" version="1.1"
+                     viewBox="0 0 493.353 493.353" xml:space="preserve">
+                        <path fill="#ffffff"
+                              d="m62.384 38.114c-7.138-7.133-15.752-10.706-25.837-10.706-10.089 0-18.702 3.576-25.841 10.706-7.135 7.139-10.706 15.753-10.706 25.841 0 13.703 6.088 24.173 18.271 31.405v361.45c0 2.475 0.902 4.617 2.714 6.424 1.807 1.807 3.949 2.71 6.423 2.71h18.271c2.474 0 4.615-0.896 6.423-2.71 1.809-1.807 2.712-3.949 2.712-6.424v-361.45c12.185-7.236 18.271-17.703 18.271-31.405 0-10.085-3.567-18.698-10.701-25.841z"/>
+                    <path fill="#ffffff"
+                          d="m487.93 69.385c-3.62-3.617-7.905-5.426-12.854-5.426-2.471 0-7.659 1.997-15.558 5.996-7.897 3.999-16.275 8.47-25.125 13.418-8.843 4.949-19.321 9.419-31.401 13.418-12.087 3.999-23.271 5.996-33.544 5.996-9.521 0-17.895-1.809-25.133-5.424-23.982-11.231-44.816-19.607-62.522-25.127-17.7-5.519-36.732-8.277-57.099-8.277-35.214 0-75.279 11.418-120.2 34.258-11.043 5.52-18.56 9.613-22.557 12.277-5.902 4.38-8.854 9.611-8.854 15.703v211.84c0 4.948 1.812 9.236 5.429 12.847 3.612 3.62 7.898 5.428 12.847 5.428 3.044 0 6.18-0.855 9.419-2.567 51.772-27.791 95.93-41.685 132.48-41.685 13.893 0 27.454 2.094 40.678 6.279 13.229 4.188 24.222 8.758 32.976 13.702 8.761 4.948 19.082 9.521 30.978 13.709 11.902 4.179 23.654 6.276 35.262 6.276 29.314 0 64.433-11.036 105.35-33.119 5.144-2.663 8.897-5.277 11.276-7.848 2.381-2.569 3.572-6.231 3.572-10.995v-217.84c1e-3 -4.947-1.806-9.226-5.42-12.841z"/>
+                    </svg>
             </div>
-            <div class="production_step">
-                <div id="second_step" class="production_step_number">2</div>
-                <div class="production_step_item">2 этап
-                    <div class="production_step_item_wrap"></div>
-                    <div class="production_step_item_layer"></div>
-                </div>
-                <div class="production_step__text">Внутри завода из них удаляется клей, <br>
-                    очищаются от загрязнений, все <br>
-                    превращается в чистую массу
-                </div>
-            </div>
-            <div class="production_step">
-                <div id="third_step" class="production_step_number">3</div>
-                <div class="production_step_item">3 этап
-                    <div class="production_step_item_wrap"></div>
-                    <div class="production_step_item_layer"></div>
-                </div>
-                <div class="production_step__text">На выходе получаем рулоны</div>
-            </div>
-        </div>
-        <div class="production_stages_content_item">
-            <div class="production_stages_content_img"></div>
-            <div class="production_stages_content_img invisible_item"></div>
-            <div class="production_stages_content_img invisible_item"></div>
-            <div class="product_pagination">
-                <div class="product_pagination_bullet product_pagination_activ"></div>
-                <div class="product_pagination_bullet"></div>
-                <div class="product_pagination_bullet"></div>
-            </div>
+            <h6>Поддержка правительства РТ</h6>
+            <span class="common_text">проект включен в ТОСЭР, поддерживается<br>и контролируется правительством РТ</span>
         </div>
     </div>
 </section>
+<!--<section class="production_stages">-->
+<!--    <h1 class="title_style">Предполагаемая доходность проекта</h1>-->
+<!--    <div class="production_stages_content">-->
+<!--        -->
+<!--    </div>-->
+<!--    <div class="production_stages_content">-->
+<!--        <div class="production_stages_content_item">-->
+<!--            <div class="production_step">-->
+<!--                <div id="first_step" class="production_step_number production_step_number_activ">1</div>-->
+<!--                <div class="production_step_item">1 этап-->
+<!--                    <div class="production_step_item_wrap animated_produnction_line_go"></div>-->
+<!--                    <div class="production_step_item_layer"></div>-->
+<!--                </div>-->
+<!--                <div class="production_step__text">Газеты, бумажные пакеты,<br>-->
+<!--                    старые картонки летят в завод-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="production_step">-->
+<!--                <div id="second_step" class="production_step_number">2</div>-->
+<!--                <div class="production_step_item">2 этап-->
+<!--                    <div class="production_step_item_wrap"></div>-->
+<!--                    <div class="production_step_item_layer"></div>-->
+<!--                </div>-->
+<!--                <div class="production_step__text">Внутри завода из них удаляется клей, <br>-->
+<!--                    очищаются от загрязнений, все <br>-->
+<!--                    превращается в чистую массу-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="production_step">-->
+<!--                <div id="third_step" class="production_step_number">3</div>-->
+<!--                <div class="production_step_item">3 этап-->
+<!--                    <div class="production_step_item_wrap"></div>-->
+<!--                    <div class="production_step_item_layer"></div>-->
+<!--                </div>-->
+<!--                <div class="production_step__text">На выходе получаем рулоны</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="production_stages_content_item">-->
+<!--            <div class="production_stages_content_img"></div>-->
+<!--            <div class="production_stages_content_img invisible_item"></div>-->
+<!--            <div class="production_stages_content_img invisible_item"></div>-->
+<!--            <div class="product_pagination">-->
+<!--                <div class="product_pagination_bullet product_pagination_activ"></div>-->
+<!--                <div class="product_pagination_bullet"></div>-->
+<!--                <div class="product_pagination_bullet"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 <section class="profit">
     <h1 class="title_style">Предполагаемая доходность проекта</h1>
     <div class="profit_content">
-        <div class="profit_content_item">186 млн.руб в месяц</div>
-        <div class="profit_content_item profit_content_title_first profit_content_title">
-            <div class="profit_content_title_first">ДОХОД <br>
-                (выручка от реализации товаров)
+        <div class="profit_content__block">
+            <div class="profit_content__block--info">
+                <h1>Доход</h1>
+                <h6>Выручка от реализации товаров</h6>
+                <p class="amount">186 млн. руб. в месяц</p>
+            </div>
+            <div class="profit_content__block--info">
+                <h1>Расходы</h1>
+                <h6>Управленческие и коммерческие</h6>
+                <p class="amount">95 млн. руб. в месяц</p>
             </div>
         </div>
-        <div class="profit_content_item">41500 руб/тонна</div>
-        <div class="profit_content_item">95 млн.руб в месяц</div>
-        <div class="profit_content_item profit_content_title">
-            <div class="profit_content_title_second">
-                РАСХОДЫ <br>
-                (управленческие и коммерческие)
+        <div class="profit_content__block">
+            <div class="profit_content__block--info pure_income">
+                <h1>Чистая прибыль</h1>
+                <h2>91 млн. руб. в месяц</h2>
+                <p class="amount">IRR<br>130,1%</p>
             </div>
         </div>
-        <div class="profit_content_item">21300 руб/тонна</div>
-        <div class="profit_content_item">91 млн.руб в месяц</div>
-        <div class="profit_content_item profit_content_title">
-            <div class="profit_content_title_third">
-                Чистая прибыль
-            </div>
-        </div>
-        <div class="profit_content_item">20200 руб/тонна</div>
+        <svg class="top" viewBox="0 0 242 76" xmlns="http://www.w3.org/2000/svg">
+            <path d="m1.674 46.292s34.69-12.268 102.26 16.745c67.574 29.013 136.77-49.349 136.77-49.349" stroke="#E6E6E6"/>
+        </svg>
+        <svg class="bottom" viewBox="0 0 242 76" xmlns="http://www.w3.org/2000/svg">
+            <path d="m1.674 46.292s34.69-12.268 102.26 16.745c67.574 29.013 136.77-49.349 136.77-49.349" stroke="#E6E6E6"/>
+        </svg>
     </div>
-    <p><span>Скачайте презентацию </span> <br>
-        с точной сметой расходов и доходов</p>
-    <button class="main_section__styled_btn modal_trigger">Получить презентацию на e-mail</button>
 </section>
 <section class="table">
     <div class="table_bg">
@@ -373,8 +330,8 @@ use App\Util\ViewGenerator;
                 <div class="table_content_item_body_wrap"></div>
                 <div class="table_content_item_body_content">
                     <div class="table_content_calc_item">
-                        <span class="table_content_calc_item_number"><span>30</span> <span>млн.</span></span>
-                        <span class="table_calc_s_title">ваша ежемесячная прибыль</span>
+                        <span class="table_content_calc_item_number"><span>30</span> <span>руб.</span></span>
+                        <span class="table_calc_s_title">ваш доход от инвестиций</span>
                     </div>
                     <button class="main_section__styled_btn modal_trigger">Инвестировать в проект</button>
                 </div>
@@ -388,21 +345,43 @@ use App\Util\ViewGenerator;
     <h1 class="title_style">Условия для инвестора</h1>
     <div class="conditions_content">
         <div class="conditions_content_item">
-            <ol>
-                <li>
-                    <h3 class="condition_title">Как высчитывается доля инвестора?</h3>
-                    <p class="condition_text">Процент доли + стоимость доли + срок возврата инвестиций.</p>
-                </li>
-                <li>
-                    <h3 class="condition_title">Какой общий % доли в бизнесе?</h3>
-                    <p class="condition_text">Общая доля для инвесторов - 49%. Возможно деление на портфели.</p>
-                </li>
-                <li>
-                    <h3 class="condition_title">Как будет распределяться прибыль до окупаемости?</h3>
-                    <p class="condition_text">До окупаемости дивиденды будут распределяться <br> 90/10 в пользу
-                        инвестора.</p>
-                </li>
-            </ol>
+            <div class="vertical_line"></div>
+
+            <div class="conditions_content_item--block">
+                <svg class="dot" fill="none" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m6 10c2.2091 0 4-1.7909 4-4s-1.7909-4-4-4-4 1.7909-4 4 1.7909 4 4 4z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd" stroke="#71AA27" stroke-width="3"/>
+                </svg>
+                <svg class="line" fill="none" viewBox="0 0 42 2" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m1 1h40" stroke="#E6E6E6" stroke-linecap="square"/>
+                </svg>
+                <div class="block--date">01.02.2019 - 03.02.2019</div>
+                <p class="block--text">Заключение застрахованного договора инвестиционного займа.
+                    Инвестиционный взнос от 600 тыс. рублей.</p>
+            </div>
+
+            <div class="conditions_content_item--block">
+                <svg class="dot" fill="none" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m6 10c2.2091 0 4-1.7909 4-4s-1.7909-4-4-4-4 1.7909-4 4 1.7909 4 4 4z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd" stroke="#71AA27" stroke-width="3"/>
+                </svg>
+                <svg class="line" fill="none" viewBox="0 0 42 2" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m1 1h40" stroke="#E6E6E6" stroke-linecap="square"/>
+                </svg>
+                <div class="block--date">01.02.2019 - 03.02.2019</div>
+                <p class="block--text">Заключение застрахованного договора инвестиционного займа.
+                    Инвестиционный взнос от 600 тыс. рублей.</p>
+            </div>
+
+            <div class="conditions_content_item--block">
+                <svg class="dot" fill="none" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m6 10c2.2091 0 4-1.7909 4-4s-1.7909-4-4-4-4 1.7909-4 4 1.7909 4 4 4z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd" stroke="#71AA27" stroke-width="3"/>
+                </svg>
+                <svg class="line" fill="none" viewBox="0 0 42 2" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m1 1h40" stroke="#E6E6E6" stroke-linecap="square"/>
+                </svg>
+                <div class="block--date">01.02.2019 - 03.02.2019</div>
+                <p class="block--text">Заключение застрахованного договора инвестиционного займа.
+                    Инвестиционный взнос от 600 тыс. рублей.</p>
+            </div>
         </div>
         <div class="conditions_content_item">
             <div class="conditions_content_item_wrap"></div>
@@ -414,24 +393,60 @@ use App\Util\ViewGenerator;
     <div class="project_head_content">
         <div class="project_head__item">
             <div class="project_head__item_img"></div>
-            <h3>Сабиров Ильмир Ильязович</h3>
-            <span>генеральный директор</span>
-            <p>Опыт в бумажной промышленности <br>
-                4 года</p>
+            <div class="project_head__item_cover">
+                <h3>Сабиров Ильмир Ильязович</h3>
+                <span>генеральный директор</span>
+                <p>Опыт в бумажной промышленности <br>
+                    4 года</p>
+            </div>
         </div>
         <div class="project_head__item">
             <div class="project_head__item_img"></div>
-            <h3>Сабиров Ильмир Ильязович</h3>
-            <span>генеральный директор</span>
-            <p>Опыт в бумажной промышленности <br>
-                4 года</p>
+            <div class="project_head__item_cover">
+                <h3>Сабиров Ильмир Ильязович</h3>
+                <span>генеральный директор</span>
+                <p>Опыт в бумажной промышленности <br>
+                    4 года</p>
+            </div>
         </div>
         <div class="project_head__item">
             <div class="project_head__item_img"></div>
-            <h3>Сабиров Ильмир Ильязович</h3>
-            <span>генеральный директор</span>
-            <p>Опыт в бумажной промышленности <br>
-                4 года</p>
+            <div class="project_head__item_cover">
+                <h3>Сабиров Ильмир Ильязович</h3>
+                <span>генеральный директор</span>
+                <p>Опыт в бумажной промышленности <br>
+                    4 года</p>
+            </div>
+        </div>
+
+        <div class="project_head__item">
+            <div class="project_head__item_img"></div>
+            <div class="project_head__item_cover">
+                <h3>Сабиров Ильмир Ильязович</h3>
+                <span>генеральный директор</span>
+                <p>Опыт в бумажной промышленности <br>
+                    4 года</p>
+            </div>
+        </div>
+    </div>
+    <div class="project_head_content">
+        <div class="project_head__item">
+            <div class="project_head__item_img"></div>
+            <div class="project_head__item_cover">
+                <h3>Сабиров Ильмир Ильязович</h3>
+                <span>генеральный директор</span>
+                <p>Опыт в бумажной промышленности <br>
+                    4 года</p>
+            </div>
+        </div>
+        <div class="project_head__item">
+            <div class="project_head__item_img"></div>
+            <div class="project_head__item_cover">
+                <h3>Сабиров Ильмир Ильязович</h3>
+                <span>генеральный директор</span>
+                <p>Опыт в бумажной промышленности <br>
+                    4 года</p>
+            </div>
         </div>
     </div>
 </section>
@@ -734,9 +749,9 @@ use App\Util\ViewGenerator;
             <div class="footer_logo"></div>
             <div class="footer_links_container">
                 <div>
-                    <a href="" class="footer_info_link">Проект</a>
+                    <a href="/" class="footer_info_link">Проект</a>
                     <a href="news/index.php" class="footer_info_link">Новости</a>
-                    <a href="news/index.php" class="footer_info_link">Личный кабинет</a>
+                    <a href="/login" class="footer_info_link">Личный кабинет</a>
                 </div>
                 <div>
                     <svg enable-background="new 0 0 96.124 96.123" version="1.1" viewBox="0 0 96.124 96.123"
@@ -910,7 +925,10 @@ use App\Util\ViewGenerator;
             $(window).on('scroll', function() {
                 if(window.pageYOffset >= 1180) {
                     if(!paused) {
-                        createChart([10, 11, 2, 14, 112, 44, 55, 66]);
+                        createChart(
+                            ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+                            [0, 5, 12, 15, 23, 34, 56, 88, 89, 90, 100, 112, 125]
+                        );
                         paused = true;
                     }
                 }
