@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . "/../../app/util/Encoder.php";
+require __DIR__."/../../app/util/Encoder.php";
 require __DIR__ . "/../../app/database/db.php";
 
 use App\Util\Encoder;

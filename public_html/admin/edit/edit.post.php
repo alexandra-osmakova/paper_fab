@@ -2,7 +2,7 @@
 
 session_start();
 
-require __DIR__ . "/../../../app/util/Encoder.php";
+require __DIR__."/../../../app/util/Encoder.php";
 require __DIR__ . "/../../../app/database/db.php";
 
 $post = R::load("posts", $_GET["id"]);
@@ -25,7 +25,7 @@ if (isset($_SESSION["user"])) {
             <link rel="stylesheet" href="/paper.css/paper.css">
             <link rel="stylesheet" href="/paper.css/admin.css">
 
-            <title>Administrator</title>
+            <title>Инвестиционный проект “Набережночелнинская картонно-бумажная фабрика”</title>
         </head>
         <body>
         <section id="admin">
@@ -93,7 +93,7 @@ if (isset($_SESSION["user"])) {
 
                 <div class="footer">
                     <div class="logo">
-                        <div class="creator_logo"></div>
+                        <a href="http://drim.agency/"><div class="creator_logo"></div></a>
                         <span>Разработка сайта</span>
                     </div>
 

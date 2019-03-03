@@ -2,7 +2,7 @@
 
 session_start();
 
-require __DIR__ . "/../../app/util/ViewGenerator.php";
+require __DIR__."/../../app/util/ViewGenerator.php";
 
 use App\Util\ViewGenerator;
 
@@ -23,7 +23,7 @@ if (isset($_SESSION["user"])) {
         <link rel="stylesheet" href="/paper.css/paper.css">
         <link rel="stylesheet" href="/paper.css/admin.css">
 
-        <title>Administrator</title>
+        <title>Инвестиционный проект “Набережночелнинская картонно-бумажная фабрика”</title>
     </head>
     <body>
     <section id="user">
@@ -84,7 +84,7 @@ if (isset($_SESSION["user"])) {
 
             <div class="footer">
                 <div class="logo">
-                    <div class="creator_logo"></div>
+                    <a href="http://drim.agency/"><div class="creator_logo"></div></a>
                     <span>Разработка сайта</span>
                 </div>
 
@@ -97,7 +97,7 @@ if (isset($_SESSION["user"])) {
         <div class="content">
             <header>
                 <div class="header_item">
-                    <a href="" class="header_info_link">Проект</a>
+                    <a href="/" class="header_info_link">Проект</a>
                     <a href="/news" class="header_info_link">Новости</a>
                 </div>
                 <div class="header_item">

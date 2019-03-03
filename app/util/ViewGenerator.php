@@ -86,10 +86,12 @@ class ViewGenerator
         $posts = \R::findAll("posts");
 
         foreach ($posts as $post) {
+            $text = (mb_strlen($post->text) > 65) ? mb_substr($post->text, 0, 65) . "..." : $post->text;
+
             $page .= "<tr>
                             <td>" . $post->date . "</td>
                             <td>" . $post->title . "</td>
-                            <td>" . mb_substr($post->text, 0, 120) . "..." . "</td>
+                            <td>" . $text . "</td>
                             <td>
                                 <div class=\"controls\">
                                     <button class=\"btn view\" onclick='viewPost(" . $post->id . ")'>
@@ -329,7 +331,7 @@ class ViewGenerator
             $page .= "<div class=\"news_content__item_piece\">
                           <div class=\"all_news_img\" style=\"background-image: url('" . $post["bg"] . "')\"></div>
                           <h3 class=\"small_news_title\"><a href='/post/" . $post["id"] . "'>" . $post["title"] . "</a></h3>
-                          <p class=\"common_text news_text\"><a href='/post/" . $post["id"] . "'>" . $post["text"] . "</a></p>
+                          <p class=\"common_text news_text\"><a href='/post/" . $post["id"] . "'>" . strip_tags(mb_substr($post["text"], 0, 100)) . "</a></p>
                           <span class=\"news_date\">" . $post["date"] . "</span>
                       </div>";
 

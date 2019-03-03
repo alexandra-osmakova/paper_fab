@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . "/../../app/util/ViewGenerator.php";
+require __DIR__."/../../app/util/ViewGenerator.php";
 
 use App\Util\ViewGenerator;
 

@@ -3,10 +3,12 @@ header("Refresh: 5; url=/admin", true, 301);
 
 session_start();
 
-require __DIR__ . "/../../../app/util/Encoder.php";
+require __DIR__."/../../../app/util/Encoder.php";
 require __DIR__ . "/../../../app/database/db.php";
+require __DIR__ . "/../../../app/util/TextFormatter.php";
 
 use App\Util\Encoder;
+use App\Util\TextFormatter;
 
 if (isset($_POST["id"])) {
     $post = R::load("posts", $_POST["id"]);
@@ -15,7 +17,7 @@ if (isset($_POST["id"])) {
 
     $post->date = date("Y-m-d H-i-s");
     $post->title = $_POST["title"];
-    $post->text = $_POST["text"];
+    $post->text = TextFormatter::format($_POST["text"]);
     $post->bg = "/img/" . $_FILES["file"]["name"];
 
     R::store($post);
@@ -26,7 +28,7 @@ if (isset($_POST["id"])) {
 
     $post->date = date("Y-m-d H:i:s");
     $post->title = $_POST["title"];
-    $post->text = $_POST["text"];
+    $post->text = TextFormatter::format($_POST["text"]);
     $post->bg = "/img/" . $_FILES["file"]["name"];
 
     R::store($post);

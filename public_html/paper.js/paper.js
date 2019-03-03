@@ -122,6 +122,7 @@ var modal_thanx_btn = document.getElementById('modal_thanx_btn');
 var close_btn_video = document.getElementById('close_btn_video');
 var hidden_video = document.getElementsByClassName('hidden_video')[0];
 var open_video = document.getElementsByClassName('circle_amimation_container')[0];
+var ps_play = document.getElementsByClassName('project_stage_play')[0];
 var modal_trigger = document.getElementsByClassName('modal_trigger');
 
 open_slider.addEventListener('click', slider_start);
@@ -166,10 +167,17 @@ open_video.addEventListener('click', function () {
     document.documentElement.classList.add('no_scroll');
 })
 
+ps_play.addEventListener('click', function () {
+    hidden_video.classList.toggle('invisible_item');
+    overlay.classList.toggle('invisible_item');
+    document.documentElement.classList.add('no_scroll');
+})
+
 close_btn_video.addEventListener('click', function () {
     hidden_video.classList.toggle('invisible_item');
     overlay.classList.toggle('invisible_item');
     document.documentElement.classList.remove('no_scroll');
+    $('#video').attr('src', $('#video').attr('src'));
 })
 
 var phoneToMask = document.getElementById('selector');
@@ -207,7 +215,7 @@ var table_content_item__switch_btn = document.getElementsByClassName('table_cont
 const rangeSlider = document.querySelector('.range-slider');
 const rangeValueBar = document.querySelector('#range-value-bar');
 const rangeValue = document.querySelector('#range-value');
-const percent_equal = (450000000 - 1000000) / 100;
+const percent_equal = (450000000 - 600000) / 100;
 const range_slider_input = document.getElementsByClassName('range_slider_input')[0];
 
 
@@ -223,7 +231,7 @@ function dragHandler() {
 }
 
 function getInputNumber(value) {
-    let input_num = Number(value * percent_equal + 1000000);
+    let input_num = Number(value * percent_equal + 600000);
     range_slider_input.innerHTML = input_num.toLocaleString();
     const parent = document.getElementsByClassName('table_content_calc_item_number');
     // let month_income = 44590000 * (input_num * 100 / 450000000) / 100;
@@ -432,7 +440,7 @@ function createChart(x, y) {
                 intersect: false,
                 callbacks: {
                     label: function (tooltipItem) {
-                        return Number(tooltipItem.yLabel) + " руб.";
+                        return Number(tooltipItem.yLabel) + "млрд. руб.";
                     }
                 }
             }

@@ -3,7 +3,7 @@ header("Refresh: 2; url=/admin", true, 301);
 
 session_start();
 
-require __DIR__ . "/../../../app/util/Encoder.php";
+require __DIR__."/../../../app/util/Encoder.php";
 require __DIR__ . "/../../../app/database/db.php";
 
 use App\Util\Encoder;
