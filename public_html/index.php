@@ -679,9 +679,6 @@ use App\Util\ViewGenerator;
                 <p>-</p>
             </div>
         </div>
-        <div class="project_head__item">
-
-        </div>
     </div>
 </section>
 <section class="experts_view">

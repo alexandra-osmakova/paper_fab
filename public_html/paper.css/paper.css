@@ -2157,8 +2157,8 @@ input[type=range]::-ms-thumb {
 }
 
 .project_head__item {
-    width: 25%;
-    margin-right: 2.5rem;
+    width: 22.5%;
+    margin-right: 2.5%;
     position: relative;
     height: 17.5rem;
 }
