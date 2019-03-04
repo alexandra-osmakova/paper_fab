@@ -2156,6 +2156,10 @@ input[type=range]::-ms-thumb {
     padding-top: 2.5rem;
 }
 
+.project_head_slider {
+    display: none;
+}
+
 .project_head__item {
     width: 22.5%;
     margin-right: 2.5%;
@@ -2737,7 +2741,7 @@ input[type="submit"].apply_form_input:hover {
     width: 8.25rem;
     height: 15.625rem;
     box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, 0.2);
-    top: 15.375rem;
+    top: 12.375rem;
     border-radius: 15px;
 }
 
@@ -2806,7 +2810,7 @@ input[type="submit"].apply_form_input:hover {
 }
 
 .experts_view .title_style {
-    padding-bottom: 8rem;
+    padding-bottom: 3rem;
     margin-left: -5rem;
 }
 
@@ -4719,6 +4723,7 @@ footer {
         width: 80%;
         display: block;
         margin: 2rem auto 0;
+        padding: 0;
     }
 
     .range-slider-container,
@@ -8009,7 +8014,7 @@ footer {
 
     .project_stage_play {
         position: absolute;
-        top: 48rem;
+        top: 69rem;
         width: 86%;
         height: 6.2rem;
     }
@@ -8067,6 +8072,7 @@ footer {
         width: 100%;
         height: 42rem;
         margin-bottom: 3rem;
+        margin-right: 0;
     }
 
     .project_head__item_cover h3 {
@@ -8097,7 +8103,7 @@ footer {
 
     .experts_view_content_item_img {
         margin: 0 0 3rem;
-        width: 9.8125rem;
+        width: 100%;
         height: 13.125rem;
     }
 
@@ -8314,5 +8320,17 @@ footer {
         margin-bottom: 1.5rem;
         padding: 2rem 1rem;
         border-radius: 3rem;
+    }
+
+    .project_head_slider {
+        display: block;
+    }
+
+    .project_head_content {
+        display: none;
+    }
+
+    .project_head_slider .project_head__item_cover h3 {
+        font-size: 2.8rem;
     }
 }

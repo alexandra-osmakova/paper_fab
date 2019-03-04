@@ -411,6 +411,20 @@ window.onload = function () {
         navAsThumbnails: true,
         arrowKeys: true,
     })
+
+    var slider = tns({
+        container: '.head_slider',
+        items: 1,
+        rewind: true,
+        swipeAngle: false,
+        gutter: 30,
+        speed: 400,
+        mouseDrag: true,
+        controlsText: [" ", " "],
+        navPosition: 'bottom',
+        navAsThumbnails: true,
+        arrowKeys: true,
+    })
 };
 
 function createChart(x, y) {

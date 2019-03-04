@@ -57,7 +57,7 @@ use App\Util\ViewGenerator;
                     <a href="/news">Новости</a>
                 </div>
                 <div class="hidden_menu_item">
-                        <span class="hidden_menu_text">ООО «Фабрика картона» <br>
+                        <span class="hidden_menu_text">ООО"Набережночелнинская картонно-бумажная Фабрика" <br>
                             Производство по переработке макулатуры в бумагу</span>
                     <div class="header_item__telephone_wrap">
                         <div class="header_phone_icon">
@@ -442,11 +442,27 @@ use App\Util\ViewGenerator;
             </div>
             <div class="project_stage_item--info active">
                 <div class="info--number">5</div>
-                <div class="info--text">Строительство: забивание свай</div>
+                <div class="info--text">Строительство</div>
             </div>
             <div class="project_stage_item--info">
                 <div class="info--number">6</div>
-                <div class="info--text">Изготовление оборудования</div>
+                <div class="info--text">Установка оборудования</div>
+            </div>
+            <div class="project_stage_item--info">
+                <div class="info--number">7</div>
+                <div class="info--text">Пуско-наладочные работы</div>
+            </div>
+            <div class="project_stage_item--info">
+                <div class="info--number">8</div>
+                <div class="info--text">Выход на производственную мощность</div>
+            </div>
+            <div class="project_stage_item--info">
+                <div class="info--number">9</div>
+                <div class="info--text">Возврат вложенных инвестиций</div>
+            </div>
+            <div class="project_stage_item--info">
+                <div class="info--number">10</div>
+                <div class="info--text">Выплата ежемесячных дивидендов инвесторам</div>
             </div>
         </div>
         <div class="project_stage_item">
@@ -582,9 +598,106 @@ use App\Util\ViewGenerator;
 </section>
 <section class="project_head">
     <h1 class="title_style">Наша команда</h1>
+    <div class="project_head_slider">
+        <div class="head_slider">
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_1.jpeg);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Хуснутдинов Ильдус Рифович</h3>
+                    <span>Инициатор проекта</span>
+                    <p>Опыт в бумажной промышленности <br>
+                        4 года</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_2.png);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Сабиров Ильмир Ильязович</h3>
+                    <span>Генеральный директор</span>
+                    <p>Опыт в бумажной промышленности <br>
+                        4 года</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_3.jpeg);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Батаев Алексей Григорьевич</h3>
+                    <span>Исполнительный директор</span>
+                    <p>Опыт в финансовой сфере <br>
+                        10 лет</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_4.png);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Андрощук Алексей Сергеевич </h3>
+                    <span>Главный технолог</span>
+                    <p>Опыт в бумажном производстве <br>
+                        16 лет</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_5.jpeg);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Хуснутдинова Анастасия Леонидовна</h3>
+                    <span>Учредитель</span>
+                    <p>Опыт в бумажной промышленности <br>
+                        4 года</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_6.jpeg);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Рышкова Елена Викторовна</h3>
+                    <span>Руководитель по связям с общественностью</span>
+                    <p>-</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_7.png);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Мирхазиянов Ильдар Тагирович</h3>
+                    <span>Главный архитектор</span>
+                    <p>-</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_8.png);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Тагиров Рафаил Салимьянович</h3>
+                    <span>Главный инженер</span>
+                    <p>-</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_9.png);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Зайнуллин Роберт Рафисович</h3>
+                    <span>Инженер-проектировщик</span>
+                    <p>-</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_10.png);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Кузьмина Мария Любиковна</h3>
+                    <span>Менеджер проекта</span>
+                    <p>-</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_11.png);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Таривердиева Гульназ Хамбалевна</h3>
+                    <span>Бухгалтер</span>
+                    <p>-</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="project_head_content">
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_1.png);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_1.jpeg);"></div>
             <div class="project_head__item_cover">
                 <h3>Хуснутдинов Ильдус Рифович</h3>
                 <span>Инициатор проекта</span>
@@ -596,13 +709,13 @@ use App\Util\ViewGenerator;
             <div class="project_head__item_img" style="background-image: url(../img/project_head_2.png);"></div>
             <div class="project_head__item_cover">
                 <h3>Сабиров Ильмир Ильязович</h3>
-                <span>генеральный директор</span>
+                <span>Генеральный директор</span>
                 <p>Опыт в бумажной промышленности <br>
                     4 года</p>
             </div>
         </div>
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_3.png);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_3.jpeg);"></div>
             <div class="project_head__item_cover">
                 <h3>Батаев Алексей Григорьевич</h3>
                 <span>Исполнительный директор</span>
@@ -622,15 +735,16 @@ use App\Util\ViewGenerator;
     </div>
     <div class="project_head_content">
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_5.png);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_5.jpeg);"></div>
             <div class="project_head__item_cover">
                 <h3>Хуснутдинова Анастасия Леонидовна</h3>
-                <span>-</span>
-                <p>-</p>
+                <span>Учредитель</span>
+                <p>Опыт в бумажной промышленности <br>
+                    4 года</p>
             </div>
         </div>
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_6.png);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_6.jpeg);"></div>
             <div class="project_head__item_cover">
                 <h3>Рышкова Елена Викторовна</h3>
                 <span>Руководитель по связям с общественностью</span>
@@ -692,7 +806,7 @@ use App\Util\ViewGenerator;
             <div class="experts_view_content_item_info">
                 <h3>Сергей Майоров</h3>
                 <span>Председатель правления Машиностроительного кластера РТ</span>
-                <p>Президент республики поручил региональному Агентству инвестиционного развития оказать
+                <p>"Президент республики поручил региональному Агентству инвестиционного развития оказать
                     предпринимателям содействие в привлечении инвесторов. Проект рассчитан, в том числе на венчурные
                     инвестиции, с высокой доходностью. Срок окупаемости 2 года. Проект картонно-бумажной фабрики не
                     подходит ни для одной из существующих федеральных программ господдержки, поэтому рассматривается
@@ -701,19 +815,19 @@ use App\Util\ViewGenerator;
                     всей стране.
                     Это хорошо, что новое производство собираются открыть на базе уже действующего предприятия. Оно
                     увеличит собственные мощности, доведя оборот до 1,5 млрд рублей. Это новые рабочие места, налоговые
-                    поступления, а также обеспечение сырьем близлежащих регионов, как минимум, Приволжского ФО
+                    поступления, а также обеспечение сырьем близлежащих регионов, как минимум, Приволжского ФО"
                 </p>
             </div>
         </div>
         <div class="experts_view_content_item invisible_item">
-            <div id="expert_view_second_img" class="experts_view_content_item_img" style="background-image: url(../img/)"></div>
+            <div id="expert_view_second_img" class="experts_view_content_item_img" style="background-image: url(../img/expert_2.jpeg)"></div>
             <div class="experts_view_content_item_info">
                 <h3>Эльдар Тимергалиев</h3>
                 <span>Заместитель главы исполкома Набережных Челнов по вопросам развития ТОСЭР </span>
-                <p>Проект «Набережночелнинской картонно-бумажной фабрики» видится мне перспективным. Малый бизнес
+                <p>"Проект «Набережночелнинской картонно-бумажной фабрики» видится мне перспективным. Малый бизнес
                     обладает набором преимуществ. Многие компании предпочитают работать с субъектом МСП, который более
                     клиенториентирован, способен поставить любой объем продукции и готов пойти навстречу партнеру в
-                    плане сроков</p>
+                    плане сроков"</p>
             </div>
         </div>
     </div>
@@ -896,14 +1010,14 @@ use App\Util\ViewGenerator;
                     </div>
                     <span> Промышленный парк «Развитие»<br>г. Набережные Челны, промышленная площадка на пересечении<br>ул. Металлургическая и ул. Техническая</span>
                 </div>
-                <a class="main_section__styled_btn link_to_news" href="/news">Показать на карте</a>
+                <a class="main_section__styled_btn link_to_news" href="https://yandex.ru/maps/-/CCU-uE9D" target="_blank">Показать на карте</a>
             </div>
         </div>
     </div>
 </section>
 <footer>
     <div class="politics">
-        <span>Все права защищены. © Фабрика Картона 2018</span>
+        <span>Все права защищены. © Набережночелнинская картонно-бумажная Фабрика 2018</span>
         <a href="./politikaconf.pdf" target="_blank">Политика конфиденциальности</a>
     </div>
     <div class="creator">
