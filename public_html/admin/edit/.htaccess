@@ -8,6 +8,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^post/(\d+)?$ edit.post.php?id=$1 [QSA,L]
 RewriteRule ^user/(\d+)?$ edit.user.php?id=$1 [QSA,L]
+RewriteRule ^faq/(\d+)?$ edit.faq.php?id=$1 [QSA,L]
 RewriteRule ^stage$ edit.stage.php [QSA,L]
 
 </IfModule>

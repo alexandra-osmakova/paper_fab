@@ -21,7 +21,7 @@ function editUser(id) {
 }
 
 function deleteUser(id) {
-    if(confirm("Вы действительно хотите удалить пользователя?")) {
+    if (confirm("Вы действительно хотите удалить пользователя?")) {
         location.href = "/admin/delete/user/" + id;
     }
 }
@@ -38,7 +38,7 @@ function addTel() {
 
     $("#count").val(++count);
 
-    $( "#contact" ).append(label, input);
+    $("#contact").append(label, input);
 }
 
 function delTel(id) {
@@ -71,10 +71,19 @@ function viewPost(id) {
 }
 
 function deletePost(id) {
-    if(confirm("Вы действительно хотите удалить пост?"))
+    if (confirm("Вы действительно хотите удалить пост?"))
         location.href = "/admin/delete/post/" + id;
 }
 
 function addFAQ() {
     location.href = "/admin/add/faq";
+}
+
+function editFAQ(id) {
+    location.href = "/admin/edit/faq/" + id;
+}
+
+function deleteFAQ(id) {
+    if (confirm("Вы действительно хотите удалить вопрос?"))
+        location.href = "/admin/delete/faq/" + id;
 }

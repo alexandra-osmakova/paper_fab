@@ -97,7 +97,7 @@ if (isset($_SESSION["user"])) {
                     </div>
 
                     <div class="politics">
-                        <span>Все права защищены.<br>© Фабрика Картона 2018</span>
+                        <span>Все права защищены.<br>© Набережночелнинская картонно-бумажная Фабрика 2018</span>
                         <a href="">Политика конфиденциальности</a>
                     </div>
                 </div>
@@ -106,6 +106,7 @@ if (isset($_SESSION["user"])) {
                 <header>
                     <div class="header_item">
                         <a href="/" class="header_info_link">Проект</a>
+                        <a href="/faq" class="header_info_link">Вопросы</a>
                         <a href="/news" class="header_info_link">Новости</a>
                     </div>
                     <div class="header_item">

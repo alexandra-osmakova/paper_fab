@@ -4,14 +4,26 @@ header("Refresh: 5; url=/admin", true, 301);
 session_start();
 
 require __DIR__."/../../../app/util/Encoder.php";
-require __DIR__ . "/../../../app/database/db.php";
+require __DIR__."/../../../app/database/db.php";
 
 use App\Util\Encoder;
 
 if (isset($_POST["id"])) {
+    $el = R::load("faq", $_POST["id"]);
 
-} else if (isset($_POST["title"])) {
+    $el->question = $_POST["title"];
+    $el->answer = $_POST["text"];
 
+    R::store($el);
+} else {
+    if (isset($_POST["title"])) {
+        $el = R::dispense("faq");
+
+        $el->question = $_POST["title"];
+        $el->answer = $_POST["text"];
+
+        R::store($el);
+    }
 }
 
 if (isset($_SESSION["user"])) {

@@ -2,11 +2,12 @@
 
 session_start();
 
-require __DIR__."/../../app/util/Encoder.php";
-require __DIR__."/../../app/util/ViewGenerator.php";
+require __DIR__ . "/../../../app/util/Encoder.php";
+require __DIR__ . "/../../../app/database/db.php";
 
 use App\Util\Encoder;
-use App\Util\ViewGenerator;
+
+$faq = R::load("faq", $_GET["id"]);
 
 if (isset($_SESSION["user"])) {
     if (Encoder::decode($_SESSION["user"]) === "administrator") {
@@ -125,29 +126,29 @@ if (isset($_SESSION["user"])) {
                         <a class="header_item__button" href="/login/logout.php">Выход</a>
                     </div>
                 </header>
-                <div class="container">
-                    <h1>Все статьи</h1>
-
+                <div class="post-body">
+                    <button class="arrow" onclick="back()">
+                        <svg enable-background="new 0 0 31.49 31.49" version="1.1" viewBox="0 0 31.49 31.49" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m21.205 5.007c-0.429-0.444-1.143-0.444-1.587 0-0.429 0.429-0.429 1.143 0 1.571l8.047 8.047h-26.554c-0.619 1e-3 -1.111 0.493-1.111 1.112s0.492 1.127 1.111 1.127h26.554l-8.047 8.032c-0.429 0.444-0.429 1.159 0 1.587 0.444 0.444 1.159 0.444 1.587 0l9.952-9.952c0.444-0.429 0.444-1.143 0-1.571l-9.952-9.953z"/>
+                        </svg>
+                    </button>
+                    <form class="post" action="/admin/add/success/faq" method="post" enctype="multipart/form-data">
+                        <input type="text" id="title" name="title" placeholder="Напишите вопрос" required value="<?=$faq->question?>">
+                        <textarea id="text" name="text" placeholder="Напишите ответ" required><?=$faq->answer?></textarea>
+                        <input type="hidden" name="id" value="<?=$faq->id?>">
+                        <input type="file" id="file" name="file" hidden>
+                    </form>
                     <div class="controls">
-                        <button class="btn" onclick="addPost()">+</button>
-                        <span>Показано 1 из 6</span>
+                        <button id="submit" class="btn save">
+                            <svg enable-background="new 0 0 488.446 488.446" version="1.1" viewBox="0 0 488.45 488.45" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                <path d="m153.03 90.223h182.4c5.427 0 9.873-4.43 9.873-9.869v-80.354h-202.17v80.354c0 5.439 4.434 9.869 9.892 9.869z"/>
+                                <path d="m480.82 122.86-102.94-103.37v60.859c0 23.404-19.043 42.447-42.447 42.447h-182.4c-23.409 0-42.447-19.043-42.447-42.447v-80.353h-65.759c-24.755 0-44.821 20.07-44.821 44.808v398.83c0 24.736 20.066 44.808 44.821 44.808h398.81c24.74 0 44.808-20.068 44.808-44.808v-302.31c0-6.933-2.746-13.567-7.627-18.461zm-68.356 262.8c0 14.434-11.703 26.154-26.168 26.154h-284.16c-14.451 0-26.153-11.722-26.153-26.154v-136.36c0-14.43 11.702-26.148 26.153-26.148h284.16c14.465 0 26.168 11.72 26.168 26.148v136.36z"/>
+                                <path d="m356.5 265.13h-224.55c-9.008 0-16.294 7.273-16.294 16.28s7.286 16.28 16.294 16.28h224.55c8.988 0 16.277-7.273 16.277-16.28s-7.288-16.28-16.278-16.28z"/>
+                                <path d="m323.94 330.26h-159.43c-8.994 0-16.28 7.273-16.28 16.28 0 8.989 7.286 16.28 16.28 16.28h159.43c8.994 0 16.281-7.291 16.281-16.28 1e-3 -9.007-7.286-16.28-16.28-16.28z"/>
+                            </svg>
+                        </button>
                     </div>
-
-                    <table>
-                        <thead>
-                        <tr>
-                            <td>Дата</td>
-                            <td>Название статьи</td>
-                            <td>Текст статьи</td>
-                            <td>Действия</td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?=ViewGenerator::generatePosts()?>
-                        </tbody>
-                    </table>
                 </div>
-            </div>
         </section>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -162,6 +163,24 @@ if (isset($_SESSION["user"])) {
                     }
                 );
             }
+
+            $("input[type='radio']").on("change", function (e) {
+                if (e.currentTarget.id === "t1") {
+                    $("#fiz").css("display", "block");
+                    $("#yur").css("display", "none");
+                } else if (e.currentTarget.id === "t2") {
+                    $("#fiz").css("display", "none");
+                    $("#yur").css("display", "block");
+                }
+            });
+
+            $("input#file").on("change", function () {
+                $("div.background").css("background", "#acd246");
+            });
+
+            $("#submit").on("click", function () {
+                $("form").submit();
+            });
         </script>
         </body>
         </html>

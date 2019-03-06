@@ -110,8 +110,7 @@ use App\Util\ViewGenerator;
         <main class="main_section__content_item">
             <h1 class="title_style">Инвестируй <br> и становись<span class="styled_text"> собственником</span>
                 бумажной фабрики</h1>
-            <p class="common_text">Присоединяйтесь к строительству фабрики по производству бумаги <br> для
-                гофрирования из макулатурного сырья</p>
+            <p class="common_text">Выгодно вложить свои накопления в реальноепроизводство и получать дивиденды может каждый</p>
             <div class="main_section__buttons">
                 <button class="main_section__styled_btn modal_trigger">Инвестировать</button>
                 <button class="main_section__normal_btn slider_trigger">
@@ -145,7 +144,8 @@ use App\Util\ViewGenerator;
     </div>
 </section>
 <section class="advantages">
-    <h1 class="title_style">Почему выгодно инвестировать в производство гофрокартона?</h1>
+    <h1 class="title_style">Почему выгодно инвестировать в производство бумаги<br> для
+        гофрирования из макулатурного сырья?</h1>
     <div class="advantages_content">
         <div class="quote__wrap">
             <div class="quote__video">
@@ -398,7 +398,13 @@ use App\Util\ViewGenerator;
                 </svg>
                 <div class="block--date">01.08.2022 - 31.07.2027</div>
                 <p class="block--text">Ежемесячные дивиденды в течение 5 лет в размере 50%* годовых от суммы
-                    инвестиционного взноса<br><span class="block--addition">*от прибыли</span></p>
+                    инвестиционного взноса.
+                    <br>
+                    <span class="block--addition">*от прибыли</span>
+                    <br>
+                    <span class="block--addition">**предложение ограничено. Чем ближе окончание строительства, тем будет ниже ставка
+                    на дивиденды для новых инвесторов. Успейте инвестировать по самой выгодной ставке и получить
+                    максимальный доход. Подробности уточняйте по телефону у менеджеров проекта</span></p>
             </div>
         </div>
         <div class="conditions_content_item">
@@ -468,16 +474,16 @@ use App\Util\ViewGenerator;
         <div class="project_stage_item">
             <div class="my-slider_satges">
                 <div>
-                    <div class="project_stage_item_img"></div>
+                    <div class="project_stage_item_img first"></div>
                 </div>
                 <div>
-                    <div class="project_stage_item_img"></div>
+                    <div class="project_stage_item_img second"></div>
                 </div>
                 <div>
-                    <div class="project_stage_item_img"></div>
+                    <div class="project_stage_item_img third"></div>
                 </div>
                 <div>
-                    <div class="project_stage_item_img"></div>
+                    <div class="project_stage_item_img fourth"></div>
                 </div>
             </div>
         </div>
@@ -610,7 +616,7 @@ use App\Util\ViewGenerator;
                 </div>
             </div>
             <div class="project_head__item">
-                <div class="project_head__item_img" style="background-image: url(../img/project_head_2.png);"></div>
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_2.jpg);"></div>
                 <div class="project_head__item_cover">
                     <h3>Сабиров Ильмир Ильязович</h3>
                     <span>Генеральный директор</span>
@@ -619,25 +625,7 @@ use App\Util\ViewGenerator;
                 </div>
             </div>
             <div class="project_head__item">
-                <div class="project_head__item_img" style="background-image: url(../img/project_head_3.jpeg);"></div>
-                <div class="project_head__item_cover">
-                    <h3>Батаев Алексей Григорьевич</h3>
-                    <span>Исполнительный директор</span>
-                    <p>Опыт в финансовой сфере <br>
-                        10 лет</p>
-                </div>
-            </div>
-            <div class="project_head__item">
-                <div class="project_head__item_img" style="background-image: url(../img/project_head_4.png);"></div>
-                <div class="project_head__item_cover">
-                    <h3>Андрощук Алексей Сергеевич </h3>
-                    <span>Главный технолог</span>
-                    <p>Опыт в бумажном производстве <br>
-                        16 лет</p>
-                </div>
-            </div>
-            <div class="project_head__item">
-                <div class="project_head__item_img" style="background-image: url(../img/project_head_5.jpeg);"></div>
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_5.jpg);"></div>
                 <div class="project_head__item_cover">
                     <h3>Хуснутдинова Анастасия Леонидовна</h3>
                     <span>Учредитель</span>
@@ -646,7 +634,25 @@ use App\Util\ViewGenerator;
                 </div>
             </div>
             <div class="project_head__item">
-                <div class="project_head__item_img" style="background-image: url(../img/project_head_6.jpeg);"></div>
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_3.jpg);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Батаев Алексей Григорьевич</h3>
+                    <span>Исполнительный директор</span>
+                    <p>Опыт в финансовой сфере <br>
+                        10 лет</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_4.jpg);"></div>
+                <div class="project_head__item_cover">
+                    <h3>Андрощук Алексей Сергеевич </h3>
+                    <span>Главный технолог</span>
+                    <p>Опыт в бумажном производстве <br>
+                        16 лет</p>
+                </div>
+            </div>
+            <div class="project_head__item">
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_6.jpg);"></div>
                 <div class="project_head__item_cover">
                     <h3>Рышкова Елена Викторовна</h3>
                     <span>Руководитель по связям с общественностью</span>
@@ -654,7 +660,7 @@ use App\Util\ViewGenerator;
                 </div>
             </div>
             <div class="project_head__item">
-                <div class="project_head__item_img" style="background-image: url(../img/project_head_7.png);"></div>
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_7.jpg);"></div>
                 <div class="project_head__item_cover">
                     <h3>Мирхазиянов Ильдар Тагирович</h3>
                     <span>Главный архитектор</span>
@@ -662,7 +668,7 @@ use App\Util\ViewGenerator;
                 </div>
             </div>
             <div class="project_head__item">
-                <div class="project_head__item_img" style="background-image: url(../img/project_head_8.png);"></div>
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_8.jpg);"></div>
                 <div class="project_head__item_cover">
                     <h3>Тагиров Рафаил Салимьянович</h3>
                     <span>Главный инженер</span>
@@ -670,7 +676,7 @@ use App\Util\ViewGenerator;
                 </div>
             </div>
             <div class="project_head__item">
-                <div class="project_head__item_img" style="background-image: url(../img/project_head_9.png);"></div>
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_9.jpg);"></div>
                 <div class="project_head__item_cover">
                     <h3>Зайнуллин Роберт Рафисович</h3>
                     <span>Инженер-проектировщик</span>
@@ -678,7 +684,7 @@ use App\Util\ViewGenerator;
                 </div>
             </div>
             <div class="project_head__item">
-                <div class="project_head__item_img" style="background-image: url(../img/project_head_10.png);"></div>
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_10.jpg);"></div>
                 <div class="project_head__item_cover">
                     <h3>Кузьмина Мария Любиковна</h3>
                     <span>Менеджер проекта</span>
@@ -686,7 +692,7 @@ use App\Util\ViewGenerator;
                 </div>
             </div>
             <div class="project_head__item">
-                <div class="project_head__item_img" style="background-image: url(../img/project_head_11.png);"></div>
+                <div class="project_head__item_img" style="background-image: url(../img/project_head_11.jpg);"></div>
                 <div class="project_head__item_cover">
                     <h3>Таривердиева Гульназ Хамбалевна</h3>
                     <span>Бухгалтер</span>
@@ -706,7 +712,7 @@ use App\Util\ViewGenerator;
             </div>
         </div>
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_2.png);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_2.jpg);"></div>
             <div class="project_head__item_cover">
                 <h3>Сабиров Ильмир Ильязович</h3>
                 <span>Генеральный директор</span>
@@ -715,27 +721,7 @@ use App\Util\ViewGenerator;
             </div>
         </div>
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_3.jpeg);"></div>
-            <div class="project_head__item_cover">
-                <h3>Батаев Алексей Григорьевич</h3>
-                <span>Исполнительный директор</span>
-                <p>Опыт в финансовой сфере <br>
-                    10 лет</p>
-            </div>
-        </div>
-        <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_4.png);"></div>
-            <div class="project_head__item_cover">
-                <h3>Андрощук Алексей Сергеевич </h3>
-                <span>Главный технолог</span>
-                <p>Опыт в бумажном производстве <br>
-                    16 лет</p>
-            </div>
-        </div>
-    </div>
-    <div class="project_head_content">
-        <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_5.jpeg);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_5.jpg);"></div>
             <div class="project_head__item_cover">
                 <h3>Хуснутдинова Анастасия Леонидовна</h3>
                 <span>Учредитель</span>
@@ -744,7 +730,27 @@ use App\Util\ViewGenerator;
             </div>
         </div>
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_6.jpeg);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_3.jpg);"></div>
+            <div class="project_head__item_cover">
+                <h3>Батаев Алексей Григорьевич</h3>
+                <span>Исполнительный директор</span>
+                <p>Опыт в финансовой сфере <br>
+                    10 лет</p>
+            </div>
+        </div>
+    </div>
+    <div class="project_head_content">
+        <div class="project_head__item">
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_4.jpg);"></div>
+            <div class="project_head__item_cover">
+                <h3>Андрощук Алексей Сергеевич </h3>
+                <span>Главный технолог</span>
+                <p>Опыт в бумажном производстве <br>
+                    16 лет</p>
+            </div>
+        </div>
+        <div class="project_head__item">
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_6.jpg);"></div>
             <div class="project_head__item_cover">
                 <h3>Рышкова Елена Викторовна</h3>
                 <span>Руководитель по связям с общественностью</span>
@@ -752,7 +758,7 @@ use App\Util\ViewGenerator;
             </div>
         </div>
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_7.png);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_7.jpg);"></div>
             <div class="project_head__item_cover">
                 <h3>Мирхазиянов Ильдар Тагирович</h3>
                 <span>Главный архитектор</span>
@@ -760,7 +766,7 @@ use App\Util\ViewGenerator;
             </div>
         </div>
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_8.png);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_8.jpg);"></div>
             <div class="project_head__item_cover">
                 <h3>Тагиров Рафаил Салимьянович</h3>
                 <span>Главный инженер</span>
@@ -770,7 +776,7 @@ use App\Util\ViewGenerator;
     </div>
     <div class="project_head_content">
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_9.png);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_9.jpg);"></div>
             <div class="project_head__item_cover">
                 <h3>Зайнуллин Роберт Рафисович</h3>
                 <span>Инженер-проектировщик</span>
@@ -778,7 +784,7 @@ use App\Util\ViewGenerator;
             </div>
         </div>
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_10.png);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_10.jpg);"></div>
             <div class="project_head__item_cover">
                 <h3>Кузьмина Мария Любиковна</h3>
                 <span>Менеджер проекта</span>
@@ -786,7 +792,7 @@ use App\Util\ViewGenerator;
             </div>
         </div>
         <div class="project_head__item">
-            <div class="project_head__item_img" style="background-image: url(../img/project_head_11.png);"></div>
+            <div class="project_head__item_img" style="background-image: url(../img/project_head_11.jpg);"></div>
             <div class="project_head__item_cover">
                 <h3>Таривердиева Гульназ Хамбалевна</h3>
                 <span>Бухгалтер</span>
@@ -820,7 +826,8 @@ use App\Util\ViewGenerator;
             </div>
         </div>
         <div class="experts_view_content_item invisible_item">
-            <div id="expert_view_second_img" class="experts_view_content_item_img" style="background-image: url(../img/expert_2.jpeg)"></div>
+            <div id="expert_view_second_img" class="experts_view_content_item_img"
+                 style="background-image: url(../img/expert_2.jpeg)"></div>
             <div class="experts_view_content_item_info">
                 <h3>Эльдар Тимергалиев</h3>
                 <span>Заместитель главы исполкома Набережных Челнов по вопросам развития ТОСЭР </span>
@@ -1010,7 +1017,9 @@ use App\Util\ViewGenerator;
                     </div>
                     <span> Промышленный парк «Развитие»<br>г. Набережные Челны, промышленная площадка на пересечении<br>ул. Металлургическая и ул. Техническая</span>
                 </div>
-                <a class="main_section__styled_btn link_to_news" href="https://yandex.ru/maps/-/CCU-uE9D" target="_blank">Показать на карте</a>
+                <a class="main_section__styled_btn link_to_news"
+                   href="https://yandex.ru/maps/?um=constructor%3Ad909cafd767e9d0b3e1ade5483ae098518ca6fb85261a0601eb75be59e295123&source=constructorLink"
+                   target="_blank">Показать на карте</a>
             </div>
         </div>
     </div>
